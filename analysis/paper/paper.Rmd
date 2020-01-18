@@ -32,8 +32,6 @@ editor_options:
   chunk_output_type: console
 ---
 
-<!-- This is the format for text comments that will be ignored during renderings. Do not put R code in these comments because it will not be ignored. -->
-
 ```{r setup, echo = FALSE}
 knitr::opts_chunk$set(
   collapse = TRUE,
@@ -53,7 +51,7 @@ Here, we directly compare two large collections of radiocarbon and tree-ring dat
 
 After harmonizing those datasets to with one another and calibrating Radiocarbon dates are drawn from the [DARCY: DATABASE AND REFERENCE HERE], and are available [HERE]. Tree-ring data are those presented in @Bocinsky2016_SA and archived on the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B).
 
-## Study Area
+# Study Area
 
 ```{r}
 four_corners_lcc_proj <- "+proj=lcc +lat_1=37 +lon_0=-109.045225"
@@ -93,9 +91,9 @@ UUSW_counties <-
 
 ```
 
-## Datasets
+# Datasets
 
-## Preparing the radiocarbon data
+# Preparing the radiocarbon data
 
 ```{r}
 # # Read in the radiocarbon database

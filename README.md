@@ -1,28 +1,29 @@
 
 <!-- README.md is generated from README.Rmd. Please edit that file -->
 
-# Robinson2020
+# robinson2020
 
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh///master?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). *Title of your paper goes here*. Name of journal/book
-> <https://doi.org/xxx/xxx>
+> Robinson, Erick, R. Kyle Bocinsky, Jacob Freeman, Darcy Bird, Robert
+> L. Kelly, (2020). *Dendrochronological dates confirm a Late
+> Prehistoric population decline in the American Southwest derived from
+> radiocarbon dates*. Under review.
 
-Our pre-print is online here:
+<!-- Our pre-print is online here: -->
 
-> Authors, (YYYY). *Title of your paper goes here*. Name of
-> journal/book, Accessed 17 Jan 2020. Online at
-> <https://doi.org/xxx/xxx>
+<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 18 Jan 2020. Online at <https://doi.org/xxx/xxx> -->
 
 ### How to cite
 
 Please cite this compendium as:
 
-> Authors, (2020). *Compendium of R code and data for Title of your
-> paper goes here*. Accessed 17 Jan 2020. Online at
-> <https://doi.org/xxx/xxx>
+> Bocinsky, R. Kyle and Erick Robinson, (2020). *Compendium of R code
+> and data for Dendrochronological dates confirm a Late Prehistoric
+> population decline in the American Southwest derived from radiocarbon
+> dates*. Accessed 18 Jan 2020.
 
 ### How to download or install
 
@@ -34,7 +35,7 @@ GitHub with:
 
 ``` r
 # install.packages("devtools")
-remotes::install_github("/")
+remotes::install_github("bocinsky/robinson2020")
 ```
 
 ### Licenses

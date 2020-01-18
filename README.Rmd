@@ -11,7 +11,7 @@ knitr::opts_chunk$set(
   fig.path = "README-"
 )
 # Please put your title here to include it in the file below.
-Title <- "Title of your paper goes here"
+Title <- "Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates"
 ```
 
 # robinson2020
@@ -20,18 +20,18 @@ Title <- "Title of your paper goes here"
 
 This repository contains the data and code for our paper:
 
-> Authors, (YYYY). _`r Title`_. Name of journal/book <https://doi.org/xxx/xxx>
+> Robinson, Erick, R. Kyle Bocinsky, Jacob Freeman, Darcy Bird, Robert L. Kelly, (2020). _`r Title`_. Under review.
 
-Our pre-print is online here:
+<!-- Our pre-print is online here: -->
 
-> Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
+<!-- > Authors, (YYYY). _`r Title`_. Name of journal/book, Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx> -->
 
 
 ### How to cite
 
 Please cite this compendium as:
 
-> Authors, (`r format(Sys.Date(), "%Y")`). _Compendium of R code and data for `r Title`_. Accessed `r format(Sys.Date(), "%d %b %Y")`. Online at <https://doi.org/xxx/xxx>
+> Bocinsky, R. Kyle and Erick Robinson, (`r format(Sys.Date(), "%Y")`). _Compendium of R code and data for `r Title`_. Accessed `r format(Sys.Date(), "%d %b %Y")`.
 
 ### How to download or install
 
@@ -42,7 +42,7 @@ Or you can install this compendium as an R package, Robinson2020, from GitHub wi
 
 ```{r gh-installation, eval = FALSE}
 # install.packages("devtools")
-remotes::install_github("/")
+remotes::install_github("bocinsky/robinson2020")
 ```
 
 
