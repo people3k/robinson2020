@@ -26,6 +26,7 @@ Suggests: devtools,
     git2r
 RoxygenNote: 7.0.2
 Depends: 
-    magrittr
+    magrittr,
+    ggplot2
 URL: https://github.com/bocinsky/robinson2020
 BugReports: https://github.com/bocinsky/robinson2020/issues

@@ -17,16 +17,9 @@ uusw_boundary <-
                 ymin = 32,
                 ymax = 38),
               crs = 4326) %>%
-  sf::st_as_sfc() %>%
-  sf::st_difference(tigris::counties(state="Arizona", cb = TRUE) %>%
-                      sf::st_as_sf() %>%
-                      dplyr::filter(NAME %in% c("Maricopa",
-                                                "Pinal",
-                                                "Pima")) %>%
-                      sf::st_union() %>%
-                      sf::st_transform(4326))
+  sf::st_as_sfc()
 
-usethis::use_data(uusw_boundary)
+usethis::use_data(uusw_boundary, overwrite = TRUE)
 
 ## Create a nice hillshade for the Four Corners states for mapping
 # A nice projection for the Four Corners states

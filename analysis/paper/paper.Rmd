@@ -47,7 +47,7 @@ library(robinson2020)
 ```
 
 # Summary of methods
-Here, we directly compare two large collections of radiocarbon and tree-ring dates drawn from the Upland US Southwest --- roughly defined as the 'Four Corners' states of Arizona, Colorado, New Mexico, and Utah, but excluding the Phoenix and Tucson basins. 
+Here, we directly compare two large collections of radiocarbon and tree-ring dates drawn from the Upland US Southwest. 
 
 After harmonizing those datasets to with one another and calibrating Radiocarbon dates are drawn from the [DARCY: DATABASE AND REFERENCE HERE], and are available [HERE]. Tree-ring data are those presented in @Bocinsky2016_SA and archived on the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B).
 
@@ -73,7 +73,6 @@ UUSW_counties <-
                    class = "sf",
                    progress_bar = FALSE) %>% 
   sf::st_transform(four_corners_lcc_proj) %>% 
-  # sf::st_contains(UUSW, sparse = FALSE)
   dplyr::filter(sf::st_intersects(suppressWarnings(sf::st_centroid(.)),
                                   UUSW %>% 
                                     sf::st_transform(four_corners_lcc_proj), 
@@ -88,6 +87,86 @@ UUSW_counties <-
                    by = "STATEFP") %>%
   dplyr::select(-STATEFP) %>%
   tidyr::unite(col = County, County, State, sep = ", ")
+
+```
+
+The UUSW was geographically definied by @Bocinsky2016_SA as the region between 105--113ºW and 32--38ºN. Here, we refine that definition in two ways. First, since location data for our radiocarbon database are only resolved to the county level, we define the study region to include all counties whose geographic centroids fall within the region from @Bocinsky2016_SA. Second, we roughly exclude the Phoenix and Tucson basins by excluding Maricopa, Pinal, and Pima counties in Arizona. Figure \@ref(fig:study-area) shows the original UUSW from @Bocinsky2016_SA, and the revised study area used in this analysis.
+
+```{r study-area}
+theme_map <- function(base_size = 6.5,
+                      base_family = ""){
+  ggplot2::theme_bw(base_size = base_size,
+                    base_family = base_family) %+replace%
+    ggplot2::theme(axis.line = ggplot2::element_blank(),
+                   axis.text = ggplot2::element_blank(),
+                   axis.ticks = ggplot2::element_blank(),
+                   axis.title = ggplot2::element_blank(),
+                   panel.background = ggplot2::element_blank(),
+                   panel.border = ggplot2::element_blank(),
+                   panel.grid = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_line(colour = 'transparent'),
+                   panel.grid.minor = ggplot2::element_line(colour = 'transparent'),
+                   legend.key = ggplot2::element_blank(),
+                   legend.position = "top",
+                   # legend.justification = c(0,0),
+                   # legend.position = "top",
+                   # legend.position = c(0.5,1),
+                   # legend.background = ggplot2::element_blank(),
+                   # legend.key.width = unit(0.15,"in"),
+                   # legend.key.height = unit(0.15,"in"),
+                   # legend.text = element_text(size = ggplot2::rel(1)),
+                   plot.background = ggplot2::element_blank(),
+                   plot.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+four_corners_states <- 
+  tigris::states(class = "sf",
+                 progress_bar = FALSE) %>%
+  dplyr::filter(NAME %in% c("Arizona", "Colorado", 
+                            "New Mexico", "Utah")) %>%
+  sf::st_transform(four_corners_lcc_proj)
+
+ggplot2::ggplot() +
+  ggplot2::geom_sf(data = four_corners_states) +
+  ggplot2::geom_raster(data = robinson2020::swus_hillshade_500m,
+                       mapping = ggplot2::aes(x = x,
+                                              y = y,
+                                              alpha = ID),
+                       na.rm = TRUE) +
+  ggplot2::scale_alpha(range = c(0.8, 0),
+                       na.value = 0,
+                       limits = c(0,255),
+                       guide = "none") +
+  ggplot2::geom_sf(data = four_corners_states,
+                   fill = NA) +
+  ggplot2::geom_sf(data = UUSW,
+                   fill = NA) +
+    ggplot2::geom_sf(data = UUSW_counties,
+                   fill = NA) +
+  # ggplot2::geom_sf(data = dates,
+  #                  mapping = aes(shape = `Date Type`,
+  #                                color = Date_BP),
+  #                  show.legend = "point") +
+  # ggplot2::scale_shape(
+  #   name = 'Date Type',
+  #   solid = FALSE,
+  #   guide = ggplot2::guide_legend(position = "top",
+  #                                 direction = "horizontal",
+  #                                 title.position = "top",
+  #                                 label.position = "bottom")
+  # ) +
+  # viridis::scale_color_viridis(
+  #   name = 'Year BP',
+  #   limits = c(450,1450),
+  #   breaks = c(450,1450),
+  #   direction = -1,
+  #   guide = ggplot2::guide_colorbar(position = "top",
+  #                                   direction = "horizontal",
+  #                                   title.position = "top",
+  #                                   label.position = "bottom",
+  #                                   reverse = TRUE)) +
+  theme_map(16)
 
 ```
 
@@ -380,129 +459,129 @@ all_density %>%
 
 
 
-<!-- ```{r} -->
-<!-- four_corners_lcc_proj <- "+proj=lcc +lat_1=37 +lon_0=-109.045225" -->
+```{r}
+four_corners_lcc_proj <- "+proj=lcc +lat_1=37 +lon_0=-109.045225"
 
-<!-- # Define the Bocinsky et al. 2016 study area -->
-<!-- SWUS_bbox <- sf::st_bbox(c(xmin = -113, -->
-<!--                            xmax = -105, -->
-<!--                            ymin = 32, -->
-<!--                            ymax = 38),  -->
-<!--                          crs = 4326) %>% -->
-<!--   sf::st_as_sfc() %>% -->
-<!--   sf::st_set_crs(NA) %>% -->
-<!--   sf::st_segmentize(dfMaxLength = 0.01) %>% -->
-<!--   sf::st_set_crs(4326) %>% -->
-<!--   sf::st_transform(four_corners_lcc_proj) -->
+# Define the Bocinsky et al. 2016 study area
+SWUS_bbox <- sf::st_bbox(c(xmin = -113,
+                           xmax = -105,
+                           ymin = 32,
+                           ymax = 38),
+                         crs = 4326) %>%
+  sf::st_as_sfc() %>%
+  sf::st_set_crs(NA) %>%
+  sf::st_segmentize(dfMaxLength = 0.01) %>%
+  sf::st_set_crs(4326) %>%
+  sf::st_transform(four_corners_lcc_proj)
 
-<!-- four_corners_states <- "./data-raw/statesp010g/statesp010g.gdb/" %>% -->
-<!--   sf::st_read() %>% -->
-<!--   dplyr::filter(NAME %in%  -->
-<!--                   c("Arizona", -->
-<!--                     "Colorado", -->
-<!--                     "New Mexico", -->
-<!--                     "Utah")) %>% -->
-<!--   sf::st_transform(four_corners_lcc_proj) -->
+four_corners_states <- "./data-raw/statesp010g/statesp010g.gdb/" %>%
+  sf::st_read() %>%
+  dplyr::filter(NAME %in%
+                  c("Arizona",
+                    "Colorado",
+                    "New Mexico",
+                    "Utah")) %>%
+  sf::st_transform(four_corners_lcc_proj)
 
-<!-- swus_hillshade_500m <- readr::read_rds("./data-derived/swus_hillshade_500m.rds") %>% -->
-<!--   raster::crop(four_corners_states) %>% -->
-<!--   raster::mask(four_corners_states) -->
+swus_hillshade_500m <- readr::read_rds("./data-derived/swus_hillshade_500m.rds") %>%
+  raster::crop(four_corners_states) %>%
+  raster::mask(four_corners_states)
 
-<!-- dendro_data <- sf::read_sf("./data-derived/dendro_data.geojson") %>% -->
-<!--   sf::st_transform(four_corners_lcc_proj) %>% -->
-<!--   dplyr::filter(Date_BP >= 550, -->
-<!--                 Date_BP <= 1450) %>% -->
-<!--   dplyr::group_by(Site_Number) %>% -->
-<!--   dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T), -->
-<!--                    geometry = mean(geometry)) %>% -->
-<!--   dplyr::mutate(`Date Type` = "Dendro") %>% -->
-<!--   dplyr::select(-Site_Number) %>% -->
-<!--   sf::st_centroid() -->
+dendro_data <- sf::read_sf("./data-derived/dendro_data.geojson") %>%
+  sf::st_transform(four_corners_lcc_proj) %>%
+  dplyr::filter(Date_BP >= 550,
+                Date_BP <= 1450) %>%
+  dplyr::group_by(Site_Number) %>%
+  dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T),
+                   geometry = mean(geometry)) %>%
+  dplyr::mutate(`Date Type` = "Dendro") %>%
+  dplyr::select(-Site_Number) %>%
+  sf::st_centroid()
 
-<!-- radiocarbon_data <- sf::read_sf("./data-derived/radiocarbon_data.geojson") %>% -->
-<!--   sf::st_transform(four_corners_lcc_proj) %>% -->
-<!--   dplyr::filter(Date_BP >= 550, -->
-<!--                 Date_BP <= 1450) %>% -->
-<!--   dplyr::group_by(Site_Number) %>% -->
-<!--   dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T)) %>% -->
-<!--   sf::st_jitter(20000) %>% -->
-<!--   dplyr::mutate(`Date Type` = "C14") %>% -->
-<!--   dplyr::select(-Site_Number) %>% -->
-<!--   sf::st_centroid() -->
+radiocarbon_data <- sf::read_sf("./data-derived/radiocarbon_data.geojson") %>%
+  sf::st_transform(four_corners_lcc_proj) %>%
+  dplyr::filter(Date_BP >= 550,
+                Date_BP <= 1450) %>%
+  dplyr::group_by(Site_Number) %>%
+  dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T)) %>%
+  sf::st_jitter(20000) %>%
+  dplyr::mutate(`Date Type` = "C14") %>%
+  dplyr::select(-Site_Number) %>%
+  sf::st_centroid()
 
-<!-- dates <- rbind(dendro_data, -->
-<!--                radiocarbon_data) -->
+dates <- rbind(dendro_data,
+               radiocarbon_data)
 
-<!-- theme_map <- function(base_size = 6.5,  -->
-<!--                       base_family = ""){ -->
-<!--   ggplot2::theme_bw(base_size = base_size,  -->
-<!--                     base_family = base_family) %+replace% -->
-<!--     ggplot2::theme(axis.line = ggplot2::element_blank(), -->
-<!--                    axis.text = ggplot2::element_blank(), -->
-<!--                    axis.ticks = ggplot2::element_blank(), -->
-<!--                    axis.title = ggplot2::element_blank(), -->
-<!--                    panel.background = ggplot2::element_blank(), -->
-<!--                    panel.border = ggplot2::element_blank(), -->
-<!--                    panel.grid = ggplot2::element_blank(), -->
-<!--                    panel.grid.major = ggplot2::element_line(colour = 'transparent'), -->
-<!--                    panel.grid.minor = ggplot2::element_line(colour = 'transparent'), -->
-<!--                    legend.key = element_blank(), -->
-<!--                    legend.position = "top", -->
-<!--                    # legend.justification = c(0,0), -->
-<!--                    # legend.position = "top", -->
-<!--                    # legend.position = c(0.5,1), -->
-<!--                    # legend.background = ggplot2::element_blank(), -->
-<!--                    # legend.key.width = unit(0.15,"in"), -->
-<!--                    # legend.key.height = unit(0.15,"in"), -->
-<!--                    # legend.text = element_text(size = ggplot2::rel(1)), -->
-<!--                    plot.background = ggplot2::element_blank(), -->
-<!--                    plot.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "npc") -->
-<!--     ) -->
-<!-- } -->
+theme_map <- function(base_size = 6.5,
+                      base_family = ""){
+  ggplot2::theme_bw(base_size = base_size,
+                    base_family = base_family) %+replace%
+    ggplot2::theme(axis.line = ggplot2::element_blank(),
+                   axis.text = ggplot2::element_blank(),
+                   axis.ticks = ggplot2::element_blank(),
+                   axis.title = ggplot2::element_blank(),
+                   panel.background = ggplot2::element_blank(),
+                   panel.border = ggplot2::element_blank(),
+                   panel.grid = ggplot2::element_blank(),
+                   panel.grid.major = ggplot2::element_line(colour = 'transparent'),
+                   panel.grid.minor = ggplot2::element_line(colour = 'transparent'),
+                   legend.key = element_blank(),
+                   legend.position = "top",
+                   # legend.justification = c(0,0),
+                   # legend.position = "top",
+                   # legend.position = c(0.5,1),
+                   # legend.background = ggplot2::element_blank(),
+                   # legend.key.width = unit(0.15,"in"),
+                   # legend.key.height = unit(0.15,"in"),
+                   # legend.text = element_text(size = ggplot2::rel(1)),
+                   plot.background = ggplot2::element_blank(),
+                   plot.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
 
-<!-- ggplot() +  -->
-<!--   ggplot2::geom_sf(data = four_corners_states) + -->
-<!--   ggplot2::geom_raster(data = Robinson2020::swus_hillshade_500m, -->
-<!--                        mapping = ggplot2::aes(x = x, -->
-<!--                                               y = y, -->
-<!--                                               alpha = ID), -->
-<!--                        na.rm = TRUE) + -->
-<!--   ggplot2::scale_alpha(range = c(0.8, 0), -->
-<!--                        na.value = 0, -->
-<!--                        limits = c(0,255), -->
-<!--                        guide = "none") + -->
-<!--   ggplot2::geom_sf(data = four_corners_states, -->
-<!--                    fill = NA) + -->
-<!--   ggplot2::geom_sf(data = SWUS_bbox, -->
-<!--                    fill = NA) + -->
-<!--   ggplot2::geom_sf(data = dates, -->
-<!--                    mapping = aes(shape = `Date Type`, -->
-<!--                                  color = Date_BP), -->
-<!--                    show.legend = "point") + -->
-<!--   ggplot2::scale_shape( -->
-<!--     name = 'Date Type', -->
-<!--     solid = FALSE, -->
-<!--     guide = ggplot2::guide_legend(position = "top", -->
-<!--                                   direction = "horizontal", -->
-<!--                                   title.position = "top", -->
-<!--                                   label.position = "bottom") -->
-<!--   ) + -->
-<!--   viridis::scale_color_viridis( -->
-<!--     name = 'Year BP', -->
-<!--     limits = c(450,1450), -->
-<!--     breaks = c(450,1450), -->
-<!--     direction = -1, -->
-<!--     guide = ggplot2::guide_colorbar(position = "top", -->
-<!--                                     direction = "horizontal", -->
-<!--                                     title.position = "top", -->
-<!--                                     label.position = "bottom", -->
-<!--                                     reverse = TRUE)) + -->
-<!--   theme_map(16) -->
+ggplot() +
+  ggplot2::geom_sf(data = four_corners_states) +
+  ggplot2::geom_raster(data = Robinson2020::swus_hillshade_500m,
+                       mapping = ggplot2::aes(x = x,
+                                              y = y,
+                                              alpha = ID),
+                       na.rm = TRUE) +
+  ggplot2::scale_alpha(range = c(0.8, 0),
+                       na.value = 0,
+                       limits = c(0,255),
+                       guide = "none") +
+  ggplot2::geom_sf(data = four_corners_states,
+                   fill = NA) +
+  ggplot2::geom_sf(data = SWUS_bbox,
+                   fill = NA) +
+  ggplot2::geom_sf(data = dates,
+                   mapping = aes(shape = `Date Type`,
+                                 color = Date_BP),
+                   show.legend = "point") +
+  ggplot2::scale_shape(
+    name = 'Date Type',
+    solid = FALSE,
+    guide = ggplot2::guide_legend(position = "top",
+                                  direction = "horizontal",
+                                  title.position = "top",
+                                  label.position = "bottom")
+  ) +
+  viridis::scale_color_viridis(
+    name = 'Year BP',
+    limits = c(450,1450),
+    breaks = c(450,1450),
+    direction = -1,
+    guide = ggplot2::guide_colorbar(position = "top",
+                                    direction = "horizontal",
+                                    title.position = "top",
+                                    label.position = "bottom",
+                                    reverse = TRUE)) +
+  theme_map(16)
 
-<!-- ggsave('./swus_sample_map.pdf', -->
-<!--        height = 8, -->
-<!--        width = 6) -->
-<!-- ``` -->
+ggsave('./swus_sample_map.pdf',
+       height = 8,
+       width = 6)
+```
 
 <!-- The following line inserts a page break  -->
 \newpage
