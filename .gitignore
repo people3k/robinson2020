@@ -1,4 +1,4 @@
-/analysis/data/*
+/analysis/data/raw_data/*
 
 # Mac trash files
 .DS_Store
