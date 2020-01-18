@@ -26,3 +26,5 @@ Suggests: devtools,
 RoxygenNote: 7.0.2
 Depends: 
     magrittr
+URL: https://github.com/bocinsky/robinson2020
+BugReports: https://github.com/bocinsky/robinson2020/issues
