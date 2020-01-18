@@ -3,7 +3,7 @@
 
 # robinson2020
 
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh///master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bocinsky/robinson2020/master?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
@@ -43,7 +43,7 @@ remotes::install_github("bocinsky/robinson2020")
 **Text and figures :**
 [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
 
-**Code :** See the [DESCRIPTION](DESCRIPTION) file
+**Code :** See the [LICENSE](LICENSE.md) file
 
 **Data :** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/)
 attribution requested in reuse
