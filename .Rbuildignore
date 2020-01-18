@@ -5,3 +5,6 @@
 ^README-.*\.png$
 ^CONDUCT\.md$
 ^CONTRIBUTING\.md$
+analysis
+^data-raw$
+^Dockerfile$
