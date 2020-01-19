@@ -15,6 +15,7 @@ institute:
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
     bookdown::html_document2:
+      code_folding: hide
       fig_caption: yes
       pandoc_args:
       - --lua-filter=../templates/scholarly-metadata.lua
@@ -26,157 +27,116 @@ output:
       - --lua-filter=../templates/scholarly-metadata.lua
       - --lua-filter=../templates/author-info-blocks.lua
       - --lua-filter=../templates/pagebreak.lua
+header-includes:
+  - \usepackage{subfig}
 bibliography: references.bib
 csl: "../templates/philosophical-transactions-of-the-royal-society-b.csl" # Insert path for the bib-style
 editor_options: 
   chunk_output_type: console
 ---
 
-```{r setup, echo = FALSE}
+```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  collapse = TRUE,
-  warning = FALSE,
-  message = FALSE,
-  echo = FALSE,
-  comment = "#>",
-  fig.path = "../figures/",
-  dpi = 300
+	echo = TRUE,
+	fig.align = "center",
+	fig.path = "../figures/",
+	message = FALSE,
+	warning = FALSE,
+	collapse = TRUE,
+	comment = "#>",
+	dev = "png",
+	dpi = 300
 )
-
 library(robinson2020)
 ```
 
-# Summary of methods
-Here, we directly compare two large collections of radiocarbon and tree-ring dates drawn from the Upland US Southwest. 
+# Methods {-}
+Here, we directly compare two large collections of radiocarbon and tree-ring dates drawn from the Upland US Southwest (UUSW). After harmonizing those datasets to with one another and calibrating the radiocarbon dates, we calculate binned summed probability distributions across the UUSW and two regions intensly studied during the Village Ecodynamics Project (VEP) --- the Central Mesa Verde and the Northern Rio Grande [@Schwindt2016]. We compare the proxy records to eachother, and to population estimates primarily derived from architecture and ceramic data [@Ortman2014,@Schwindt2016]. The radiocarbon dates we analyze here are drawn from the [DARCY: DATABASE AND REFERENCE HERE], and are available [HERE]; The tree-ring data are those presented in @Bocinsky2016_SA and archived on the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B).
 
-After harmonizing those datasets to with one another and calibrating Radiocarbon dates are drawn from the [DARCY: DATABASE AND REFERENCE HERE], and are available [HERE]. Tree-ring data are those presented in @Bocinsky2016_SA and archived on the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B).
+## Study Area {-}
 
-# Study Area
+The UUSW was geographically defined by @Bocinsky2016_SA as the region between 105--113ºW and 32--38ºN. Here, we refine that definition in two ways. First, because location data for our radiocarbon database are only resolved to the county level for most sites, we define our study region to include all counties whose geographic centroids fall within the region from @Bocinsky2016_SA. Second, because of the generally poor tree-ring date record in the Sonoran Desert, we roughly exclude the Phoenix and Tucson basins by dropping Maricopa, Pinal, and Pima counties in Arizona. We also analyze subsets of both datasets for the Village Ecodynamic Project (VEP) study areas in the Central Mesa Verde (CMV) and Northern Rio Grande (NRG) regions [@Schwindt2016]. Figure \@ref(fig:study-area) shows the original UUSW from @Bocinsky2016_SA and revised study area used in this analysis, as well as the two VEP study areas.
 
-```{r}
-four_corners_lcc_proj <- "+proj=lcc +lat_1=37 +lon_0=-109.045225"
+```{r study-area, fig.height=6.5, fig.width=6.5, out.width = '50%', fig.cap="The UUSW as defined in this study (region with black border). The white dashed area represents the UUSW as defined in @Bocinsky2016_SA. VEP study areas are white boxes. CMV: Central Mesa Verde; NRG: Northern Rio Grande."}
+# A nice projection of the Four Corners states to use for mapping
+four_corners_lcc_proj <- 
+  robinson2020::four_corners_lcc_proj
 
-# Define the Bocinsky et al. 2016 study area
-UUSW <- robinson2020::uusw_boundary
+# The Four Corners states in four_corners_lcc_proj
+four_corners_states <- 
+  robinson2020::four_corners_states
 
-# VEP study areas
+# The UUSW as defined in Bocinsky et al. 2016
+uusw_boundary <- robinson2020::uusw_boundary
+
+# The UUSW study area for this analysis
+uusw_counties <- 
+  robinson2020::uusw_counties
+
+# The VEP study areas
 vep_study_areas <- 
-  list(CMV = robinson2020::vepii_cmv_boundary,
-       NRG = robinson2020::vepii_nrg_boundary) %>%
-  purrr::map(sf::st_transform,
-             crs = 4326) %>%
-  purrr::imap(~dplyr::mutate(.x,`Study Area` = .y)) %>%
-  do.call(rbind, .)
+  robinson2020::vep_study_areas
 
-UUSW_counties <- 
-  tigris::counties(cb = TRUE, 
-                   class = "sf",
-                   progress_bar = FALSE) %>% 
-  sf::st_transform(four_corners_lcc_proj) %>% 
-  dplyr::filter(sf::st_intersects(suppressWarnings(sf::st_centroid(.)),
-                                  UUSW %>% 
-                                    sf::st_transform(four_corners_lcc_proj), 
-                                  sparse = FALSE)) %>%
-  dplyr::select(NAME,STATEFP) %>%
-  dplyr::rename(County = NAME) %>%
-  dplyr::left_join(tigris::states(class = "sf",
-                                  progress_bar = FALSE) %>%
-                     dplyr::select(STATEFP,STUSPS) %>%
-                     dplyr::rename(State = STUSPS) %>%
-                     sf::st_drop_geometry(),
-                   by = "STATEFP") %>%
-  dplyr::select(-STATEFP) %>%
-  tidyr::unite(col = County, County, State, sep = ", ")
-
-```
-
-The UUSW was geographically definied by @Bocinsky2016_SA as the region between 105--113ºW and 32--38ºN. Here, we refine that definition in two ways. First, since location data for our radiocarbon database are only resolved to the county level, we define the study region to include all counties whose geographic centroids fall within the region from @Bocinsky2016_SA. Second, we roughly exclude the Phoenix and Tucson basins by excluding Maricopa, Pinal, and Pima counties in Arizona. Figure \@ref(fig:study-area) shows the original UUSW from @Bocinsky2016_SA, and the revised study area used in this analysis.
-
-```{r study-area}
 theme_map <- function(base_size = 6.5,
                       base_family = ""){
-  ggplot2::theme_bw(base_size = base_size,
-                    base_family = base_family) %+replace%
-    ggplot2::theme(axis.line = ggplot2::element_blank(),
-                   axis.text = ggplot2::element_blank(),
-                   axis.ticks = ggplot2::element_blank(),
-                   axis.title = ggplot2::element_blank(),
-                   panel.background = ggplot2::element_blank(),
-                   panel.border = ggplot2::element_blank(),
-                   panel.grid = ggplot2::element_blank(),
-                   panel.grid.major = ggplot2::element_line(colour = 'transparent'),
-                   panel.grid.minor = ggplot2::element_line(colour = 'transparent'),
-                   legend.key = ggplot2::element_blank(),
-                   legend.position = "top",
-                   # legend.justification = c(0,0),
-                   # legend.position = "top",
-                   # legend.position = c(0.5,1),
-                   # legend.background = ggplot2::element_blank(),
-                   # legend.key.width = unit(0.15,"in"),
-                   # legend.key.height = unit(0.15,"in"),
-                   # legend.text = element_text(size = ggplot2::rel(1)),
-                   plot.background = ggplot2::element_blank(),
-                   plot.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+  theme_bw(base_size = base_size,
+           base_family = base_family) %+replace%
+    theme(axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank(),
+          panel.background = element_blank(),
+          panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.grid.major = element_line(colour = 'transparent'),
+          panel.grid.minor = element_line(colour = 'transparent'),
+          legend.key = element_blank(),
+          legend.position = "top",
+          plot.background = element_blank(),
+          plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
     )
 }
 
-four_corners_states <- 
-  tigris::states(class = "sf",
-                 progress_bar = FALSE) %>%
-  dplyr::filter(NAME %in% c("Arizona", "Colorado", 
-                            "New Mexico", "Utah")) %>%
-  sf::st_transform(four_corners_lcc_proj)
-
-ggplot2::ggplot() +
-  ggplot2::geom_sf(data = four_corners_states) +
-  ggplot2::geom_raster(data = robinson2020::swus_hillshade_500m,
-                       mapping = ggplot2::aes(x = x,
-                                              y = y,
-                                              alpha = ID),
-                       na.rm = TRUE) +
-  ggplot2::scale_alpha(range = c(0.8, 0),
-                       na.value = 0,
-                       limits = c(0,255),
-                       guide = "none") +
-  ggplot2::geom_sf(data = four_corners_states,
-                   fill = NA) +
-  ggplot2::geom_sf(data = UUSW,
-                   fill = NA) +
-    ggplot2::geom_sf(data = UUSW_counties,
-                   fill = NA) +
-  # ggplot2::geom_sf(data = dates,
-  #                  mapping = aes(shape = `Date Type`,
-  #                                color = Date_BP),
-  #                  show.legend = "point") +
-  # ggplot2::scale_shape(
-  #   name = 'Date Type',
-  #   solid = FALSE,
-  #   guide = ggplot2::guide_legend(position = "top",
-  #                                 direction = "horizontal",
-  #                                 title.position = "top",
-  #                                 label.position = "bottom")
-  # ) +
-  # viridis::scale_color_viridis(
-  #   name = 'Year BP',
-  #   limits = c(450,1450),
-  #   breaks = c(450,1450),
-  #   direction = -1,
-  #   guide = ggplot2::guide_colorbar(position = "top",
-  #                                   direction = "horizontal",
-  #                                   title.position = "top",
-  #                                   label.position = "bottom",
-  #                                   reverse = TRUE)) +
+ggplot() +
+  geom_sf(data = four_corners_states) +
+  geom_raster(data = robinson2020::swus_hillshade_500m,
+              mapping = aes(x = x,
+                            y = y,
+                            alpha = ID),
+              na.rm = TRUE) +
+  scale_alpha(range = c(0.8, 0),
+              na.value = 0,
+              limits = c(0,255),
+              guide = "none") +
+  geom_sf(data = four_corners_states,
+          fill = NA) +
+  geom_sf(data = uusw_counties %>% 
+            sf::st_union() %>%
+            rmapshaper::ms_filter_islands(),
+          fill = NA,
+          color = "black") +
+  geom_sf(data = uusw_boundary,
+          fill = NA,
+          linetype = 2,
+          color = "white") +
+  geom_sf(data = vep_study_areas,
+          fill = NA,
+          color = "white",
+          size = 1) +
+  geom_sf_text(data = vep_study_areas,
+               aes(label = `Study Area`),
+               size = 3) +
   theme_map(16)
 
 ```
 
-# Datasets
+## Datasets {-}
 
-# Preparing the radiocarbon data
+The radiocarbon data presented here are derived from the [RADIOCARBON DATA DETAILS HERE]. Data from Arizona, Colorado, and New Mexico in the [DATABASE] are spatially resolved to only the county level; we therefor translated the Utah dates to their counties as well, and then spatially cropped the data to our study area.
 
-```{r}
+```{r prepare-radiocarbon-data}
 # # Read in the radiocarbon database
-# radiocarbon_data <-
+# # radiocarbon_data <-
 #   readr::read_csv(here::here("analysis/data/raw_data/0403_sbox_clean.csv")) %>%
 #   # Convert to spatial object
 #   sf::st_as_sf(coords = c("Long","Lat"),
@@ -192,10 +152,17 @@ ggplot2::ggplot() +
 #                 Date_BP = date,
 #                 SD = sd,
 #                 Site_Number = Site) %>%
-#   sf::st_intersection(UUSW_counties) %>%
+#   sf::st_intersection(uusw_counties) %>%
 #   sf::st_drop_geometry() %>%
 #   dplyr::mutate(Type = "Radiocarbon",
-#                 SiteID = SiteID %>% stringr::str_c("Radiocarbon - ", .)) %T>%
+#                 SiteID = SiteID %>% stringr::str_c("Radiocarbon - ", .)) %>%
+#   dplyr::select(Type,
+#                 SiteID,
+#                 Site_Number,
+#                 County,
+#                 Lab_Number,
+#                 Date_BP,
+#                 SD) %T>%
 #   # Write the output to a new file (csv)
 #   readr::write_csv(here::here("analysis/data/derived_data/radiocarbon_data.csv"))
 
@@ -204,8 +171,9 @@ radiocarbon_data <-
 
 ```
 
-These data contain sensitive location information about cultural sites, and are restricted on tDAR. Accordingly, we pre-processed the data using the script below, and provide data as supplemental information without location information represented.
-```{r}
+We draw on the tree-ring date database presented in @Bocinsky2016_SA and archived in the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B). The tree-ring data we use here were compiled by Tim Kohler and Rebecca Higgins from many contributers, and the vast majority of dates were determined by researchers in the Laboratory of Tree Ring Research at the University of Arizona. The original dataset contained 32,863 cutting, near-cutting, and non-cutting dates from across the US Southwest. Here, we only use the dates that are most likely to be accurate --- cutting dates ('B', 'G', 'L', 'c', or 'r' dates, with or without a '+') for which we know the year the tree died, and near-cutting dates ('v' or 'v+' dates) which are likely within 0--3 years of the true date of the outermost ring. The @Bocinsky2016_SA data contain site locations; for this analysis, we first spatially cropped the database to our study area, and then translated those locations to the county level. We converted the original date determinations to BP to match radiocarbon conventions.
+
+```{r prepare-treering-data}
 # # Read in the Bocinsky et al. 2016 tree ring data
 # # https://doi.org/10.6067/XCV82J6D7B
 # dendro_data <-
@@ -226,13 +194,20 @@ These data contain sensitive location information about cultural sites, and are 
 #                 Type,
 #                 Date_BP) %>%
 #   dplyr::rename(SiteID = Seq_Number) %>%
-#   sf::st_intersection(UUSW_counties) %>%
+#   sf::st_intersection(uusw_counties) %>%
 #   sf::st_drop_geometry() %>%
 #   dplyr::mutate(Type = Type %>% stringr::str_c("Dendro - ", .),
 #                 SiteID = SiteID %>% stringr::str_c("Dendro - ", .),
 #                 SD = 0) %>%
 #   dplyr::filter(Type == "Dendro - Cutting or Near-cutting") %>%
-#   dplyr::mutate(Type = "Tree-ring") %T>%
+#   dplyr::mutate(Type = "Tree-ring")  %>%
+#   dplyr::select(Type,
+#                 SiteID,
+#                 Site_Number,
+#                 County,
+#                 Lab_Number,
+#                 Date_BP,
+#                 SD) %T>%
 #   # Write the output to a new file (csv)
 #   readr::write_csv(here::here("analysis/data/derived_data/dendro_data.csv"))
 
@@ -241,10 +216,8 @@ dendro_data <-
 
 ```
 
-We draw on the tree-ring date database presented in @Bocinsky2016_SA and archived on the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B). Here, we use only the subset of those data 
+Archaeological site locations are protected by US federal and state statutes. In order to protect these sensitive data, we pre-processed the both the radiocarbon and tree-ring data; data included in this compendium do not include site locations, and researchers will need to gain permission from the State Historic Preservation Office (SHPO) of each state in order to access the site location data.
 
-
-# Combining datasets
 ```{r}
 all_data <- list(Radiocarbon = radiocarbon_data,
                  `Tree-ring` = dendro_data) %>%
@@ -252,24 +225,197 @@ all_data <- list(Radiocarbon = radiocarbon_data,
                             `Study Area` = ifelse(County == "Montezuma, CO",
                                                   "CMV", 
                                                   NA),
-                            `Study Area` = ifelse(County %in% c("Rio Arriba, NM",
+                            `Study Area` = ifelse(County %in% c("Los Alamos, NM",
+                                                                "Rio Arriba, NM",
                                                                 "Sandoval, NM",
                                                                 "Santa Fe, NM",
                                                                 "Taos, NM"),
                                                   "NRG", 
                                                   `Study Area`)))
 
+```
+
+Finally, due to much of the radiocarbon data only being resolved to the county level, we had to approximate inclusion in the VEP CMV and NRG study areas. The CMV study area conforms well to Montezuma county, Colorado; the NRG overlaps with Los Alamos, Rio Arriba, Sandoval, Santa Fe, and Taos counties in New Mexico. Our final dataset includes `r nrow(all_data$Radiocarbon) %>% format(big.mark = ',')` radiocarbon dates from `r max(all_data$Radiocarbon$Date_BP)`--`r min(all_data$Radiocarbon$Date_BP)` BP (uncalibrated; `r -1 * (1950 - max(all_data$Radiocarbon$Date_BP)) - 1` BC--`r 1950 - min(all_data$Radiocarbon$Date_BP)` AD) and `r nrow(all_data[['Tree-ring']]) %>% format(big.mark = ',')` tree-ring dates from `r max(all_data[['Tree-ring']]$Date_BP)` -- `r min(all_data[['Tree-ring']]$Date_BP)` BP (`r 1950 - max(all_data[['Tree-ring']]$Date_BP)`--`r 1950 - min(all_data[['Tree-ring']]$Date_BP)` AD). Table \@ref(tab:data-summary) presents the counts of each date type in the CMV and NRG study areas.
+
+```{r data-summary}
 all_data %>%
   dplyr::bind_rows() %>%
+  dplyr::bind_rows(all_data %>%
+                     dplyr::bind_rows() %>%
+                     dplyr::mutate(`Study Area` = "UUSW Total")) %>%
+  dplyr::filter(!is.na(`Study Area`)) %>%
+  dplyr::mutate(`Study Area` = factor(`Study Area`, levels = c("UUSW Total","CMV","NRG"))) %>%
   dplyr::group_by(Type,`Study Area`) %>%
   dplyr::summarise(Count = dplyr::n()) %>%
-  tidyr::spread(Type, Count)
+  tidyr::spread(Type, Count) %>%
+  knitr::kable(caption = "Counts of radiocarbon and tree-ring dates in this study.",
+               booktabs = TRUE,
+               format.args = list(big.mark = ','))
+```
+
+Date densities across the study area were very uneven, with high counts of radiocarbon dates deriving from Navajo County, Arizona, and almost a third of the tree-ring dates in our study being from Montezuma County, Colorado. Below, we attempt to overcome some of these sampling issues by binning dates by site and occupation phase. Still, these disparities likely demonstrate more fundemental differences in research design across archaeological projects. Figure \@ref(fig:date-densities) presents the number of radiocarbon and tree-ring dates by county within our study area. Figure \@ref(fig:site-densities) presents the number of unique sites with radiocarbon and tree-ring dates by county within our study area.
+
+```{r date-densities, fig.height=9, fig.width=6.5, fig.cap='The number of radiocarbon and tree-ring dates by county in this study.', fig.show = 'hold', out.width = '50%'}
+county_counts <-
+  all_data %>%
+  dplyr::bind_rows() %>%
+  dplyr::group_by(Type, County) %>%
+  dplyr::summarise(Dates = dplyr::n()) %>%
+  dplyr::left_join(uusw_counties,
+                   by = "County") %>%
+  sf::st_as_sf()
+
+theme_map <- function(base_size = 6.5,
+                      base_family = ""){
+  theme_bw(base_size = base_size,
+           base_family = base_family) %+replace%
+    theme(axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank(),
+          panel.background = element_blank(),
+          panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.grid.major = element_line(colour = 'transparent'),
+          panel.grid.minor = element_line(colour = 'transparent'),
+          legend.key = element_blank(),
+          legend.position = "bottom",
+          legend.background = element_blank(),
+          legend.key.width = unit(0.15,"npc"),
+          legend.text = element_text(size = rel(1)),
+          plot.background = element_blank(),
+          plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+county_counts %>%
+  dplyr::filter(Type == "Radiocarbon") %>%
+  ggplot() +
+  geom_sf(data = four_corners_states,
+          fill = NA) +
+  geom_sf(aes(fill = Dates),
+          color = "black") +
+  scale_fill_distiller(name = "Number of Radiocarbon Dates",
+                       palette = "Greys",
+                       direction = 1,
+                       limits = c(0,500),
+                       minor_breaks = seq(50,450,100),
+                       breaks = seq(0,500,100),
+                       expand = expand_scale(mult = 0, add = 0),
+                       guide = guide_colorbar(title.position = "top")) +
+  geom_sf(data = uusw_counties,
+          fill = NA,
+          color = "black") +
+  theme_map(16)
+
+county_counts %>%
+  dplyr::filter(Type == "Tree-ring") %>%
+  ggplot() +
+  geom_sf(data = four_corners_states,
+          fill = NA) +
+  geom_sf(aes(fill = Dates),
+          color = "black") +
+  scale_fill_distiller(name = "Number of Tree-ring Dates",
+                       palette = "Greys",
+                       direction = 1,
+                       limits = c(0,5000),
+                       minor_breaks = seq(500,4500,1000),
+                       breaks = seq(0,5000,1000),
+                       expand = expand_scale(mult = 0, add = 0),
+                       guide = guide_colorbar(title.position = "top")) +
+  geom_sf(data = uusw_counties,
+          fill = NA,
+          color = "black") +
+  theme_map(16)
 
 ```
 
-# Preparing the radiocarbon SPDs
+```{r site-densities, fig.height=9, fig.width=6.5, fig.cap='The number of sites with radiocarbon and tree-ring dates by county in this study.', fig.show = 'hold', out.width = '50%'}
+county_counts <-
+  all_data %>%
+  dplyr::bind_rows() %>%
+  dplyr::select(Type, SiteID, County) %>%
+  dplyr::distinct() %>%
+  dplyr::group_by(Type, County) %>%
+  dplyr::summarise(Dates = dplyr::n()) %>%
+  dplyr::left_join(uusw_counties,
+                   by = "County") %>%
+  sf::st_as_sf()
 
-```{r}
+theme_map <- function(base_size = 6.5,
+                      base_family = ""){
+  theme_bw(base_size = base_size,
+           base_family = base_family) %+replace%
+    theme(axis.line = element_blank(),
+          axis.text = element_blank(),
+          axis.ticks = element_blank(),
+          axis.title = element_blank(),
+          panel.background = element_blank(),
+          panel.border = element_blank(),
+          panel.grid = element_blank(),
+          panel.grid.major = element_line(colour = 'transparent'),
+          panel.grid.minor = element_line(colour = 'transparent'),
+          legend.key = element_blank(),
+          # legend.position = "top",
+          # legend.justification = c(0,0),
+          legend.position = "bottom",
+          # legend.position = c(0.5,1),
+          legend.background = element_blank(),
+          legend.key.width = unit(0.15,"npc"),
+          # legend.key.height = unit(0.15,"in"),
+          legend.text = element_text(size = rel(1)),
+          plot.background = element_blank(),
+          plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+county_counts %>%
+  dplyr::filter(Type == "Radiocarbon") %>%
+  ggplot() +
+  geom_sf(data = four_corners_states,
+          fill = NA) +
+  geom_sf(aes(fill = Dates),
+          color = "black") +
+  scale_fill_distiller(name = "Number of Sites with Radiocarbon Dates",
+                       palette = "Greys",
+                       direction = 1,
+                       limits = c(0,80),
+                       minor_breaks = seq(10,70,20),
+                       breaks = seq(0,80,20),
+                       expand = expand_scale(mult = 0, add = 0),
+                       guide = guide_colorbar(title.position = "top")) +
+  geom_sf(data = uusw_counties,
+          fill = NA,
+          color = "black") +
+  theme_map(16)
+
+county_counts %>%
+  dplyr::filter(Type == "Tree-ring") %>%
+  ggplot() +
+  geom_sf(data = four_corners_states,
+          fill = NA) +
+  geom_sf(aes(fill = Dates),
+          color = "black") +
+  scale_fill_distiller(name = "Number of Sites with Tree-ring Dates",
+                       palette = "Greys",
+                       direction = 1,
+                       limits = c(0,250),
+                       minor_breaks = seq(25,225,50),
+                       breaks = seq(0,250,50),
+                       expand = expand_scale(mult = 0, add = 0),
+                       guide = guide_colorbar(title.position = "top")) +
+  geom_sf(data = uusw_counties,
+          fill = NA,
+          color = "black") +
+  theme_map(16)
+
+```
+
+## Preparing the SPDs {-}
+
+To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `rcarbon::binprep` function with an `h`-value of 100. This effectively clusters dates from the same site that are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions between 1949--0 BP (1--1950 AD). We smoothed the SPD using a 21-year moving average, and normalised the total probability mass of the smoothed SPD to sum to unity.
+
+```{r radiocarbon-spds}
 if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
   all_data$Radiocarbon %>%
   split(.,.$`Study Area`) %>%
@@ -282,13 +428,14 @@ if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
                                     rcarbon::calibrate(x = Date_BP,
                                                        errors = SD,
                                                        calMatrix = TRUE,
-                                                       normalised = TRUE,
                                                        verbose = FALSE)),
                 Bins = list(rcarbon::binPrep(sites = Dates$SiteID,
                                              ages = Calibrated,
                                              h = 100)),
                 SPD = list(rcarbon::spd(x = Calibrated,
                                         bins = Bins,
+                                        datenormalised = TRUE,
+                                        spdnormalised = TRUE,
                                         timeRange = c(1949,0),
                                         runm = 21,
                                         verbose = FALSE))) %>%
@@ -309,12 +456,9 @@ radiocarbon_spd <- readr::read_rds(here::here("analysis/data/derived_data/radioc
 
 ```
 
-To prepare the radiocarbon dataset, we used functions provided by the *rcarbon* package for R [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008 and implemented in @rcarbon. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated radiocarbon dates known to be from the same phase of same archaeological site using the `rcarbon::binprep` function with an `h`-value of 100. We averaged probability densities of binned dates, and then constructed summed probability density (SPD) distributions across bins.
+We treated the tree-ring dates much in the same way as the radiocarbon dates. We modeled faux-calibrated tree-ring date probabilities as discrete degenerate distributions ($\Pr(X=k_0)=1$) with $k_0$ equal to the tree-ring date --- in other words, a probability of $1$ at the date value, and $0$ elsewhere. Thinking of tree ring dates this way allows us to use the same binning and SPD algorithms as for radiocarbon dates.^[One might consider alternative probability distributions for non-cutting or near-cutting dates. The probability mass function in such a case would be zero for years prior to the date of the outer ring of the sample, and non-zero for subsequent years, presumably decaying quickly. For instance, we could imagine a study that derives empirical probability distributions for non-cutting dates based on cutting-dates from the same contexts.] Here, we did just that, binning the dates into site-phases using the `rcarbon::binprep` function, and constructing SPDs using `rcarbon::spd`, both with the same parameter selections as used for the radiocarbon samples. As above, we smoothed normalised the SPD.
 
-
-# 'Calibrating' tree-ring dates, and preparing tree-ring SPDs
-
-```{r}
+```{r treering-spds}
 calibrate_tree_ring_dates <- function(x){
   out <- list(
     metadata = tibble::tibble(
@@ -368,6 +512,8 @@ if(!file.exists(here::here("analysis/data/derived_data/dendro_spd.rds")))
                                              h = 100)),
                 SPD = list(rcarbon::spd(x = Calibrated,
                                         bins = Bins,
+                                        datenormalised = TRUE,
+                                        spdnormalised = TRUE,
                                         timeRange = c(1949,0),
                                         runm = 21,
                                         verbose = FALSE))) %>%
@@ -389,9 +535,9 @@ dendro_spd <- readr::read_rds(here::here("analysis/data/derived_data/dendro_spd.
 
 ```
 
-## Comparing radiocarbon and tree-ring SPDs
+## Comparing radiocarbon and tree-ring SPDs {-}
 
-```{r}
+```{r c14-tr-pop, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon and tree-ring density distributions in the UUSW, CMV, and NRG regions, and VEP population estimates for the CMV and NRG. Y-axis labels are omitted for simplicity; the maximum population in the lower panel is ~30,000 people, and the minimum is 0. Dates are given in AD.', fig.show = 'hold', out.width = '75%'}
 all_density <- 
   dendro_spd %>%
   dplyr::select(`Study Area`,Density) %>%
@@ -406,9 +552,7 @@ all_density <-
                 Type, 
                 Density) %>%
   dplyr::rename(Value = Density)
-```
 
-```{r}
 vep_demography <- 
   robinson2020::vep_demography %>%
   dplyr::rowwise() %>%
@@ -418,181 +562,60 @@ vep_demography <-
   dplyr::mutate(Type = "Population",
                 Date_BP = 1950 - `Year AD`) %>%
   dplyr::rename(Value = Population)
-```
 
-```{r c14_tr_pop}
 all_density %>%
   dplyr::bind_rows(vep_demography) %>%
   dplyr::mutate(Type = factor(Type, 
                               levels = c("Radiocarbon Density",
                                          "Tree-ring Density",
                                          "Population"),
-                              ordered = TRUE)#,
-                # `Study Area` = ifelse(`Study Area` == "CMV", "Central Mesa Verde", "Northern Rio Grande")
+                              ordered = TRUE),
+                `Study Area` = factor(`Study Area`,
+                                      levels = c( `Upland US Southwest` = "UUSW",
+                                                  `Central Mesa Verde` = "CMV",
+                                                 `Northern Rio Grande` = "NRG"))
   ) %>%
-  ggplot2::ggplot(ggplot2::aes(x = `Year AD`)) +
-  ggplot2::geom_line(ggplot2::aes(y = Value,
-                                  color = `Study Area`),
-                     size = 1.25) +
+  ggplot(aes(x = `Year AD`)) +
+  geom_line(aes(y = Value,
+                color = `Study Area`,
+                size = `Study Area`)) +
+  scale_color_manual(values = c("UUSW" = "black",
+                                "CMV" = "gray50",
+                                "NRG" = "gray80")) +
+  scale_size_manual(values = c("UUSW" = 1.25,
+                               "CMV" = 0.75,
+                               "NRG" = 0.75)) +
   # coord_cartesian(xlim = c(600,1600)) +
-  ggplot2::xlab("Year AD") +
-  ggplot2::theme_minimal(24) +
-  ggplot2::theme(legend.title = ggplot2::element_blank(),
-                 legend.justification = c(0, 1), 
-                 legend.position = "bottom",
-                 axis.title.y = ggplot2::element_blank(),
-                 axis.text.y = ggplot2::element_blank(),
-                 panel.grid.major.y = ggplot2::element_blank(),
-                 panel.grid.minor.y = ggplot2::element_blank(),
-                 plot.margin = ggplot2::unit(c(0.25,0.5,0.25,0.25),"in")
+  xlab("Year AD") +
+  scale_x_continuous(breaks = c(1,seq(200,2000,200))) + 
+  theme_minimal(18) +
+  theme(legend.title = element_blank(),
+        legend.justification = c(0, 1), 
+        legend.position = "bottom",
+        axis.title.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
+        axis.title.y = element_blank(),
+        axis.text.y = element_blank(),
+        panel.grid.major.y = element_blank(),
+        panel.grid.minor.y = element_blank(),
+        plot.margin = unit(c(0.25,0.5,0.25,0.25),"in")
   ) +
-  ggplot2::facet_wrap("Type", 
-                      nrow = 3,
-                      scales = "free_y")
+  facet_wrap("Type", 
+             nrow = 3,
+             scales = "free_y")
 
-```
-
-
-
-
-
-
-
-
-```{r}
-four_corners_lcc_proj <- "+proj=lcc +lat_1=37 +lon_0=-109.045225"
-
-# Define the Bocinsky et al. 2016 study area
-SWUS_bbox <- sf::st_bbox(c(xmin = -113,
-                           xmax = -105,
-                           ymin = 32,
-                           ymax = 38),
-                         crs = 4326) %>%
-  sf::st_as_sfc() %>%
-  sf::st_set_crs(NA) %>%
-  sf::st_segmentize(dfMaxLength = 0.01) %>%
-  sf::st_set_crs(4326) %>%
-  sf::st_transform(four_corners_lcc_proj)
-
-four_corners_states <- "./data-raw/statesp010g/statesp010g.gdb/" %>%
-  sf::st_read() %>%
-  dplyr::filter(NAME %in%
-                  c("Arizona",
-                    "Colorado",
-                    "New Mexico",
-                    "Utah")) %>%
-  sf::st_transform(four_corners_lcc_proj)
-
-swus_hillshade_500m <- readr::read_rds("./data-derived/swus_hillshade_500m.rds") %>%
-  raster::crop(four_corners_states) %>%
-  raster::mask(four_corners_states)
-
-dendro_data <- sf::read_sf("./data-derived/dendro_data.geojson") %>%
-  sf::st_transform(four_corners_lcc_proj) %>%
-  dplyr::filter(Date_BP >= 550,
-                Date_BP <= 1450) %>%
-  dplyr::group_by(Site_Number) %>%
-  dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T),
-                   geometry = mean(geometry)) %>%
-  dplyr::mutate(`Date Type` = "Dendro") %>%
-  dplyr::select(-Site_Number) %>%
-  sf::st_centroid()
-
-radiocarbon_data <- sf::read_sf("./data-derived/radiocarbon_data.geojson") %>%
-  sf::st_transform(four_corners_lcc_proj) %>%
-  dplyr::filter(Date_BP >= 550,
-                Date_BP <= 1450) %>%
-  dplyr::group_by(Site_Number) %>%
-  dplyr::summarise(Date_BP = mean(Date_BP, na.rm = T)) %>%
-  sf::st_jitter(20000) %>%
-  dplyr::mutate(`Date Type` = "C14") %>%
-  dplyr::select(-Site_Number) %>%
-  sf::st_centroid()
-
-dates <- rbind(dendro_data,
-               radiocarbon_data)
-
-theme_map <- function(base_size = 6.5,
-                      base_family = ""){
-  ggplot2::theme_bw(base_size = base_size,
-                    base_family = base_family) %+replace%
-    ggplot2::theme(axis.line = ggplot2::element_blank(),
-                   axis.text = ggplot2::element_blank(),
-                   axis.ticks = ggplot2::element_blank(),
-                   axis.title = ggplot2::element_blank(),
-                   panel.background = ggplot2::element_blank(),
-                   panel.border = ggplot2::element_blank(),
-                   panel.grid = ggplot2::element_blank(),
-                   panel.grid.major = ggplot2::element_line(colour = 'transparent'),
-                   panel.grid.minor = ggplot2::element_line(colour = 'transparent'),
-                   legend.key = element_blank(),
-                   legend.position = "top",
-                   # legend.justification = c(0,0),
-                   # legend.position = "top",
-                   # legend.position = c(0.5,1),
-                   # legend.background = ggplot2::element_blank(),
-                   # legend.key.width = unit(0.15,"in"),
-                   # legend.key.height = unit(0.15,"in"),
-                   # legend.text = element_text(size = ggplot2::rel(1)),
-                   plot.background = ggplot2::element_blank(),
-                   plot.margin = ggplot2::margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
-    )
-}
-
-ggplot() +
-  ggplot2::geom_sf(data = four_corners_states) +
-  ggplot2::geom_raster(data = Robinson2020::swus_hillshade_500m,
-                       mapping = ggplot2::aes(x = x,
-                                              y = y,
-                                              alpha = ID),
-                       na.rm = TRUE) +
-  ggplot2::scale_alpha(range = c(0.8, 0),
-                       na.value = 0,
-                       limits = c(0,255),
-                       guide = "none") +
-  ggplot2::geom_sf(data = four_corners_states,
-                   fill = NA) +
-  ggplot2::geom_sf(data = SWUS_bbox,
-                   fill = NA) +
-  ggplot2::geom_sf(data = dates,
-                   mapping = aes(shape = `Date Type`,
-                                 color = Date_BP),
-                   show.legend = "point") +
-  ggplot2::scale_shape(
-    name = 'Date Type',
-    solid = FALSE,
-    guide = ggplot2::guide_legend(position = "top",
-                                  direction = "horizontal",
-                                  title.position = "top",
-                                  label.position = "bottom")
-  ) +
-  viridis::scale_color_viridis(
-    name = 'Year BP',
-    limits = c(450,1450),
-    breaks = c(450,1450),
-    direction = -1,
-    guide = ggplot2::guide_colorbar(position = "top",
-                                    direction = "horizontal",
-                                    title.position = "top",
-                                    label.position = "bottom",
-                                    reverse = TRUE)) +
-  theme_map(16)
-
-ggsave('./swus_sample_map.pdf',
-       height = 8,
-       width = 6)
 ```
 
 <!-- The following line inserts a page break  -->
 \newpage
 
-# References 
+## References {-}
 <!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
 <div id="refs"></div>
 
 \newpage
 
-### Colophon
+## Colophon {-}
 
 This report is part of a research compendium developed using the `rrtools` package for reproducible research [@Marwick2017, @rrtools]. This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
 

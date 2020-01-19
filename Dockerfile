@@ -1,10 +1,27 @@
-# get the base image, the rocker/verse has R, RStudio and pandoc
-FROM rocker/binder
+## Use a tag instead of "latest" for reproducibility
+FROM rocker/binder:latest
 
 # required
 MAINTAINER Kyle Bocinsky <bocinsky@gmail.com>
 
+## Declares build arguments
+ARG NB_USER
+ARG NB_UID
+
+## Copies your repo files into the Docker Container
+USER root
 COPY . /<REPO>
+## COPY . ${HOME}
+## Enable this to copy files from the binder subdirectory
+## to the home, overriding any existing files.
+## Useful to create a setup on binder that is different from a
+## clone of your repository
+## COPY binder ${HOME}
+## RUN chown -R ${NB_USER} ${HOME}
+RUN chown -R ${NB_USER} /<REPO>
+
+## Become normal user again
+USER ${NB_USER}
 
 # go into the repo directory
 RUN . /etc/environment \
