@@ -4,5 +4,16 @@ USER root
 COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
 USER ${NB_USER}
-RUN wget https://github.com/bocinsky/robinson2020/raw/master/DESCRIPTION \
-  && R -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2020-01-19/')); devtools::install_deps(dependencies = c('Depends', 'Imports'))"
+
+COPY . /robinson2020
+
+# go into the repo directory
+RUN . /etc/environment \
+
+  # build this compendium package
+  && R -e "options(repos = list(CRAN = 'http://mran.revolutionanalytics.com/snapshot/2020-01-19/')); devtools::install('${HOME}', dependencies = c('Depends', 'Imports'))" \
+
+ # render the manuscript into a docx, you'll need to edit this if you've
+ # customised the location and name of your main Rmd file
+  && R -e "rmarkdown::render('/robinson2020/analysis/paper/paper.Rmd')"
+
