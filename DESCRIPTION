@@ -23,11 +23,16 @@ Imports:
     readr,
     rmapshaper,
     purrr
-Suggests: devtools,
-    git2r
+Suggests: 
+    devtools,
+    git2r,
+    styler,
+    precommit (>= 0.0.0.9017)
 RoxygenNote: 7.0.2
 Depends: 
     magrittr,
     ggplot2
 URL: https://github.com/bocinsky/robinson2020
 BugReports: https://github.com/bocinsky/robinson2020/issues
+Remotes:  
+    lorenzwalthert/precommit

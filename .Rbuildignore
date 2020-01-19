@@ -9,3 +9,4 @@ analysis
 ^data-raw$
 ^Dockerfile$
 ^\.travis\.yml$
+^\.pre-commit-config\.yaml$
