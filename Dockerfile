@@ -10,7 +10,7 @@ COPY . /robinson2020
 RUN . /etc/environment \
 
   # build this compendium package
-  && R -e "devtools::install('/robinson2020', dep=TRUE)" \
+  && R -e "devtools::install('/robinson2020', dependencies = c('Depends', 'Imports'))" \
 
  # render the manuscript into a docx, you'll need to edit this if you've
  # customised the location and name of your main Rmd file
