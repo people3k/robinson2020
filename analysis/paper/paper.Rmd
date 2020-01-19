@@ -408,6 +408,9 @@ county_counts %>%
 To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `rcarbon::binprep` function with an `h`-value of 100. This effectively clusters dates from the same site that are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions between 1949--0 BP (1--1950 AD). We smoothed the SPD using a 21-year moving average, and normalised the total probability mass of the smoothed SPD to sum to unity.
 
 ```{r radiocarbon-spds}
+# Set the time range for the reconstructions
+timerange <- c(1949,0)
+
 if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
   all_data$Radiocarbon %>%
   split(.,.$`Study Area`) %>%
@@ -419,6 +422,7 @@ if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
   dplyr::mutate(Calibrated = list(Dates %$%
                                     rcarbon::calibrate(x = Date_BP,
                                                        errors = SD,
+                                                       timerange = timerange,
                                                        calMatrix = TRUE,
                                                        verbose = FALSE)),
                 Bins = list(rcarbon::binPrep(sites = Dates$SiteID,
@@ -461,7 +465,7 @@ calibrate_tree_ring_dates <- function(x){
       CalCurve = "intcal13",
       ResOffsets = 0,
       ResErrors = 0,
-      StartBP = 50000,
+      StartBP = timerange[1],
       EndBP = 0,
       Normalised = TRUE,
       F14C = FALSE,
@@ -474,7 +478,7 @@ calibrate_tree_ring_dates <- function(x){
                      value = TRUE) %>%
       tidyr::pivot_wider(names_from = index,
                          values_from = value) %>%
-      dplyr::bind_rows(tibble::tibble(year_bp = 50000:0)) %>%
+      dplyr::bind_rows(tibble::tibble(year_bp = timerange[1]:timerange[2])) %>%
       dplyr::filter(!duplicated(year_bp)) %>%
       dplyr::arrange(-year_bp) %>%
       dplyr::filter(year_bp >= 0) %>%
@@ -506,7 +510,7 @@ if(!file.exists(here::here("analysis/data/derived_data/dendro_spd.rds")))
                                         bins = Bins,
                                         datenormalised = TRUE,
                                         spdnormalised = TRUE,
-                                        timeRange = c(1949,0),
+                                        timeRange = timerange,
                                         runm = 21,
                                         verbose = FALSE))) %>%
   
