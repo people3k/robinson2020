@@ -3,6 +3,8 @@
 
 # robinson2020
 
+[![Travis-CI Build
+Status](https://travis-ci.org/bocinsky/robinson2020.svg?branch=master)](https://travis-ci.org/bocinsky/robinson2020)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bocinsky/robinson2020/master?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
