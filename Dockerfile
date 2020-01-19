@@ -5,8 +5,8 @@ FROM rocker/geospatial:3.6.2
 MAINTAINER Kyle Bocinsky <bocinsky@gmail.com>
 
 ## Declares build arguments
-##ARG NB_USER
-##ARG NB_UID
+ARG NB_USER
+ARG NB_UID
 
 ## Copies your repo files into the Docker Container
 USER root
@@ -17,11 +17,11 @@ COPY . ${HOME}
 ## Useful to create a setup on binder that is different from a
 ## clone of your repository
 ## COPY binder ${HOME}
-##RUN chown -R ${NB_USER} ${HOME}
+RUN chown -R ${NB_USER} ${HOME}
 ##RUN chown -R ${NB_USER} /<REPO>
 
 ## Become normal user again
-##USER ${NB_USER}
+USER ${NB_USER}
 
 # go into the repo directory
 RUN . /etc/environment \
