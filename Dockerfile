@@ -10,8 +10,8 @@ MAINTAINER Kyle Bocinsky <bocinsky@gmail.com>
 
 ## Copies your repo files into the Docker Container
 USER root
-COPY . /<REPO>
-##COPY . ${HOME}
+##COPY . /<REPO>
+COPY . ${HOME}
 ## Enable this to copy files from the binder subdirectory
 ## to the home, overriding any existing files.
 ## Useful to create a setup on binder that is different from a
