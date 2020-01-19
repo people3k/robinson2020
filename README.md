@@ -64,7 +64,7 @@ produce the `paper.docx`.
 **Text and figures :**
 [CC-BY-4.0](http://creativecommons.org/licenses/by/4.0/)
 
-**Code :** See the [LICENSE](LICENSE.md) file
+**Code :** [GNU GPLv3](LICENSE.md)
 
 **Data :** [CC-0](http://creativecommons.org/publicdomain/zero/1.0/)
 attribution requested in reuse
@@ -78,5 +78,6 @@ participating in this project you agree to abide by its terms.
 
 ### Acknowledgements
 
-This compendium was created using the `rrtools` package by Ben Marwick:
-[]()
+This compendium was created using the [`rrtools` package by Ben
+Marwick](https://github.com/benmarwick/rrtools), which is ✨pure magic
+✨for doing reproducible research.

@@ -557,8 +557,10 @@ vep_demography <-
   robinson2020::vep_demography %>%
   dplyr::rowwise() %>%
   dplyr::mutate(`Year AD` = list((Start+1):End)) %>%
-  dplyr::select(`Study Area`,`Year AD`,Population) %>%
-  tidyr::unnest(cols = c(`Year AD`)) %>%
+  dplyr::select(`Study Area`,
+                `Year AD`,
+                Population) %>%
+  tidyr::unnest(cols = c("Year AD")) %>%
   dplyr::mutate(Type = "Population",
                 Date_BP = 1950 - `Year AD`) %>%
   dplyr::rename(Value = Population)

@@ -23,7 +23,7 @@ Imports:
     readr,
     rmapshaper,
     purrr,
-    Cairo
+    magick
 Suggests: devtools,
     git2r
 RoxygenNote: 7.0.2
