@@ -21,6 +21,14 @@ output:
       - --lua-filter=../templates/scholarly-metadata.lua
       - --lua-filter=../templates/author-info-blocks.lua
       - --lua-filter=../templates/pagebreak.lua
+    bookdown::word_document2:
+      reference_docx: "../templates/template.docx"
+      code_folding: hide
+      fig_caption: yes
+      pandoc_args:
+      - --lua-filter=../templates/scholarly-metadata.lua
+      - --lua-filter=../templates/author-info-blocks.lua
+      - --lua-filter=../templates/pagebreak.lua
 bibliography: references.bib
 csl: "../templates/philosophical-transactions-of-the-royal-society-b.csl" # Insert path for the bib-style
 editor_options: 
@@ -29,15 +37,15 @@ editor_options:
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-	echo = TRUE,
-	fig.align = "center",
-	fig.path = "../figures/",
-	message = FALSE,
-	warning = FALSE,
-	collapse = TRUE,
-	comment = "#>",
-	dev = "png",
-	dpi = 300
+  echo = TRUE,
+  fig.align = "center",
+  fig.path = "../figures/",
+  message = FALSE,
+  warning = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dev = "png",
+  dpi = 300
 )
 library(robinson2020)
 ```
@@ -129,7 +137,9 @@ The radiocarbon data presented here are derived from the [RADIOCARBON DATA DETAI
 ```{r prepare-radiocarbon-data}
 # # Read in the radiocarbon database
 # # radiocarbon_data <-
-#   readr::read_csv(here::here("analysis/data/raw_data/0403_sbox_clean.csv")) %>%
+# readr::read_csv(
+#   here::here("analysis/data/raw_data/0403_sbox_clean.csv")
+# ) %>%
 #   # Convert to spatial object
 #   sf::st_as_sf(coords = c("Long","Lat"),
 #                crs = 4326) %>%
@@ -156,20 +166,26 @@ The radiocarbon data presented here are derived from the [RADIOCARBON DATA DETAI
 #                 Date_BP,
 #                 SD) %T>%
 #   # Write the output to a new file (csv)
-#   readr::write_csv(here::here("analysis/data/derived_data/radiocarbon_data.csv"))
+#   readr::write_csv(
+#     here::here("analysis/data/derived_data/radiocarbon_data.csv")
+#   )
 
 radiocarbon_data <-
-  readr::read_csv(here::here("analysis/data/derived_data/radiocarbon_data.csv"))
+  readr::read_csv(
+    here::here("analysis/data/derived_data/radiocarbon_data.csv")
+  )
 
 ```
 
-We draw on the tree-ring date database presented in @Bocinsky2016_SA and archived in the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B). The tree-ring data we use here were compiled by Tim Kohler and Rebecca Higgins from many contributers, and the vast majority of dates were determined by researchers in the Laboratory of Tree Ring Research at the University of Arizona. The original dataset contained 32,863 cutting, near-cutting, and non-cutting dates from across the US Southwest. Here, we only use the dates that are most likely to be accurate --- cutting dates ('B', 'G', 'L', 'c', or 'r' dates, with or without a '+') for which we know the year the tree died, and near-cutting dates ('v' or 'v+' dates) which are likely within 0--3 years of the true date of the outermost ring. The @Bocinsky2016_SA data contain site locations; for this analysis, we first spatially cropped the database to our study area, and then translated those locations to the county level. We converted the original date determinations to BP to match radiocarbon conventions.
+We draw on the tree-ring date database presented in @Bocinsky2016_SA and archived in the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B). The tree-ring data we use here were compiled by Tim Kohler and Rebecca Higgins from many contributors, and the vast majority of dates were determined by researchers in the Laboratory of Tree Ring Research at the University of Arizona. The original dataset contained 32,863 cutting, near-cutting, and non-cutting dates from across the US Southwest. Here, we only use the dates that are most likely to be accurate --- cutting dates ('B', 'G', 'L', 'c', or 'r' dates, with or without a '+') for which we know the year the tree died, and near-cutting dates ('v' or 'v+' dates) which are likely within 0--3 years of the true date of the outermost ring. The @Bocinsky2016_SA data contain site locations; for this analysis, we first spatially cropped the database to our study area, and then translated those locations to the county level. We converted the original date determinations to BP to match radiocarbon conventions.
 
 ```{r prepare-treering-data}
 # # Read in the Bocinsky et al. 2016 tree ring data
 # # https://doi.org/10.6067/XCV82J6D7B
 # dendro_data <-
-#   readr::read_csv(here::here("analysis/data/raw_data/BOCINSKY_ET_AL_2015_TREE_RINGS.csv")) %>%
+#   readr::read_csv(
+#     here::here("analysis/data/raw_data/BOCINSKY_ET_AL_2015_TREE_RINGS.csv")
+#   ) %>%
 #   # Convert to spatial object
 #   sf::st_as_sf(coords = c("LON","LAT"),
 #                crs = 4326) %>%
@@ -201,10 +217,14 @@ We draw on the tree-ring date database presented in @Bocinsky2016_SA and archive
 #                 Date_BP,
 #                 SD) %T>%
 #   # Write the output to a new file (csv)
-#   readr::write_csv(here::here("analysis/data/derived_data/dendro_data.csv"))
+#   readr::write_csv(
+#     here::here("analysis/data/derived_data/dendro_data.csv")
+#   )
 
 dendro_data <- 
-  readr::read_csv(here::here("analysis/data/derived_data/dendro_data.csv"))
+  readr::read_csv(
+    here::here("analysis/data/derived_data/dendro_data.csv")
+  )
 
 ```
 
@@ -236,7 +256,10 @@ all_data %>%
                      dplyr::bind_rows() %>%
                      dplyr::mutate(`Study Area` = "UUSW Total")) %>%
   dplyr::filter(!is.na(`Study Area`)) %>%
-  dplyr::mutate(`Study Area` = factor(`Study Area`, levels = c("UUSW Total","CMV","NRG"))) %>%
+  dplyr::mutate(`Study Area` = factor(`Study Area`, 
+                                      levels = c("UUSW Total",
+                                                 "CMV",
+                                                 "NRG"))) %>%
   dplyr::group_by(Type,`Study Area`) %>%
   dplyr::summarise(Count = dplyr::n()) %>%
   tidyr::spread(Type, Count) %>%
@@ -411,7 +434,9 @@ To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` 
 # Set the time range for the reconstructions
 timerange <- c(1949,0)
 
-if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
+if(!file.exists(
+  here::here("analysis/data/derived_data/radiocarbon_spd.rds")
+))
   all_data$Radiocarbon %>%
   split(.,.$`Study Area`) %>%
   tibble::tibble(`Study Area` = names(.),
@@ -445,10 +470,13 @@ if(!file.exists(here::here("analysis/data/derived_data/radiocarbon_spd.rds")))
                                      Density = PrDens / sum(PrDens, na.rm = T))
                   })
   ) %>%
-  readr::write_rds(here::here("analysis/data/derived_data/radiocarbon_spd.rds"),
-                   compress = "gz")
+  readr::write_rds(
+    here::here("analysis/data/derived_data/radiocarbon_spd.rds"),
+    compress = "gz")
 
-radiocarbon_spd <- readr::read_rds(here::here("analysis/data/derived_data/radiocarbon_spd.rds"))
+radiocarbon_spd <- readr::read_rds(
+  here::here("analysis/data/derived_data/radiocarbon_spd.rds")
+)
 
 ```
 
@@ -493,7 +521,9 @@ calibrate_tree_ring_dates <- function(x){
   return(out)
 }
 
-if(!file.exists(here::here("analysis/data/derived_data/dendro_spd.rds")))
+if(!file.exists(
+  here::here("analysis/data/derived_data/dendro_spd.rds")
+))
   all_data$`Tree-ring` %>%
   split(.,.$`Study Area`) %>%
   tibble::tibble(`Study Area` = names(.),
@@ -524,10 +554,13 @@ if(!file.exists(here::here("analysis/data/derived_data/dendro_spd.rds")))
                                      Density = PrDens / sum(PrDens, na.rm = T))
                   })
   ) %>%
-  readr::write_rds(here::here("analysis/data/derived_data/dendro_spd.rds"),
-                   compress = "gz")
+  readr::write_rds(
+    here::here("analysis/data/derived_data/dendro_spd.rds"),
+    compress = "gz")
 
-dendro_spd <- readr::read_rds(here::here("analysis/data/derived_data/dendro_spd.rds"))
+dendro_spd <- readr::read_rds(
+  here::here("analysis/data/derived_data/dendro_spd.rds")
+)
 
 ```
 
@@ -571,7 +604,7 @@ all_density %>%
                 `Study Area` = factor(`Study Area`,
                                       levels = c( `Upland US Southwest` = "UUSW",
                                                   `Central Mesa Verde` = "CMV",
-                                                 `Northern Rio Grande` = "NRG"))
+                                                  `Northern Rio Grande` = "NRG"))
   ) %>%
   ggplot(aes(x = `Year AD`)) +
   geom_line(aes(y = Value,
@@ -626,5 +659,7 @@ The current Git commit details are:
 
 ```{r}
 # what commit is this file at? 
-if ("git2r" %in% installed.packages() & git2r::in_repository(path = ".")) git2r::repository(here::here())  
+if ("git2r" %in% installed.packages() & 
+    git2r::in_repository(path = ".")) 
+  git2r::repository(here::here())  
 ```
