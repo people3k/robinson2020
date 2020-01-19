@@ -27,8 +27,12 @@ output:
       - --lua-filter=../templates/scholarly-metadata.lua
       - --lua-filter=../templates/author-info-blocks.lua
       - --lua-filter=../templates/pagebreak.lua
-header-includes:
-  - \usepackage{subfig}
+    bookdown::word_document2:
+      fig_caption: yes
+      pandoc_args:
+      - --lua-filter=../templates/scholarly-metadata.lua
+      - --lua-filter=../templates/author-info-blocks.lua
+      - --lua-filter=../templates/pagebreak.lua
 bibliography: references.bib
 csl: "../templates/philosophical-transactions-of-the-royal-society-b.csl" # Insert path for the bib-style
 editor_options: 

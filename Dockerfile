@@ -29,4 +29,4 @@ RUN . /etc/environment \
   && R -e "devtools::install('${HOME}', dep=TRUE)" \
   # render the manuscript into a docx, you'll need to edit this if you've
   # customised the location and name of your main Rmd file
-  && R -e "rmarkdown::render('${HOME}/analysis/paper/paper.Rmd', output_format='all')"
+  && R -e "rmarkdown::render('${HOME}/analysis/paper/paper.Rmd')"
