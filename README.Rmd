@@ -63,4 +63,4 @@ We welcome contributions from everyone. Before you get started, please see our [
 
 ### Acknowledgements
 
-This compendium was created using the [`rrtools` package by Ben Marwick](https://github.com/benmarwick/rrtools), which is ✨pure magic ✨for doing reproducible research. 
+This compendium was created using the [`rrtools` package by Ben Marwick](https://github.com/benmarwick/rrtools), which is ✨ pure magic ✨ for doing reproducible research. 

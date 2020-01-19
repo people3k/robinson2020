@@ -81,5 +81,5 @@ participating in this project you agree to abide by its terms.
 ### Acknowledgements
 
 This compendium was created using the [`rrtools` package by Ben
-Marwick](https://github.com/benmarwick/rrtools), which is ✨pure magic
-✨for doing reproducible research.
+Marwick](https://github.com/benmarwick/rrtools), which is ✨ pure magic ✨
+for doing reproducible research.
