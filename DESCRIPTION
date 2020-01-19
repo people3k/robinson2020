@@ -22,8 +22,7 @@ Imports:
     viridis,
     readr,
     rmapshaper,
-    purrr,
-    magick
+    purrr
 Suggests: devtools,
     git2r
 RoxygenNote: 7.0.2
