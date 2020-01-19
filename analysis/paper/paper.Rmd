@@ -135,40 +135,42 @@ ggplot() +
 The radiocarbon data presented here are derived from the [RADIOCARBON DATA DETAILS HERE]. Data from Arizona, Colorado, and New Mexico in the [DATABASE] are spatially resolved to only the county level; we therefor translated the Utah dates to their counties as well, and then spatially cropped the data to our study area.
 
 ```{r prepare-radiocarbon-data}
-# # Read in the radiocarbon database
-# # radiocarbon_data <-
-# readr::read_csv(
-#   here::here("analysis/data/raw_data/0403_sbox_clean.csv")
-# ) %>%
-#   # Convert to spatial object
-#   sf::st_as_sf(coords = c("Long","Lat"),
-#                crs = 4326) %>%
-#   sf::st_transform(four_corners_lcc_proj) %>%
-#   # Select salient columns
-#   dplyr::select(labnumber,
-#                 date,
-#                 sd,
-#                 Site,
-#                 SiteID) %>%
-#   dplyr::rename(Lab_Number = labnumber,
-#                 Date_BP = date,
-#                 SD = sd,
-#                 Site_Number = Site) %>%
-#   sf::st_intersection(uusw_counties) %>%
-#   sf::st_drop_geometry() %>%
-#   dplyr::mutate(Type = "Radiocarbon",
-#                 SiteID = SiteID %>% stringr::str_c("Radiocarbon - ", .)) %>%
-#   dplyr::select(Type,
-#                 SiteID,
-#                 Site_Number,
-#                 County,
-#                 Lab_Number,
-#                 Date_BP,
-#                 SD) %T>%
-#   # Write the output to a new file (csv)
-#   readr::write_csv(
-#     here::here("analysis/data/derived_data/radiocarbon_data.csv")
-#   )
+# Read in the radiocarbon database
+if(!file.exists(
+  here::here("analysis/data/derived_data/radiocarbon_data.csv")
+))
+  readr::read_csv(
+    here::here("analysis/data/raw_data/0403_sbox_clean_sd300.csv")
+  ) %>%
+  # Convert to spatial object
+  sf::st_as_sf(coords = c("Long","Lat"),
+               crs = 4326) %>%
+  sf::st_transform(four_corners_lcc_proj) %>%
+  # Select salient columns
+  dplyr::select(labnumber,
+                date,
+                sd,
+                Site,
+                SiteID) %>%
+  dplyr::rename(Lab_Number = labnumber,
+                Date_BP = date,
+                SD = sd,
+                Site_Number = Site) %>%
+  sf::st_intersection(uusw_counties) %>%
+  sf::st_drop_geometry() %>%
+  dplyr::mutate(Type = "Radiocarbon",
+                SiteID = SiteID %>% stringr::str_c("Radiocarbon - ", .)) %>%
+  dplyr::select(Type,
+                SiteID,
+                Site_Number,
+                County,
+                Lab_Number,
+                Date_BP,
+                SD) %>%
+  # Write the output to a new file (csv)
+  readr::write_csv(
+    here::here("analysis/data/derived_data/radiocarbon_data.csv")
+  )
 
 radiocarbon_data <-
   readr::read_csv(
@@ -180,46 +182,49 @@ radiocarbon_data <-
 We draw on the tree-ring date database presented in @Bocinsky2016_SA and archived in the Digital Archaeological Record (https://doi.org/10.6067/XCV82J6D7B). The tree-ring data we use here were compiled by Tim Kohler and Rebecca Higgins from many contributors, and the vast majority of dates were determined by researchers in the Laboratory of Tree Ring Research at the University of Arizona. The original dataset contained 32,863 cutting, near-cutting, and non-cutting dates from across the US Southwest. Here, we only use the dates that are most likely to be accurate --- cutting dates ('B', 'G', 'L', 'c', or 'r' dates, with or without a '+') for which we know the year the tree died, and near-cutting dates ('v' or 'v+' dates) which are likely within 0--3 years of the true date of the outermost ring. The @Bocinsky2016_SA data contain site locations; for this analysis, we first spatially cropped the database to our study area, and then translated those locations to the county level. We converted the original date determinations to BP to match radiocarbon conventions.
 
 ```{r prepare-treering-data}
-# # Read in the Bocinsky et al. 2016 tree ring data
-# # https://doi.org/10.6067/XCV82J6D7B
-# dendro_data <-
-#   readr::read_csv(
-#     here::here("analysis/data/raw_data/BOCINSKY_ET_AL_2015_TREE_RINGS.csv")
-#   ) %>%
-#   # Convert to spatial object
-#   sf::st_as_sf(coords = c("LON","LAT"),
-#                crs = 4326) %>%
-#   sf::st_transform(four_corners_lcc_proj) %>%
-#   # Convert dates to BP
-#   dplyr::mutate(Date_BP = 1950 - Outer_Date_AD,
-#                 Type = ifelse(C_Level %in% c(2,3),
-#                               "Cutting or Near-cutting",
-#                               "Non-cutting")) %>%
-#   # drop C_Level
-#   dplyr::select(Seq_Number,
-#                 Site_Number,
-#                 Lab_Number,
-#                 Type,
-#                 Date_BP) %>%
-#   dplyr::rename(SiteID = Seq_Number) %>%
-#   sf::st_intersection(uusw_counties) %>%
-#   sf::st_drop_geometry() %>%
-#   dplyr::mutate(Type = Type %>% stringr::str_c("Dendro - ", .),
-#                 SiteID = SiteID %>% stringr::str_c("Dendro - ", .),
-#                 SD = 0) %>%
-#   dplyr::filter(Type == "Dendro - Cutting or Near-cutting") %>%
-#   dplyr::mutate(Type = "Tree-ring")  %>%
-#   dplyr::select(Type,
-#                 SiteID,
-#                 Site_Number,
-#                 County,
-#                 Lab_Number,
-#                 Date_BP,
-#                 SD) %T>%
-#   # Write the output to a new file (csv)
-#   readr::write_csv(
-#     here::here("analysis/data/derived_data/dendro_data.csv")
-#   )
+# Read in the Bocinsky et al. 2016 tree ring data
+# https://doi.org/10.6067/XCV82J6D7B
+
+if(!file.exists(
+  here::here("analysis/data/derived_data/dendro_data.csv")
+))
+  readr::read_csv(
+    here::here("analysis/data/raw_data/BOCINSKY_ET_AL_2015_TREE_RINGS.csv")
+  ) %>%
+  # Convert to spatial object
+  sf::st_as_sf(coords = c("LON","LAT"),
+               crs = 4326) %>%
+  sf::st_transform(four_corners_lcc_proj) %>%
+  # Convert dates to BP
+  dplyr::mutate(Date_BP = 1950 - Outer_Date_AD,
+                Type = ifelse(C_Level %in% c(2,3),
+                              "Cutting or Near-cutting",
+                              "Non-cutting")) %>%
+  # drop C_Level
+  dplyr::select(Seq_Number,
+                Site_Number,
+                Lab_Number,
+                Type,
+                Date_BP) %>%
+  dplyr::rename(SiteID = Seq_Number) %>%
+  sf::st_intersection(uusw_counties) %>%
+  sf::st_drop_geometry() %>%
+  dplyr::mutate(Type = Type %>% stringr::str_c("Dendro - ", .),
+                SiteID = SiteID %>% stringr::str_c("Dendro - ", .),
+                SD = 0) %>%
+  dplyr::filter(Type == "Dendro - Cutting or Near-cutting") %>%
+  dplyr::mutate(Type = "Tree-ring")  %>%
+  dplyr::select(Type,
+                SiteID,
+                Site_Number,
+                County,
+                Lab_Number,
+                Date_BP,
+                SD) %>%
+  # Write the output to a new file (csv)
+  readr::write_csv(
+    here::here("analysis/data/derived_data/dendro_data.csv")
+  )
 
 dendro_data <- 
   readr::read_csv(
@@ -432,12 +437,9 @@ To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` 
 
 ```{r radiocarbon-spds}
 # Set the time range for the reconstructions
-timerange <- c(1949,0)
+timerange <- c(1949, 0)
 
-if(!file.exists(
-  here::here("analysis/data/derived_data/radiocarbon_spd.rds")
-))
-  all_data$Radiocarbon %>%
+all_data$Radiocarbon %>%
   split(.,.$`Study Area`) %>%
   tibble::tibble(`Study Area` = names(.),
                  Dates = .) %>%
@@ -447,7 +449,7 @@ if(!file.exists(
   dplyr::mutate(Calibrated = list(Dates %$%
                                     rcarbon::calibrate(x = Date_BP,
                                                        errors = SD,
-                                                       timerange = timerange,
+                                                       timeRange = timerange,
                                                        calMatrix = TRUE,
                                                        verbose = FALSE)),
                 Bins = list(rcarbon::binPrep(sites = Dates$SiteID,
@@ -455,9 +457,8 @@ if(!file.exists(
                                              h = 100)),
                 SPD = list(rcarbon::spd(x = Calibrated,
                                         bins = Bins,
-                                        datenormalised = TRUE,
                                         spdnormalised = TRUE,
-                                        timeRange = c(1949,0),
+                                        timeRange = timerange,
                                         runm = 21,
                                         verbose = FALSE))) %>%
   dplyr::ungroup() %>%
@@ -494,7 +495,7 @@ calibrate_tree_ring_dates <- function(x){
       ResOffsets = 0,
       ResErrors = 0,
       StartBP = timerange[1],
-      EndBP = 0,
+      EndBP = timerange[2],
       Normalised = TRUE,
       F14C = FALSE,
       CalEPS = 1e-05
@@ -521,10 +522,7 @@ calibrate_tree_ring_dates <- function(x){
   return(out)
 }
 
-if(!file.exists(
-  here::here("analysis/data/derived_data/dendro_spd.rds")
-))
-  all_data$`Tree-ring` %>%
+all_data$`Tree-ring` %>%
   split(.,.$`Study Area`) %>%
   tibble::tibble(`Study Area` = names(.),
                  Dates = .) %>%
@@ -538,7 +536,6 @@ if(!file.exists(
                                              h = 100)),
                 SPD = list(rcarbon::spd(x = Calibrated,
                                         bins = Bins,
-                                        datenormalised = TRUE,
                                         spdnormalised = TRUE,
                                         timeRange = timerange,
                                         runm = 21,
