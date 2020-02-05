@@ -11,3 +11,6 @@ analysis
 ^\.travis\.yml$
 ^\.pre-commit-config\.yaml$
 ^.binder$
+^_pkgdown\.yml$
+^docs$
+^pkgdown$
