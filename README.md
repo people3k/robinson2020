@@ -3,9 +3,9 @@
 
 # robinson2020
 
-[![Travis-CI Build
-Status](https://travis-ci.org/bocinsky/robinson2020.svg?branch=master)](https://travis-ci.org/bocinsky/robinson2020)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/bocinsky/robinson2020/master?urlpath=rstudio)
+[![Travis build
+status](https://travis-ci.org/people3k/robinson2020.svg?branch=master)](https://travis-ci.org/people3k/robinson2020)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/people3k/robinson2020/master?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
@@ -50,7 +50,7 @@ The **analysis** directory contains:
 ## How to run in your browser or download and run locally
 
 The simplest way to explore the text, code and data is to click on
-[binder](https://mybinder.org/v2/gh/bocinsky/robinson2020/master?urlpath=rstudio)
+[binder](https://mybinder.org/v2/gh/people3k/robinson2020/master?urlpath=rstudio)
 to open an instance of RStudio in your browser, which will have the
 compendium files ready to work with. Binder uses
 (rocker-project.org)\[rocker-project.org Docker\] images to ensure a
@@ -63,6 +63,13 @@ in RStudio, and run `devtools::install()` to ensure you have the
 packages this analysis depends on (also listed in the
 [DESCRIPTION](/DESCRIPTION) file). Then open `paper.Rmd` and knit to
 produce the `paper.docx`.
+
+Or, simply install straight from Github:
+
+``` r
+# install.packages("devtools")
+devtools::install_github("people3k/robinson2020")
+```
 
 ### Licenses
 
