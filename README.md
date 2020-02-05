@@ -3,6 +3,7 @@
 
 # robinson2020
 
+[![DOI](https://zenodo.org/badge/234769845.svg)](https://zenodo.org/badge/latestdoi/234769845)
 [![Travis build
 status](https://travis-ci.org/people3k/robinson2020.svg?branch=master)](https://travis-ci.org/people3k/robinson2020)
 [![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/people3k/robinson2020/master?urlpath=rstudio)
