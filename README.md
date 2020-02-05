@@ -15,9 +15,11 @@ This repository contains the data and code for our paper:
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-1862-3428),
 > Jacob Freeman, Darcy Bird
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3466-6284),
-> Robert L. Kelly, (2020). *Dendrochronological dates confirm a Late
-> Prehistoric population decline in the American Southwest derived from
-> radiocarbon dates*. Under review.
+> Robert L.
+> Kelly[![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-9737-0152),
+> (2020). *Dendrochronological dates confirm a Late Prehistoric
+> population decline in the American Southwest derived from radiocarbon
+> dates*. Under review.
 
 <!-- Our pre-print is online here: -->
 
