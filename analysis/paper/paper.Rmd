@@ -730,9 +730,9 @@ all_density %>%
     size = `Study Area`
   )) +
   scale_color_manual(values = c(
-    "UUSW" = "black",
-    "CMV" = "gray50",
-    "NRG" = "gray80"
+    "UUSW" = "#1b9e77",
+    "CMV" = "#d95f02",
+    "NRG" = "#7570b3"
   )) +
   scale_size_manual(values = c(
     "UUSW" = 1.25,

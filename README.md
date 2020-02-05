@@ -21,7 +21,7 @@ This repository contains the data and code for our paper:
 
 <!-- Our pre-print is online here: -->
 
-<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 19 Jan 2020. Online at <https://doi.org/xxx/xxx> -->
+<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 05 Feb 2020. Online at <https://doi.org/xxx/xxx> -->
 
 ### How to cite
 
@@ -30,7 +30,7 @@ Please cite this compendium as:
 > Bocinsky, R. Kyle and Erick Robinson, (2020). *Compendium of R code
 > and data for Dendrochronological dates confirm a Late Prehistoric
 > population decline in the American Southwest derived from radiocarbon
-> dates*. Accessed 19 Jan 2020.
+> dates*. Accessed 05 Feb 2020.
 
 ## Contents
 
@@ -45,14 +45,15 @@ The **analysis** directory contains:
   - [:file\_folder: figures](/analysis/figures): Plots and other
     illustrations
 
-## How to run in your broswer or download and run locally
+## How to run in your browser or download and run locally
 
 The simplest way to explore the text, code and data is to click on
 [binder](https://mybinder.org/v2/gh/bocinsky/robinson2020/master?urlpath=rstudio)
 to open an instance of RStudio in your browser, which will have the
-compendium files ready to work with. Binder uses \[rocker-project.org
-Docker\] images to ensure a consistent and reproducible computational
-environment. These Docker images can also be used locally.
+compendium files ready to work with. Binder uses
+(rocker-project.org)\[rocker-project.org Docker\] images to ensure a
+consistent and reproducible computational environment. These Docker
+images can also be used locally.
 
 You can download the compendium as a zip from from this URL:
 [master.zip](/archive/master.zip). After unzipping, open the `Proj` file
