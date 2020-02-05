@@ -10,3 +10,4 @@ analysis
 ^Dockerfile$
 ^\.travis\.yml$
 ^\.pre-commit-config\.yaml$
+^.binder$

@@ -2,6 +2,7 @@ Package: robinson2020
 Title: Robinson et al. 2020 Supplemental Information: Comparing the Radiocarbon and Tree-ring Records for the Upland US Southwest
 Version: 1.0.0.9000
 Authors@R:
+    c(
     person(given = "Kyle",
            family = "Bocinsky",
            role = c("aut", "cre"),
@@ -9,10 +10,11 @@ Authors@R:
     person(given = "Darcy",
            family = "Bird",
            role = c("ctb"),
-           email = "bocinsky@gmail.com")
+           email = "darcy.bird@wsu.edu")
+           )
 Description: This R package repository is a research compendium for Robinson et al. 2020.
     The compendium contains all code associated with the analyses described and presented in the publication.
-License: GPL-3 + LICENSE
+License: GPL-3
 ByteCompile: true
 Encoding: UTF-8
 LazyData: true
@@ -26,17 +28,18 @@ Imports:
     viridis,
     readr,
     rmapshaper,
-    purrr
+    purrr,
+    ggplot2
 Suggests: 
     devtools,
     git2r,
     styler,
     precommit (>= 0.0.0.9017)
 RoxygenNote: 7.0.2
-Depends: 
-    magrittr,
-    ggplot2
+Depends:
+    R (>= 3.1),
+    magrittr
 URL: https://github.com/bocinsky/robinson2020
 BugReports: https://github.com/bocinsky/robinson2020/issues
-Remotes:  
+Remotes: 
     lorenzwalthert/precommit
