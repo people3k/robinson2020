@@ -5,6 +5,10 @@ Authors@R:
     person(given = "Kyle",
            family = "Bocinsky",
            role = c("aut", "cre"),
+           email = "bocinsky@gmail.com"),
+    person(given = "Darcy",
+           family = "Bird",
+           role = c("ctb"),
            email = "bocinsky@gmail.com")
 Description: This R package repository is a research compendium for Robinson et al. 2020.
     The compendium contains all code associated with the analyses described and presented in the publication.
