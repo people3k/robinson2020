@@ -729,7 +729,6 @@ dplyr::left_join(all_density,
     Type,
     Period
   ) %>%
-  # dplyr::mutate(`Binned Density` = ifelse(is.na(Population), NA, rep(mean(`Scaled Density`), dplyr::n()))) %>%
   dplyr::group_by(
     `Study Area`,
     Type
@@ -785,12 +784,6 @@ dplyr::left_join(all_density,
   ),
   size = 0.75
   ) +
-  # geom_line(aes(
-  #   y = `Binned Density`,
-  #   color = Type
-  # ),
-  # size = 1.25) +
-
   scale_color_manual(values = c(
     "Tree-ring Density" = "#d95f02",
     "Radiocarbon Density" = "#1b9e77",
