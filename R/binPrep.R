@@ -24,7 +24,7 @@ binPrep <- function(sites, ages, h, method = "complete") {
   clusters <- rep(NA, length(sites))
 
   if (any(class(ages) %in% "CalDates")) {
-    ages <- medCal(ages)
+    ages <- rcarbon::medCal(ages)
   }
 
   for  (x in 1:length(unique(sites))) {
