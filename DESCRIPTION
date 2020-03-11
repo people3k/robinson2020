@@ -29,7 +29,8 @@ Imports:
     readr,
     rmapshaper,
     purrr,
-    ggplot2
+    ggplot2,
+    egg
 Suggests: 
     devtools,
     git2r,

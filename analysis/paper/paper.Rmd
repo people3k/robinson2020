@@ -3,14 +3,20 @@ title: "Robinson et al. 2020 Supplemental Information: Comparing the Radiocarbon
 author:
   - Kyle Bocinsky:
       email: bocinsky@gmail.com
-      institute: [CCAC]
+      institute: [CCAC,UM]
       correspondence: true
+  - Darcy Bird:
+      email: darcy.bird@wsu.edu
+      institute: [WSU]
+      correspondence: false
   - Erick Robinson:
       email: erick.robinson@usu.edu
       institute: [USU]
       correspondence: false
 institute:
   - CCAC: Crow Canyon Archaeological Center
+  - UM: University of Montana
+  - WSU: Washington State University
   - USU: Utah State University
 date: "`r format(Sys.time(), '%d %B, %Y')`"
 output: 
@@ -770,60 +776,79 @@ dplyr::left_join(all_density,
       ordered = TRUE
     )
   ) %>%
-  ggplot(aes(x = `Year AD`)) +
-  geom_line(aes(
-    y = `Raw Density`,
-    color = Type
-  ),
-  size = 0.5,
-  alpha = 0.5
-  ) +
-  geom_line(aes(
-    y = `Population`
-  ),
-  size = 1.25
-  ) +
-  geom_line(aes(
-    y = `Smoothed Density`,
-    color = Type
-  ),
-  size = 0.75
-  ) +
-  scale_color_manual(
-    values = c(
-      "Tree-ring Density" = "#d95f02",
-      "Radiocarbon Density" = "#1b9e77",
-      "VEP Population" = "black"
-    ),
-    limits = c(
-      "Tree-ring Density",
-      "Radiocarbon Density",
-      "VEP Population"
-    )
-  ) +
-  xlab("Year AD") +
-  scale_x_continuous(
-    limits = c(200, 1800),
-    breaks = seq(200, 1800, 200),
-    expand = expansion(0, 0)
-  ) +
-  theme_minimal(18) +
-  theme(
-    legend.title = element_blank(),
-    legend.justification = c(0, 1),
-    legend.position = "bottom",
-    axis.title.x = element_text(size = 12),
-    axis.text.x = element_text(size = 10),
-    axis.title.y = element_blank(),
-    # axis.text.y = element_blank(),
-    # panel.grid.major.y = element_blank(),
-    # panel.grid.minor.y = element_blank(),
-    plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
-  ) +
-  facet_wrap(
-    vars(`Study Area`),
-    ncol = 1,
-    scales = "free_y"
+  {
+    ggplot(
+      .,
+      aes(x = `Year AD`)
+    ) +
+      geom_line(aes(
+        y = `Raw Density`,
+        color = Type
+      ),
+      size = 0.5,
+      alpha = 0.5
+      ) +
+      geom_line(aes(
+        y = `Population`
+      ),
+      size = 1.25
+      ) +
+      geom_line(aes(
+        y = `Smoothed Density`,
+        color = Type
+      ),
+      size = 0.75
+      ) +
+      scale_color_manual(
+        values = c(
+          "Tree-ring Density" = "#d95f02",
+          "Radiocarbon Density" = "#1b9e77",
+          "VEP Population" = "black"
+        ),
+        limits = c(
+          "Tree-ring Density",
+          "Radiocarbon Density",
+          "VEP Population"
+        )
+      ) +
+      xlab("Year AD") +
+      scale_x_continuous(
+        limits = c(200, 1800),
+        breaks = seq(200, 1800, 200),
+        expand = expansion(0, 0)
+      ) +
+      theme_minimal(18) +
+      theme(
+        legend.title = element_blank(),
+        legend.justification = c(0, 1),
+        legend.position = "bottom",
+        axis.title.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
+        axis.title.y = element_blank(),
+        strip.text = element_text(size = 12),
+        # axis.text.y = element_blank(),
+        # panel.grid.major.y = element_blank(),
+        # panel.grid.minor.y = element_blank(),
+        plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
+      ) +
+      facet_wrap(
+        # rows =
+        vars(`Study Area`),
+        ncol = 1,
+        scales = "free_y"
+      )
+  } %>%
+  egg::tag_facet(
+    open = "",
+    close = "",
+    tag_pool = paste0(LETTERS, ". ", c(
+      "Upland US Southwest Density",
+      "Central Mesa Verde Population",
+      "Northern Rio Grande Population"
+    )),
+    hjust = 0,
+    vjust = 1.5,
+    size = 5
   )
 ```
 
