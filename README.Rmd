@@ -37,7 +37,7 @@ Robert L. Kelly[![](https://orcid.org/sites/default/files/images/orcid_16x16.png
 
 Please cite this compendium as:
 
-> Bocinsky, R. Kyle and Erick Robinson, (`r format(Sys.Date(), "%Y")`). _Compendium of R code and data for `r Title`_. Accessed `r format(Sys.Date(), "%d %b %Y")`.
+> Bocinsky, R. Kyle, Darcy Bird, and Erick Robinson, (`r format(Sys.Date(), "%Y")`). _Compendium of R code and data for `r Title`_. Accessed `r format(Sys.Date(), "%d %b %Y")`.
 
 ## Contents
 

@@ -26,16 +26,16 @@ This repository contains the data and code for our paper:
 
 <!-- Our pre-print is online here: -->
 
-<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 05 Feb 2020. Online at <https://doi.org/xxx/xxx> -->
+<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 10 Mar 2020. Online at <https://doi.org/xxx/xxx> -->
 
 ### How to cite
 
 Please cite this compendium as:
 
-> Bocinsky, R. Kyle and Erick Robinson, (2020). *Compendium of R code
-> and data for Dendrochronological dates confirm a Late Prehistoric
-> population decline in the American Southwest derived from radiocarbon
-> dates*. Accessed 05 Feb 2020.
+> Bocinsky, R. Kyle, Darcy Bird, and Erick Robinson, (2020). *Compendium
+> of R code and data for Dendrochronological dates confirm a Late
+> Prehistoric population decline in the American Southwest derived from
+> radiocarbon dates*. Accessed 10 Mar 2020.
 
 ## Contents
 
