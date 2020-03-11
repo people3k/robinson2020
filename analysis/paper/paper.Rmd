@@ -678,7 +678,6 @@ dendro_spd <-
 
 ```{r c14-tr-pop, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon and tree-ring density distributions in the UUSW, CMV, and NRG regions, and VEP population estimates for the CMV and NRG. The radiocarbon and tree-ring density distributions for the UUSW and CMV are normalized such that the area under their densities is equal to the area under the VEP population estimates (i.e., the cumulative population). Years are given in AD.', fig.show = 'hold', out.width = '75%'}
 
-# A smoothing distribution to use throughout the analyses
 # This is a 21-year wide Gaussian distribution with a
 # mean of 0 and standard deviation of 5 years.
 # This is the smoother used in Bocinsky et al. 2016.
@@ -759,10 +758,16 @@ dplyr::left_join(all_density,
     ),
     `Study Area` = factor(`Study Area`,
       levels = c(
-        `Upland US Southwest` = "UUSW",
-        `Central Mesa Verde` = "CMV",
-        `Northern Rio Grande` = "NRG"
-      )
+        "UUSW",
+        "CMV",
+        "NRG"
+      ),
+      labels = c(
+        "Upland US Southwest Density",
+        "Central Mesa Verde Population",
+        "Northern Rio Grande Population"
+      ),
+      ordered = TRUE
     )
   ) %>%
   ggplot(aes(x = `Year AD`)) +
@@ -784,11 +789,18 @@ dplyr::left_join(all_density,
   ),
   size = 0.75
   ) +
-  scale_color_manual(values = c(
-    "Tree-ring Density" = "#d95f02",
-    "Radiocarbon Density" = "#1b9e77",
-    "VEP Population" = "black"
-  )) +
+  scale_color_manual(
+    values = c(
+      "Tree-ring Density" = "#d95f02",
+      "Radiocarbon Density" = "#1b9e77",
+      "VEP Population" = "black"
+    ),
+    limits = c(
+      "Tree-ring Density",
+      "Radiocarbon Density",
+      "VEP Population"
+    )
+  ) +
   xlab("Year AD") +
   scale_x_continuous(
     limits = c(200, 1800),
@@ -808,8 +820,9 @@ dplyr::left_join(all_density,
     # panel.grid.minor.y = element_blank(),
     plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
   ) +
-  facet_grid(
-    rows = vars(`Study Area`),
+  facet_wrap(
+    vars(`Study Area`),
+    ncol = 1,
     scales = "free_y"
   )
 ```
