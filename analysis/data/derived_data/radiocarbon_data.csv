@@ -1,58 +1,38 @@
 Type,SiteID,Site_Number,County,Lab_Number,Date_BP,SD
 Radiocarbon,Radiocarbon - 2330,5MT12069,"Montezuma, CO",Beta-155398,960,40
-Radiocarbon,Radiocarbon - 2330,5MT12069,"Montezuma, CO",Beta-155399,2550,40
 Radiocarbon,Radiocarbon - 2331,5MT123,"Montezuma, CO",Beta-201369,760,40
 Radiocarbon,Radiocarbon - 2331,5MT123,"Montezuma, CO",Beta-201370,880,40
-Radiocarbon,Radiocarbon - 2335,5MT13682,"Montezuma, CO",Beta-133591,7610,40
 Radiocarbon,Radiocarbon - 2349,5MT5466,"Montezuma, CO",Beta-133589,900,40
-Radiocarbon,Radiocarbon - 2348,5MT5454,"Montezuma, CO",Beta-147435,7950,40
 Radiocarbon,Radiocarbon - 2344,5MT4654,"Montezuma, CO",Tx-3888,670,40
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75286,1080,50
-Radiocarbon,Radiocarbon - 2339,5MT2731,"Montezuma, CO",Beta-10866,2830,50
-Radiocarbon,Radiocarbon - 2351,5MT7191,"Montezuma, CO",Beta-133588,7570,50
-Radiocarbon,Radiocarbon - 2350,5MT5479,"Montezuma, CO",Beta-144127,2070,50
 Radiocarbon,Radiocarbon - 2327,5MT10967,"Montezuma, CO",Beta-55054,1018,60
-Radiocarbon,Radiocarbon - 2324,5MT10525,"Montezuma, CO",Beta-81721,2210,60
-Radiocarbon,Radiocarbon - 2324,5MT10525,"Montezuma, CO",Beta-81722,2270,60
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75282,1240,60
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75283,920,60
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75285,1030,60
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75287,1580,60
 Radiocarbon,Radiocarbon - 2326,5MT10595,"Montezuma, CO",Beta-75288,840,60
-Radiocarbon,Radiocarbon - 2328,5MT11431,"Montezuma, CO",Beta-131049,6500,60
 Radiocarbon,Radiocarbon - 2331,5MT123,"Montezuma, CO",Beta-201368,800,60
-Radiocarbon,Radiocarbon - 2332,5MT13632,"Montezuma, CO",Beta-128517,2060,60
-Radiocarbon,Radiocarbon - 2334,5MT13681,"Montezuma, CO",Beta-131050,7340,60
 Radiocarbon,Radiocarbon - 2340,5MT2854,"Montezuma, CO",Tx-3883,1680,60
 Radiocarbon,Radiocarbon - 2340,5MT2854,"Montezuma, CO",Tx-3884,1620,60
 Radiocarbon,Radiocarbon - 2346,5MT4763,"Montezuma, CO",Tx-3875,1710,60
-Radiocarbon,Radiocarbon - 2341,5MT2858,"Montezuma, CO",Tx-3877,2000,60
 Radiocarbon,Radiocarbon - 2341,5MT2858,"Montezuma, CO",Tx-3878,1660,60
 Radiocarbon,Radiocarbon - 2325,5MT10594,"Montezuma, CO",Beta-75284,1240,70
 Radiocarbon,Radiocarbon - 2330,5MT12069,"Montezuma, CO",Beta-155397,820,70
-Radiocarbon,Radiocarbon - 2339,5MT2731,"Montezuma, CO",Beta-10867,2650,70
-Radiocarbon,Radiocarbon - 2345,5MT4683,"Montezuma, CO",Beta-10875,3110,70
 Radiocarbon,Radiocarbon - 2347,5MT4950,"Montezuma, CO",CAIS-5315,960,70
 Radiocarbon,Radiocarbon - 2337,5MT2192,"Montezuma, CO",Tx-3882,1510,70
 Radiocarbon,Radiocarbon - 2343,5MT4614,"Montezuma, CO",Tx-3879,1660,70
-Radiocarbon,Radiocarbon - 2328,5MT11431,"Montezuma, CO",Beta-70243,7350,80
 Radiocarbon,Radiocarbon - 2329,5MT11668,"Montezuma, CO",Beta-75290,1620,80
 Radiocarbon,Radiocarbon - 2342,5MT4215,"Montezuma, CO",Tx-3873,1630,80
 Radiocarbon,Radiocarbon - 2342,5MT4215,"Montezuma, CO",Tx-3874,1420,80
 Radiocarbon,Radiocarbon - 2333,5MT13679,"Montezuma, CO",Beta-144125,1230,90
-Radiocarbon,Radiocarbon - 2338,5MT2242,"Montezuma, CO",X-3876,3710,90
-Radiocarbon,Radiocarbon - 2338,5MT2242,"Montezuma, CO",Tx-3876,3710,90
 Radiocarbon,Radiocarbon - 2343,5MT4614,"Montezuma, CO",Tx-3880,1590,90
 Radiocarbon,Radiocarbon - 2344,5MT4654,"Montezuma, CO",Tx-3887,580,90
 Radiocarbon,Radiocarbon - 2323,5MT-?,"Montezuma, CO",I-4107,1010,100
-Radiocarbon,Radiocarbon - 2336,5MT13684,"Montezuma, CO",Beta-144126,4300,120
 Radiocarbon,Radiocarbon - 2330,5MT12069,"Montezuma, CO",Beta-155396,940,140
 Radiocarbon,Radiocarbon - 2322,5MT,"Montezuma, CO",I-1112,890,150
-Radiocarbon,Radiocarbon - 2337,5MT2192,"Montezuma, CO",Tx-3881,1990,160
 Radiocarbon,Radiocarbon - 2344,5MT4654,"Montezuma, CO",Tx-3886,1450,160
 Radiocarbon,Radiocarbon - 2329,5MT11668,"Montezuma, CO",Beta-75289,1680,180
 Radiocarbon,Radiocarbon - 2344,5MT4654,"Montezuma, CO",Tx-3885,990,190
-Radiocarbon,Radiocarbon - 2352,5MT915,"Montezuma, CO",AA-1791,2550,200
 Radiocarbon,Radiocarbon - 2344,5MT4654,"Montezuma, CO",Tx-3889,900,210
 Radiocarbon,Radiocarbon - 733,LA111422,"Sierra, NM",Beta-317545,1480,30
 Radiocarbon,Radiocarbon - 733,LA111422,"Sierra, NM",Beta-318168,1440,30
@@ -61,15 +41,12 @@ Radiocarbon,Radiocarbon - 734,LA111429,"Sierra, NM",Beta-317547,220,30
 Radiocarbon,Radiocarbon - 734,LA111429,"Sierra, NM",Beta-317548,260,30
 Radiocarbon,Radiocarbon - 734,LA111429,"Sierra, NM",Beta-317580,1800,30
 Radiocarbon,Radiocarbon - 734,LA111429,"Sierra, NM",Beta-317581,300,30
-Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317551,2910,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317552,1630,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317553,1600,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317554,1620,30
-Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317555,2430,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317556,1180,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317557,1110,30
 Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317558,1110,30
-Radiocarbon,Radiocarbon - 735,LA111435,"Sierra, NM",Beta-317559,4290,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317560,440,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317561,340,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317563,730,30
@@ -79,7 +56,6 @@ Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317568,1190,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317569,1370,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317570,1230,30
 Radiocarbon,Radiocarbon - 736,LA155963,"Sierra, NM",Beta-317571,1280,30
-Radiocarbon,Radiocarbon - 737,LA155964,"Sierra, NM",Beta-317582,130,30
 Radiocarbon,Radiocarbon - 738,LA155968,"Sierra, NM",Beta-317575,1290,30
 Radiocarbon,Radiocarbon - 738,LA155968,"Sierra, NM",Beta-317576,1220,30
 Radiocarbon,Radiocarbon - 738,LA155968,"Sierra, NM",Beta-317577,1230,30
@@ -176,11 +152,8 @@ Radiocarbon,Radiocarbon - 2130,42KA2584,"Kane, UT",BETA-8470,1110,50
 Radiocarbon,Radiocarbon - 2130,42KA2584,"Kane, UT",BETA-8471,730,50
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-67117,1690,50
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77117,820,50
-Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-7717,1990,50
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-7724,1330,50
 Radiocarbon,Radiocarbon - 2151,42KA1568,"Kane, UT",BETA-55079,1100,50
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",A-3516,2640,50
-Radiocarbon,Radiocarbon - 2096,42KA4116,"Kane, UT",Beta-78339,2400,50
 Radiocarbon,Radiocarbon - 2147,42KA3383,"Kane, UT",BETA-132382,960,50
 Radiocarbon,Radiocarbon - 2151,42KA1568,"Kane, UT",BETA-55078,800,50
 Radiocarbon,Radiocarbon - 2227,42KA1811,"Kane, UT",BETA-109803,1060,50
@@ -189,16 +162,12 @@ Radiocarbon,Radiocarbon - 2382,42KA172,"Kane, UT",AA-10374,1755,50
 Radiocarbon,Radiocarbon - 2382,42KA172,"Kane, UT",AA-10375,1830,50
 Radiocarbon,Radiocarbon - 2136,42KA2594,"Kane, UT",BETA-8473,1310,50
 Radiocarbon,Radiocarbon - 2227,42KA1811,"Kane, UT",BETA-109805,1290,50
-Radiocarbon,Radiocarbon - 2073,42KA433,"Kane, UT",AA-10376,3355,50
 Radiocarbon,Radiocarbon - 2370,42KA2739,"Kane, UT",AA-5223,675,55
-Radiocarbon,Radiocarbon - 2075,42KA443,"Kane, UT",AA-10371,5890,55
-Radiocarbon,Radiocarbon - 2061,42KA433,"Kane, UT",AA-13004,3210,55
 Radiocarbon,Radiocarbon - 2067,42KA3328,"Kane, UT",BETA-40332,1890,60
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77114,1110,60
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77116,840,60
 Radiocarbon,Radiocarbon - 2155,42KA2667,"Kane, UT",BETA-23055,1010,60
 Radiocarbon,Radiocarbon - 2355,42KA4416,"Kane, UT",BETA-107650,890,60
-Radiocarbon,Radiocarbon - 2356,42KA2753,"Kane, UT",Beta-38342,3900,60
 Radiocarbon,Radiocarbon - 2151,42KA1568,"Kane, UT",BETA-55077,930,60
 Radiocarbon,Radiocarbon - 2207,42KA2683,"Kane, UT",BETA-132380,1060,60
 Radiocarbon,Radiocarbon - 2364,42KA1502,"Kane, UT",BETA-107649,950,60
@@ -207,26 +176,19 @@ Radiocarbon,Radiocarbon - 2416,42KA2580,"Kane, UT",BETA-134477,920,60
 Radiocarbon,Radiocarbon - 2060,42KA2574,"Kane, UT",BETA-8788,360,60
 Radiocarbon,Radiocarbon - 2018,42KA2780,"Kane, UT",BETA-16079,1610,60
 Radiocarbon,Radiocarbon - 2068,42KA3576,"Kane, UT",BETA-40453,1150,60
-Radiocarbon,Radiocarbon - 2075,42KA443,"Kane, UT",AA-10372,5665,60
 Radiocarbon,Radiocarbon - 2234,42KA1978,"Kane, UT",UGA-3749,720,65
 Radiocarbon,Radiocarbon - 2234,42KA1978,"Kane, UT",UGA-4003,835,65
 Radiocarbon,Radiocarbon - 2051,42KA2610,"Kane, UT",BETA-10844,1940,70
 Radiocarbon,Radiocarbon - 2059,42KA1504,"Kane, UT",BETA-26630,1140,70
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77115,700,70
-Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77118,3420,70
 Radiocarbon,Radiocarbon - 2155,42KA2667,"Kane, UT",BETA-23054,1120,70
 Radiocarbon,Radiocarbon - 2354,42KA2773,"Kane, UT",BETA-16277,1730,70
 Radiocarbon,Radiocarbon - 2363,42KA2745,"Kane, UT",BETA-16271,1670,70
-Radiocarbon,Radiocarbon - 2091,42KA2687,"Kane, UT",Beta-19920,6480,70
 Radiocarbon,Radiocarbon - 2419,42KA178,"Kane, UT",Beta-34945,1420,70
 Radiocarbon,Radiocarbon - 2058,42KA1576,"Kane, UT",BETA-128986,1570,70
 Radiocarbon,Radiocarbon - 2147,42KA3383,"Kane, UT",BETA-132381,900,70
-Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111634,2000,70
-Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111637,7290,70
-Radiocarbon,Radiocarbon - 2061,42KA433,"Kane, UT",AA-13003,5810,70
 Radiocarbon,Radiocarbon - 2083,42KA1520,"Kane, UT",BETA-134476,950,70
 Radiocarbon,Radiocarbon - 2415,42KA4865,"Kane, UT",BETA-132383,780,70
-Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",BETA-1232,3760,75
 Radiocarbon,Radiocarbon - 2234,42KA1978,"Kane, UT",UGA-3751,980,75
 Radiocarbon,Radiocarbon - 2094,42KA2756,"Kane, UT",GX-11338,1290,75
 Radiocarbon,Radiocarbon - 2365,42KA2756,"Kane, UT",BETA-16274,1060,80
@@ -234,48 +196,27 @@ Radiocarbon,Radiocarbon - 2059,42KA1504,"Kane, UT",BETA-24402,840,80
 Radiocarbon,Radiocarbon - 2117,42KA2661,"Kane, UT",BETA-86551,710,80
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-77113,1020,80
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-7726,1330,80
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",A-3513,5500,80
-Radiocarbon,Radiocarbon - 2365,42KA2756,"Kane, UT",BETA-16276,4330,80
-Radiocarbon,Radiocarbon - 2091,42KA2687,"Kane, UT",Beta-19919,6500,80
 Radiocarbon,Radiocarbon - 2418,42KA172,"Kane, UT",Beta-34942,1690,80
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-100262,870,80
 Radiocarbon,Radiocarbon - 2222,42KA3061,"Kane, UT",BETA-121576,1380,80
-Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111635,6640,80
-Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111636,6660,80
-Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111638,6700,80
-Radiocarbon,Radiocarbon - 2095,42KA3384,"Kane, UT",Beta-30568,2320,80
 Radiocarbon,Radiocarbon - 2371,42KA2836,"Kane, UT",BETA-21236,1200,80
-Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",BETA-1749,2445,85
 Radiocarbon,Radiocarbon - 2135,42KA3976,"Kane, UT",BETA-7727,950,90
 Radiocarbon,Radiocarbon - 2359,42KA2731,"Kane, UT",BETA-16587,1750,90
-Radiocarbon,Radiocarbon - 2092,42KA2730,"Kane, UT",Beta-19514,2310,90
-Radiocarbon,Radiocarbon - 2382,42KA172,"Kane, UT",BETA-34944,2260,90
 Radiocarbon,Radiocarbon - 2019,42KA4356,"Kane, UT",BETA-111639,1520,90
 Radiocarbon,Radiocarbon - 2018,42KA2780,"Kane, UT",BETA-16080,1660,90
 Radiocarbon,Radiocarbon - 2386,42KA1248,"Kane, UT",BETA-134475,860,100
 Radiocarbon,Radiocarbon - 2362,42KA2751,"Kane, UT",BETA-16272,1800,100
 Radiocarbon,Radiocarbon - 2382,42KA172,"Kane, UT",BETA-34943,970,100
-Radiocarbon,Radiocarbon - 2117,42KA2661,"Kane, UT",BETA-8338,2130,100
-Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",UGA-3254,3145,105
 Radiocarbon,Radiocarbon - 2058,42KA1576,"Kane, UT",RL-2086,1670,110
 Radiocarbon,Radiocarbon - 2128,42KA1796,"Kane, UT",BETA-6288,760,110
 Radiocarbon,Radiocarbon - 2414,42KA3360,"Kane, UT",RL-2084,1270,110
 Radiocarbon,Radiocarbon - 2090,42KA-?,"Kane, UT",RL-1396,990,110
 Radiocarbon,Radiocarbon - 2090,42KA-?,"Kane, UT",RL-1397,810,110
 Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",BETA-1142,1470,115
-Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",BETA-1748,2735,115
 Radiocarbon,Radiocarbon - 2136,42KA2594,"Kane, UT",BETA-8472,1870,120
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",BETA-16025,6750,120
 Radiocarbon,Radiocarbon - 2060,42KA2574,"Kane, UT",BETA-8785,1500,130
 Radiocarbon,Radiocarbon - 2086,42KA2664,"Kane, UT",BETA-23056,1080,140
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",GX-10501,2080,140
 Radiocarbon,Radiocarbon - 2093,42KA2737,"Kane, UT",Beta-31974,1720,140
-Radiocarbon,Radiocarbon - 2366,42KA2756,"Kane, UT",GX-11339,3000,145
-Radiocarbon,Radiocarbon - 2118,42KA265,"Kane, UT",BETA-1750,2720,205
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",GX-10502,7525,220
-Radiocarbon,Radiocarbon - 2360,42KA2546,"Kane, UT",GX-10500,7795,230
-Radiocarbon,Radiocarbon - 2362,42KA2751,"Kane, UT",BETA-21235,2260,230
-Radiocarbon,Radiocarbon - 2358,42KA2771,"Kane, UT",GX-11146,5300,235
 Radiocarbon,Radiocarbon - 1134,O:12:74/04-1410,"Coconino, AZ",Beta-181375,470,30
 Radiocarbon,Radiocarbon - 1125,O:12:19,"Coconino, AZ",Beta-348408,960,30
 Radiocarbon,Radiocarbon - 1125,O:12:19,"Coconino, AZ",Beta-348409,1160,30
@@ -283,14 +224,12 @@ Radiocarbon,Radiocarbon - 1127,O:12:21,"Coconino, AZ",Beta-289241,360,30
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-348410,1450,30
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-348411,1790,30
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-348412,1760,30
-Radiocarbon,Radiocarbon - 1132,O:12:41/04-1431,"Coconino, AZ",Beta-192508,2980,40
 Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1894C,1510,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214899,930,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214900,500,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214901,1050,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214903,1150,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214904,940,40
-Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214906,2140,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214907,1010,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214908,970,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-214909,920,40
@@ -303,16 +242,12 @@ Radiocarbon,Radiocarbon - 1133,O:12:73/04-1475,"Coconino, AZ",Beta-156784,1660,4
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-227186,1580,40
 Radiocarbon,Radiocarbon - 1141,O:5:156(ASM),"Coconino, AZ",Beta-226416,1040,40
 Radiocarbon,Radiocarbon - 1752,B:16:134,"Coconino, AZ",Beta-249006,1030,40
-Radiocarbon,Radiocarbon - 1752,B:16:134,"Coconino, AZ",Beta-249007,2590,40
-Radiocarbon,Radiocarbon - 1752,B:16:134,"Coconino, AZ",Beta-249008,3160,40
 Radiocarbon,Radiocarbon - 1130,O:12:32/04-53,"Coconino, AZ",Beta-206146,700,40
 Radiocarbon,Radiocarbon - 1130,O:12:32/04-53,"Coconino, AZ",Beta-206148,710,40
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-137567,1450,40
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-137568,1280,40
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-137569,1240,40
-Radiocarbon,Radiocarbon - 1136,O:12:87/04-1437,"Coconino, AZ",Beta-233326,2120,40
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-233327,200,40
-Radiocarbon,Radiocarbon - 1136,O:12:87/04-1437,"Coconino, AZ",Beta-224422,2170,40
 Radiocarbon,Radiocarbon - 1128,O:12:25/04-743,"Coconino, AZ",Beta-153224,230,40
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-153228,1360,40
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-153229,1480,40
@@ -324,58 +259,20 @@ Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-233324,1050,4
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-233325,1190,40
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-233967,1070,40
 Radiocarbon,Radiocarbon - 1129,O:12:28,"Coconino, AZ",Beta-287247,1050,40
-Radiocarbon,Radiocarbon - 1130,O:12:32/04-53,"Coconino, AZ",Beta-206147,2120,40
-Radiocarbon,Radiocarbon - 1135,O:12:75/04-1417,"Coconino, AZ",Beta-174898,2120,40
-Radiocarbon,Radiocarbon - 1135,O:12:75/04-1417,"Coconino, AZ",Beta-177541,2120,40
-Radiocarbon,Radiocarbon - 1135,O:12:75/04-1417,"Coconino, AZ",Beta-177542,2110,40
-Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-233328,2050,40
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-233330,720,40
 Radiocarbon,Radiocarbon - 1138,O:12:89/04-1411,"Coconino, AZ",Beta-172216,190,40
 Radiocarbon,Radiocarbon - 1138,O:12:89/04-1411,"Coconino, AZ",Beta-174900,190,40
-Radiocarbon,Radiocarbon - 1127,O:12:21,"Coconino, AZ",Beta-287246,4700,40
 Radiocarbon,Radiocarbon - 1139,O:12:92,"Coconino, AZ",Beta-289242,1770,40
-Radiocarbon,Radiocarbon - 1423,"I:39:53,NNAD","Coconino, AZ",AA-9317,3445,45
-Radiocarbon,Radiocarbon - 1423,"I:39:53,NNAD","Coconino, AZ",AA-9319,3135,45
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",AA-9318,2630,45
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",AA-9320,2315,45
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",AA-9322,2140,45
 Radiocarbon,Radiocarbon - 1126,O:12:19/04-1159,"Coconino, AZ",Beta-215640,1110,50
-Radiocarbon,Radiocarbon - 1423,"I:39:53,NNAD","Coconino, AZ",AA-9321,3050,50
 Radiocarbon,Radiocarbon - 1137,O:12:88/04-1438,"Coconino, AZ",Beta-233329,1670,50
 Radiocarbon,Radiocarbon - 1128,O:12:25/04-743,"Coconino, AZ",Beta-153223,1200,50
 Radiocarbon,Radiocarbon - 1135,O:12:75/04-1417,"Coconino, AZ",Beta-174899,1670,50
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29095,5575,50
 Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1894A,1660,55
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29096a,7540,55
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876A,2800,60
 Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876G,880,60
-Radiocarbon,Radiocarbon - 1135,O:12:75/04-1417,"Coconino, AZ",Beta-156785,2510,60
 Radiocarbon,Radiocarbon - 1140,O:5:155(ASM),"Coconino, AZ",Beta-226415,1430,60
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",Beta-26333,2100,60
-Radiocarbon,Radiocarbon - 1130,O:12:32/04-53,"Coconino, AZ",Beta-206145,2360,60
 Radiocarbon,Radiocarbon - 1131,O:12:38/04-1372,"Coconino, AZ",Beta-153227,1170,60
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29098,7290,60
 Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876H,650,60
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29093,7425,65
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29096b,7565,65
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",AA-29097,7445,65
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876B,3590,80
 Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876C,730,80
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876E,4200,80
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",Beta-26334,2810,80
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCLA-1876D,6080,85
-Radiocarbon,Radiocarbon - 1423,"I:39:53,NNAD","Coconino, AZ",Beta-43317,3110,90
-Radiocarbon,Radiocarbon - 1423,"I:39:53,NNAD","Coconino, AZ",Beta-43318,3040,90
-Radiocarbon,Radiocarbon - 1424,"I:63:7,NNAD","Coconino, AZ",Beta-26332,2690,90
-Radiocarbon,Radiocarbon - 1422,I:,"Coconino, AZ",SI-86,3880,90
-Radiocarbon,Radiocarbon - 1753,C:,"Coconino, AZ",P-51480,2330,100
-Radiocarbon,Radiocarbon - 1422,I:,"Coconino, AZ",UCLA-741B,3500,100
-Radiocarbon,Radiocarbon - 1754,C:5:3,"Coconino, AZ",UCLA-741A,4095,100
-Radiocarbon,Radiocarbon - 1142,NA-11914,"Coconino, AZ",UCLA-1676,6175,120
-Radiocarbon,Radiocarbon - 1123,O:,"Coconino, AZ",UCR-231,4170,150
-Radiocarbon,Radiocarbon - 1754,C:5:3,"Coconino, AZ",A-1166,5760,200
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-55481,3789,36
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-88480,2274,36
 Radiocarbon,Radiocarbon - 507,CC:2:235,"Graham, AZ",Beta-148274,790,40
 Radiocarbon,Radiocarbon - 508,CC:2:289,"Graham, AZ",Beta-144573,880,40
 Radiocarbon,Radiocarbon - 508,CC:2:289,"Graham, AZ",Beta-144575,970,40
@@ -388,79 +285,30 @@ Radiocarbon,Radiocarbon - 508,CC:2:289,"Graham, AZ",Beta-148279,1480,40
 Radiocarbon,Radiocarbon - 508,CC:2:289,"Graham, AZ",Beta-148280,1070,40
 Radiocarbon,Radiocarbon - 509,CC:2:290,"Graham, AZ",Beta-148281,850,40
 Radiocarbon,Radiocarbon - 510,CC:2:291,"Graham, AZ",Beta-148282,670,40
-Radiocarbon,Radiocarbon - 511,CC:2:296,"Graham, AZ",Beta-144577,1960,40
 Radiocarbon,Radiocarbon - 511,CC:2:296,"Graham, AZ",Beta-144578,1820,40
-Radiocarbon,Radiocarbon - 511,CC:2:296,"Graham, AZ",Beta-148283,1980,40
 Radiocarbon,Radiocarbon - 511,CC:2:296,"Graham, AZ",Beta-148284,1830,40
 Radiocarbon,Radiocarbon - 511,CC:2:296,"Graham, AZ",Beta-148285,1840,40
 Radiocarbon,Radiocarbon - 512,CC:2:297,"Graham, AZ",Beta-144582,600,40
 Radiocarbon,Radiocarbon - 512,CC:2:297,"Graham, AZ",Beta-148286,1060,40
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-43176,2290,40
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-43180,2780,40
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-45664,2320,40
 Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-25327,225,40
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-89952,2274,41
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-89953,2259,42
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-87862,2484,44
 Radiocarbon,Radiocarbon - 506,CC:1:28(ASM),"Graham, AZ",TX-8302,775,46
 Radiocarbon,Radiocarbon - 506,CC:1:28(ASM),"Graham, AZ",TX-8303,665,46
-Radiocarbon,Radiocarbon - 512,CC:2:297,"Graham, AZ",Beta-144583,2350,50
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-43177,3690,50
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-43178,2430,50
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-43179,2790,50
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-45662,2270,50
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-25326,2430,55
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-25325,2240,55
 Radiocarbon,Radiocarbon - 506,CC:1:28(ASM),"Graham, AZ",TX-8304,746,56
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",CAMS-45663,2290,60
 Radiocarbon,Radiocarbon - 506,CC:1:28(ASM),"Graham, AZ",TX-8305,914,60
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",AA-25324,2355,65
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",M-540,2400,100
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",M-461,2600,125
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",L-432B,2200,140
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",A-258,2200,145
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",A-257,2200,145
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-20,2100,150
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-29bis,2430,150
 Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",M-462,1140,150
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ","A-20,-23",2100,150
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-50bis,2730,150
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-25B,2440,160
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-25bis,2700,160
 Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-28,1900,160
-Radiocarbon,Radiocarbon - 880,W:13:6,"Graham, AZ",A-247,2500,160
-Radiocarbon,Radiocarbon - 878,W:10:112,"Graham, AZ",A-51bis,3190,160
-Radiocarbon,Radiocarbon - 879,W:10:12,"Graham, AZ",M-541,2530,250
-Radiocarbon,Radiocarbon - 1802,LA133205,"Rio Arriba, NM",Beta-246314,2570,40
-Radiocarbon,Radiocarbon - 1803,LA133206,"Rio Arriba, NM",Beta-246315,2130,40
-Radiocarbon,Radiocarbon - 1804,LA139244,"Rio Arriba, NM",Beta-213521,2110,40
-Radiocarbon,Radiocarbon - 1804,LA139244,"Rio Arriba, NM",Beta-213522,2000,40
-Radiocarbon,Radiocarbon - 1804,LA139244,"Rio Arriba, NM",Beta-213523,2130,40
 Radiocarbon,Radiocarbon - 1805,LA155234,"Rio Arriba, NM",Beta-246317,280,40
 Radiocarbon,Radiocarbon - 1805,LA155234,"Rio Arriba, NM",Beta-246318,340,40
 Radiocarbon,Radiocarbon - 1812,LA71849,"Rio Arriba, NM",Beta-105372,1870,50
 Radiocarbon,Radiocarbon - 1806,LA66288/105710,"Rio Arriba, NM",Beta-167116,620,50
 Radiocarbon,Radiocarbon - 1810,LA66874,"Rio Arriba, NM",AA-9314,730,55
-Radiocarbon,Radiocarbon - 1804,LA139244,"Rio Arriba, NM",Beta-213520,2260,60
 Radiocarbon,Radiocarbon - 1806,LA66288/105710,"Rio Arriba, NM",Beta-163883,570,60
 Radiocarbon,Radiocarbon - 1808,LA66864,"Rio Arriba, NM",AA-9310,1175,60
 Radiocarbon,Radiocarbon - 1809,LA66866,"Rio Arriba, NM",AA-9311,1860,60
-Radiocarbon,Radiocarbon - 1814,LA82615,"Rio Arriba, NM",AA-9308,3680,60
-Radiocarbon,Radiocarbon - 1807,LA66860,"Rio Arriba, NM",AA-9309,2080,65
-Radiocarbon,Radiocarbon - 1811,LA66891,"Rio Arriba, NM",AA-9315,4320,65
-Radiocarbon,Radiocarbon - 1810,LA66874,"Rio Arriba, NM",AA-9313,6355,70
-Radiocarbon,Radiocarbon - 1813,LA72826,"Rio Arriba, NM",Beta-121912,5750,70
-Radiocarbon,Radiocarbon - 1814,LA82615,"Rio Arriba, NM",AA-9307,6260,75
-Radiocarbon,Radiocarbon - 1813,LA72826,"Rio Arriba, NM",Beta-121913,2630,90
-Radiocarbon,Radiocarbon - 1810,LA66874,"Rio Arriba, NM",AA-9312,6885,100
 Radiocarbon,Radiocarbon - 1834,LA40176,"San Juan, NM",UCIAMS-24002,155,20
 Radiocarbon,Radiocarbon - 1834,LA40176,"San Juan, NM",UCIAMS-24003,165,20
 Radiocarbon,Radiocarbon - 1833,LA38934,"San Juan, NM",PRI-13-050-198,948,21
 Radiocarbon,Radiocarbon - 1833,LA38934,"San Juan, NM",PRI-13937,948,21
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-139114,3520,30
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-140978,4120,30
-Radiocarbon,Radiocarbon - 1854,LA80320,"San Juan, NM",Beta-139118,3790,30
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130170,3100,30
 Radiocarbon,Radiocarbon - 1828,LA3035,"San Juan, NM",Beta-239156,1600,40
 Radiocarbon,Radiocarbon - 1839,LA4257,"San Juan, NM",Beta-239163,1570,40
 Radiocarbon,Radiocarbon - 1816,LA110299,"San Juan, NM",Beta-141323,340,40
@@ -471,36 +319,15 @@ Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130165,980,40
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130178,780,40
 Radiocarbon,Radiocarbon - 1820,LA122034,"San Juan, NM",Beta-153472,1940,40
 Radiocarbon,Radiocarbon - 1820,LA122034,"San Juan, NM",Beta-153475,1870,40
-Radiocarbon,Radiocarbon - 1820,LA122034,"San Juan, NM",Beta-153476,2000,40
 Radiocarbon,Radiocarbon - 1821,LA127117,"San Juan, NM",Beta-131239,480,40
 Radiocarbon,Radiocarbon - 1825,LA226,"San Juan, NM",Beta-188110,1020,40
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-139308,5650,40
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-140977,5960,40
-Radiocarbon,Radiocarbon - 1837,LA4169,"San Juan, NM",Beta-239158,2270,40
 Radiocarbon,Radiocarbon - 1838,LA4195,"San Juan, NM",Beta-239159,1110,40
 Radiocarbon,Radiocarbon - 1838,LA4195,"San Juan, NM",Beta-239160,1150,40
 Radiocarbon,Radiocarbon - 1838,LA4195,"San Juan, NM",Beta-239161,1310,40
 Radiocarbon,Radiocarbon - 1838,LA4195,"San Juan, NM",Beta-239162,1210,40
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133880,4180,40
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144137,3180,40
 Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130173,370,40
 Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130176,370,40
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-147433,5640,40
-Radiocarbon,Radiocarbon - 1846,LA72759,"San Juan, NM",Beta-157035,2130,40
-Radiocarbon,Radiocarbon - 1846,LA72759,"San Juan, NM",Beta-157036,2070,40
-Radiocarbon,Radiocarbon - 1846,LA72759,"San Juan, NM",Beta-157038,2070,40
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144130,5450,40
 Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144132,1860,40
-Radiocarbon,Radiocarbon - 1820,LA122034,"San Juan, NM",Beta-153471,2030,40
-Radiocarbon,Radiocarbon - 1836,LA41156,"San Juan, NM",Beta-273384,2240,40
-Radiocarbon,Radiocarbon - 1836,LA41156,"San Juan, NM",Beta-273385,2110,40
-Radiocarbon,Radiocarbon - 1836,LA41156,"San Juan, NM",Beta-273386,2190,40
-Radiocarbon,Radiocarbon - 1836,LA41156,"San Juan, NM",Beta-273387,2080,40
-Radiocarbon,Radiocarbon - 1836,LA41156,"San Juan, NM",Beta-273388,2200,40
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144128,4450,40
-Radiocarbon,Radiocarbon - 1852,LA80315,"San Juan, NM",Beta-144141,2850,40
-Radiocarbon,Radiocarbon - 1853,LA80316,"San Juan, NM",Beta-144140,2040,40
-Radiocarbon,Radiocarbon - 1853,LA80316,"San Juan, NM",Beta-144142,2880,40
 Radiocarbon,Radiocarbon - 1818,LA111589,"San Juan, NM",Beta-96742,1400,50
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130156,950,50
 Radiocarbon,Radiocarbon - 1822,LA127118,"San Juan, NM",Beta-131240,970,50
@@ -510,10 +337,7 @@ Radiocarbon,Radiocarbon - 1825,LA226,"San Juan, NM",Beta-188114,830,50
 Radiocarbon,Radiocarbon - 1827,LA27615,"San Juan, NM",Beta-96276,1940,50
 Radiocarbon,Radiocarbon - 1829,LA36653,"San Juan, NM",Beta-117373,1210,50
 Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-115941,880,50
-Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-117571,4710,50
-Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-117572,2790,50
 Radiocarbon,Radiocarbon - 1832,LA38533,"San Juan, NM",Beta-115946,990,50
-Radiocarbon,Radiocarbon - 1841,LA70667,"San Juan, NM",Beta-103381,2450,50
 Radiocarbon,Radiocarbon - 1842,LA71610,"San Juan, NM",Beta-103374,1610,50
 Radiocarbon,Radiocarbon - 1845,LA72747,"San Juan, NM",Beta-103375,1600,50
 Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78390,1570,50
@@ -521,95 +345,54 @@ Radiocarbon,Radiocarbon - 1848,LA78171,"San Juan, NM",Beta-78407,620,50
 Radiocarbon,Radiocarbon - 1848,LA78171,"San Juan, NM",Beta-78411,620,50
 Radiocarbon,Radiocarbon - 1848,LA78171,"San Juan, NM",Beta-78413,1230,50
 Radiocarbon,Radiocarbon - 1849,LA78813,"San Juan, NM",Beta-60622,1740,50
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133881,4070,50
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133883,5050,50
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133885,2890,50
 Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144138,1360,50
-Radiocarbon,Radiocarbon - 1851,LA79500,"San Juan, NM",Beta-103380,2230,50
 Radiocarbon,Radiocarbon - 1855,LA80351,"San Juan, NM",Beta-103376,1580,50
 Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117475,1110,50
-Radiocarbon,Radiocarbon - 1865,LA86339,"San Juan, NM",Beta-131238,2420,50
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144131,3940,50
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-141663,3170,50
 Radiocarbon,Radiocarbon - 1818,LA111589,"San Juan, NM",Beta-96745,1650,60
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130158,910,60
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130177,890,60
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129323,1080,60
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129324,920,60
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129329,920,60
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-147434,5860,60
 Radiocarbon,Radiocarbon - 1830,LA38515,"San Juan, NM",Beta-115940,960,60
 Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-115943,1220,60
-Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-117573,6660,60
 Radiocarbon,Radiocarbon - 1837,LA4169,"San Juan, NM",Beta-239157,1330,60
 Radiocarbon,Radiocarbon - 1843,LA71781,"San Juan, NM",Beta-67767,1660,60
 Radiocarbon,Radiocarbon - 1844,LA72717,"San Juan, NM",Beta-103378,1840,60
-Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78394,2890,60
 Radiocarbon,Radiocarbon - 1858,LA80972,"San Juan, NM",Beta-78421,1720,60
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130167,2680,60
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130168,2850,60
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130169,2790,60
 Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117472,390,60
 Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117474,1600,60
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144133,3770,60
-Radiocarbon,Radiocarbon - 1815,LA109151,"San Juan, NM",Beta-96725,4230,70
 Radiocarbon,Radiocarbon - 1818,LA111589,"San Juan, NM",Beta-96738,1710,70
 Radiocarbon,Radiocarbon - 1818,LA111589,"San Juan, NM",Beta-96741,1900,70
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130160,540,70
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130164,1050,70
-Radiocarbon,Radiocarbon - 1820,LA122034,"San Juan, NM",Beta-120133,2660,70
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129326,1000,70
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129327,890,70
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129328,720,70
 Radiocarbon,Radiocarbon - 1829,LA36653,"San Juan, NM",Beta-117372,1050,70
 Radiocarbon,Radiocarbon - 1830,LA38515,"San Juan, NM",Beta-115939,570,70
 Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-115942,1010,70
-Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-115942B,3030,70
 Radiocarbon,Radiocarbon - 1832,LA38533,"San Juan, NM",Beta-115949,1070,70
-Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78396,2410,70
 Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78400,1660,70
 Radiocarbon,Radiocarbon - 1851,LA79500,"San Juan, NM",Beta-78418,1890,70
-Radiocarbon,Radiocarbon - 1853,LA80316,"San Juan, NM",Beta-139303,2890,70
-Radiocarbon,Radiocarbon - 1860,LA83051,"San Juan, NM",Beta-103377,2940,70
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130166,2810,70
 Radiocarbon,Radiocarbon - 1862,LA86090,"San Juan, NM",Beta-96273,1030,70
 Radiocarbon,Radiocarbon - 1862,LA86090,"San Juan, NM",Beta-96274,1290,70
 Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117476,350,70
-Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117477,4920,70
-Radiocarbon,Radiocarbon - 1864,LA86095,"San Juan, NM",Beta-96275,2880,70
 Radiocarbon,Radiocarbon - 1852,LA80315,"San Juan, NM",Beta-144139,1370,70
-Radiocarbon,Radiocarbon - 1857,LA80963,"San Juan, NM",AA-10764,3350,75
-Radiocarbon,Radiocarbon - 1815,LA109151,"San Juan, NM",Beta-96723,3760,80
-Radiocarbon,Radiocarbon - 1817,LA111588,"San Juan, NM",Beta-96719,3090,80
 Radiocarbon,Radiocarbon - 1819,LA120494,"San Juan, NM",Beta-130159,780,80
 Radiocarbon,Radiocarbon - 1824,LA20266,"San Juan, NM",Beta-129331,790,80
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-130116,4110,80
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-139116,4110,80
 Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78398,1850,80
 Radiocarbon,Radiocarbon - 1848,LA78171,"San Juan, NM",Beta-78408,1450,80
 Radiocarbon,Radiocarbon - 1848,LA78171,"San Juan, NM",Beta-78412,1080,80
 Radiocarbon,Radiocarbon - 1863,LA86094,"San Juan, NM",Beta-117473,350,80
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-144129,2910,80
 Radiocarbon,Radiocarbon - 1849,LA78813,"San Juan, NM",Beta-60623,1870,90
 Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133884,1870,90
 Radiocarbon,Radiocarbon - 1851,LA79500,"San Juan, NM",Beta-78414,1520,90
 Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-130171,620,90
-Radiocarbon,Radiocarbon - 1861,LA86086,"San Juan, NM",Beta-131237,5970,90
-Radiocarbon,Radiocarbon - 1847,LA72798,"San Juan, NM",Beta-78401,2540,100
-Radiocarbon,Radiocarbon - 1856,LA80446,"San Juan, NM",A-615A,3530,100
-Radiocarbon,Radiocarbon - 1859,LA82984,"San Juan, NM",Beta-103379,2630,110
 Radiocarbon,Radiocarbon - 1837,LA4169,"San Juan, NM",I-1342,1750,115
-Radiocarbon,Radiocarbon - 1831,LA38528,"San Juan, NM",Beta-115944,5840,130
-Radiocarbon,Radiocarbon - 1826,LA27092,"San Juan, NM",Beta-139115,6180,140
-Radiocarbon,Radiocarbon - 1850,LA79076,"San Juan, NM",Beta-133882,5350,150
 Radiocarbon,Radiocarbon - 1839,LA4257,"San Juan, NM",M-1115B,1830,150
 Radiocarbon,Radiocarbon - 1839,LA4257,"San Juan, NM",M-1115C,1690,150
 Radiocarbon,Radiocarbon - 1839,LA4257,"San Juan, NM",M-1115D,1740,150
-Radiocarbon,Radiocarbon - 1840,LA42893,"San Juan, NM",UGA-4231,4245,180
-Radiocarbon,Radiocarbon - 1835,LA40178,"San Juan, NM",A-3395,2170,180
-Radiocarbon,Radiocarbon - 1835,LA40178,"San Juan, NM",A-3396,2290,210
-Radiocarbon,Radiocarbon - 1823,LA17687,"San Juan, NM",GX-12720,3175,240
-Radiocarbon,Radiocarbon - 1838,LA4195,"San Juan, NM",TBN-306-3,2191,264
 Radiocarbon,Radiocarbon - 1878,LA2742,"Taos, NM",Beta-47036,1170,60
 Radiocarbon,Radiocarbon - 1878,LA2742,"Taos, NM",Beta-46600,1140,60
 Radiocarbon,Radiocarbon - 1879,LA70577,"Taos, NM",Beta-46602,940,60
@@ -625,21 +408,11 @@ Radiocarbon,Radiocarbon - 1878,LA2742,"Taos, NM",Beta-46597,1050,130
 Radiocarbon,Radiocarbon - 876,V:5:104/1045,"Gila, AZ",AA-13690,1725,65
 Radiocarbon,Radiocarbon - 877,V:9:13,"Gila, AZ",A-1345,1020,80
 Radiocarbon,Radiocarbon - 1799,E:8:1,"Apache, AZ",A-2464,1430,24
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-87861,2078,38
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-220356,2290,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-220357,2250,40
 Radiocarbon,Radiocarbon - 1443,K:10:12,"Apache, AZ",Beta-237072,1370,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-242496,2250,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-242497,2260,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-242499,2200,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-242500,2310,40
-Radiocarbon,Radiocarbon - 1444,K:10:28,"Apache, AZ",Beta-242936,2120,40
-Radiocarbon,Radiocarbon - 1445,K:10:9,"Apache, AZ",Beta-242491,2220,40
 Radiocarbon,Radiocarbon - 1445,K:10:9,"Apache, AZ",Beta-242492,1230,40
 Radiocarbon,Radiocarbon - 1445,K:10:9,"Apache, AZ",Beta-242493,1280,40
 Radiocarbon,Radiocarbon - 1445,K:10:9,"Apache, AZ",Beta-242494,1220,40
 Radiocarbon,Radiocarbon - 1445,K:10:9,"Apache, AZ",Beta-242935,1200,40
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-57717,2132,43
 Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-57743,1395,43
 Radiocarbon,Radiocarbon - 1799,E:8:1,"Apache, AZ",AA-57742,1373,43
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59708,840,50
@@ -648,19 +421,10 @@ Radiocarbon,Radiocarbon - 1449,K:14:32,"Apache, AZ",Beta-47902,1560,50
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59707,730,50
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59711,950,50
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59718,1230,50
-Radiocarbon,Radiocarbon - 1564,LA-18745,"Apache, AZ",UGa-2893,2395,50
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",P-1544,500,50
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59717,910,50
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-86999,2153,51
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-87003,2070,51
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-87000,2187,52
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-87002,2134,52
 Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-86998,1278,58
-Radiocarbon,Radiocarbon - 1447,K:13:60,"Apache, AZ",AA-2438,2100,60
 Radiocarbon,Radiocarbon - 1452,K:15:28,"Apache, AZ",Beta-59706,870,60
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",UGa-2101,2180,60
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",UGa-2102,2145,60
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",UGa-2104,2040,60
 Radiocarbon,Radiocarbon - 1448,K:14:26,"Apache, AZ",Beta-29353,740,60
 Radiocarbon,Radiocarbon - 1448,K:14:26,"Apache, AZ",Beta-29354,990,60
 Radiocarbon,Radiocarbon - 1449,K:14:32,"Apache, AZ",Beta-47898,1360,60
@@ -671,23 +435,14 @@ Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59713,1160,60
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59714,1220,60
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3983,770,60
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59715,1070,60
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",UGa-2103,2185,65
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",UGA-3235,2395,65
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4190,2090,70
 Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4191,1830,70
-Radiocarbon,Radiocarbon - 1168,Q:7:33,"Apache, AZ",UGA-3230,3310,70
 Radiocarbon,Radiocarbon - 1448,K:14:26,"Apache, AZ",Beta-29352,690,70
 Radiocarbon,Radiocarbon - 1449,K:14:32,"Apache, AZ",Beta-47900,1490,70
 Radiocarbon,Radiocarbon - 1450,K:14:33,"Apache, AZ",Beta-47906,1490,70
 Radiocarbon,Radiocarbon - 1450,K:14:33,"Apache, AZ",Beta-47907,1460,70
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59710,1370,70
-Radiocarbon,Radiocarbon - 1547,LA-18103,"Apache, AZ",UGa-3628,3650,70
-Radiocarbon,Radiocarbon - 1564,LA-18745,"Apache, AZ",UGa-2894,2825,70
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3980,400,70
 Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",UGA-2100,1940,75
-Radiocarbon,Radiocarbon - 1164,Q:11:69,"Apache, AZ",UGA-3227,2355,75
-Radiocarbon,Radiocarbon - 1563,LA-17584,"Apache, AZ",UGa-3110,2150,75
-Radiocarbon,Radiocarbon - 1798,E:,"Apache, AZ",AA-87001,2155,76
 Radiocarbon,Radiocarbon - 1165,Q:12:13,"Apache, AZ",UGa-2137,1540,80
 Radiocarbon,Radiocarbon - 1446,K:13:41,"Apache, AZ",Beta-60046,910,80
 Radiocarbon,Radiocarbon - 1446,K:13:41,"Apache, AZ",Beta-60047,650,80
@@ -699,74 +454,34 @@ Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3982,640,80
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3985,570,80
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3986,580,80
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3981,625,85
-Radiocarbon,Radiocarbon - 1546,LA-17337,"Apache, AZ",UGa-3621,3680,85
 Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4193,1530,90
 Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4223,1920,90
-Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4224,2280,90
 Radiocarbon,Radiocarbon - 1163,Q:1:22,"Apache, AZ",WSU-3984,730,90
-Radiocarbon,Radiocarbon - 1164,Q:11:69,"Apache, AZ",UGA-3218,4130,90
-Radiocarbon,Radiocarbon - 1164,Q:11:69,"Apache, AZ",UGA-3228,4130,90
-Radiocarbon,Radiocarbon - 1447,K:13:60,"Apache, AZ",WSU-3576,2960,90
 Radiocarbon,Radiocarbon - 1450,K:14:33,"Apache, AZ",Beta-47908,1920,90
 Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4188,1590,95
 Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4219,1900,95
 Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4220,1950,95
 Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4221,1830,95
-Radiocarbon,Radiocarbon - 1447,K:13:60,"Apache, AZ",WSU-3577,2900,95
-Radiocarbon,Radiocarbon - 1546,LA-17337,"Apache, AZ",UGa-3623,3560,95
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4189,2040,100
 Radiocarbon,Radiocarbon - 1162,Q:1:114,"Apache, AZ",WSU-4222,1700,100
-Radiocarbon,Radiocarbon - 1168,Q:7:33,"Apache, AZ",UGA-3229,2175,100
-Radiocarbon,Radiocarbon - 1166,Q:12:27,"Apache, AZ",UGA-3232,3070,105
 Radiocarbon,Radiocarbon - 1169,Q:7:34,"Apache, AZ",UGA-3231,1920,105
-Radiocarbon,Radiocarbon - 1447,K:13:60,"Apache, AZ",WSU-3575,2420,110
 Radiocarbon,Radiocarbon - 1451,K:15:16,"Apache, AZ",Beta-59709,1130,110
 Radiocarbon,Radiocarbon - 1164,Q:11:69,"Apache, AZ",UGA-3226,1435,115
-Radiocarbon,Radiocarbon - 1166,Q:12:27,"Apache, AZ",UGA-3233,2850,125
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",A-2202,2120,140
 Radiocarbon,Radiocarbon - 1165,Q:12:13,"Apache, AZ",UGa-2139,1775,145
 Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",WSU-4192,1740,150
-Radiocarbon,Radiocarbon - 1547,LA-18103,"Apache, AZ",UGa-3627,3985,155
-Radiocarbon,Radiocarbon - 1161,Q:,"Apache, AZ",GX-12488,2734,160
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",UGA-3239,2130,185
-Radiocarbon,Radiocarbon - 1170,Q:7:35,"Apache, AZ",A-2203,4770,200
-Radiocarbon,Radiocarbon - 1166,Q:12:27,"Apache, AZ",UGA-3234,2980,205
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",UGA-3236,3255,220
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",UGA-3237,2070,230
-Radiocarbon,Radiocarbon - 1167,Q:7:22,"Apache, AZ",UGA-3238,2735,230
 Radiocarbon,Radiocarbon - 566,LA12076,"Grant, NM",UCIAMS-154709,1075,20
 Radiocarbon,Radiocarbon - 565,LA111413,"Grant, NM",Beta-105818,1010,40
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-141721,2270,40
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-141724,2240,40
 Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-141722,1690,40
 Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-141723,1700,40
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-133981,2740,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-133982,2730,45
 Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-133983,1815,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-133984,2735,45
 Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-141726,1945,45
 Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-141727,295,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-141728,2705,45
 Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-142216,1735,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-142217,2740,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-142218,2760,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-142219,2760,45
-Radiocarbon,Radiocarbon - 569,LA99631,"Grant, NM",Beta-142220,2735,45
 Radiocarbon,Radiocarbon - 564,LA111402,"Grant, NM",Beta-106598,420,50
 Radiocarbon,Radiocarbon - 565,LA111413,"Grant, NM",Beta-105817,1130,50
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-141725,2240,50
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-133978,2230,50
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-133979,2210,50
-Radiocarbon,Radiocarbon - 568,LA78089,"Grant, NM",Beta-133980,2140,50
 Radiocarbon,Radiocarbon - 567,LA34813,"Grant, NM",N-1556,1640,80
-Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-306306,3610,30
-Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-304778,3590,30
 Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-234858,1480,40
 Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-235397,1370,40
-Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-302711,6610,40
-Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-304094,2340,40
 Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-283900,1940,40
-Radiocarbon,Radiocarbon - 2557,5DT813,"Dolores, CO",Beta-250332,6890,50
 Radiocarbon,Radiocarbon - 2648,42GA3128,"Garfield, UT",SR-5867,890,30
 Radiocarbon,Radiocarbon - 2813,42GA4445,"Garfield, UT",BETA-128677,940,30
 Radiocarbon,Radiocarbon - 2648,42GA3128,"Garfield, UT",SR-5864,1180,40
@@ -780,31 +495,21 @@ Radiocarbon,Radiocarbon - 2626,42GA3591,"Garfield, UT",BETA-54286,990,50
 Radiocarbon,Radiocarbon - 2467,42GA288,"Garfield, UT",Beta-34940,1480,50
 Radiocarbon,Radiocarbon - 2465,42GA4567,"Garfield, UT",BETA-161580,770,50
 Radiocarbon,Radiocarbon - 2472,42GA288,"Garfield, UT",AA-5224,1600,50
-Radiocarbon,Radiocarbon - 2560,42GA3907,"Garfield, UT",BETA-94482-dup?,3160,50
 Radiocarbon,Radiocarbon - 2816,42GA4431,"Garfield, UT",BETA-128673,1160,50
-Radiocarbon,Radiocarbon - 2816,42GA4431,"Garfield, UT",BETA-128674,2040,50
 Radiocarbon,Radiocarbon - 2624,42GA4126,"Garfield, UT",BETA-106104,1140,60
 Radiocarbon,Radiocarbon - 2627,42GA2557,"Garfield, UT",BETA-77112,760,60
 Radiocarbon,Radiocarbon - 2669,42GA3138,"Garfield, UT",BETA-39266,980,60
 Radiocarbon,Radiocarbon - 2682,42GA3102,"Garfield, UT",BETA-17182,1200,60
-Radiocarbon,Radiocarbon - 2726,42GA4001,"Garfield, UT",BETA-101268,2120,60
-Radiocarbon,Radiocarbon - 2847,42GA3863,"Garfield, UT",BETA-101423,2050,60
 Radiocarbon,Radiocarbon - 2501,42GA3132,"Garfield, UT",Beta-35560,1580,60
 Radiocarbon,Radiocarbon - 2501,42GA3132,"Garfield, UT",Beta-20671,1550,60
 Radiocarbon,Radiocarbon - 2503,42GA3138,"Garfield, UT",Beta-20673,770,60
-Radiocarbon,Radiocarbon - 2503,42GA3138,"Garfield, UT",Beta-39256,2320,60
 Radiocarbon,Radiocarbon - 2504,42GA3199,"Garfield, UT",Beta-31188,1520,60
-Radiocarbon,Radiocarbon - 2506,42GA3205,"Garfield, UT",Beta-27897,3240,60
 Radiocarbon,Radiocarbon - 2529,42GA1541,"Garfield, UT",BETA-134608,1230,60
 Radiocarbon,Radiocarbon - 2829,42GA448,"Garfield, UT",BETA-124190,1470,60
 Radiocarbon,Radiocarbon - 2656,42GA3970,"Garfield, UT",BETA-161576,930,60
 Radiocarbon,Radiocarbon - 2814,42GA4443,"Garfield, UT",BETA-128676,1140,60
 Radiocarbon,Radiocarbon - 2830,42GA4441,"Garfield, UT",BETA-124189,1460,60
-Radiocarbon,Radiocarbon - 2828,42GA4418,"Garfield, UT",BETA-128679,2110,70
-Radiocarbon,Radiocarbon - 2498,42GA3084,"Garfield, UT",Beta-31185,2850,70
-Radiocarbon,Radiocarbon - 2500,42GA3122,"Garfield, UT",Beta-20669,2250,70
 Radiocarbon,Radiocarbon - 2503,42GA3138,"Garfield, UT",Beta-35318,1380,70
-Radiocarbon,Radiocarbon - 2505,42GA3202,"Garfield, UT",Beta-31189,2530,70
 Radiocarbon,Radiocarbon - 2467,42GA288,"Garfield, UT",Beta-34939,1270,70
 Radiocarbon,Radiocarbon - 2495,42GA103,"Garfield, UT",Beta-34937,1570,70
 Radiocarbon,Radiocarbon - 2465,42GA4567,"Garfield, UT",BETA-161581,1170,70
@@ -827,30 +532,18 @@ Radiocarbon,Radiocarbon - 2536,42GA4561,"Garfield, UT",BETA-134617,1520,80
 Radiocarbon,Radiocarbon - 2536,42GA4561,"Garfield, UT",BETA-134618,1500,80
 Radiocarbon,Radiocarbon - 2540,42GA4536,"Garfield, UT",BETA-134612,1760,80
 Radiocarbon,Radiocarbon - 2563,42GA4518,"Garfield, UT",BETA-134610,950,80
-Radiocarbon,Radiocarbon - 2670,42GA3987,"Garfield, UT",BETA-101267,2180,80
 Radiocarbon,Radiocarbon - 2828,42GA4418,"Garfield, UT",BETA-128680,1580,80
 Radiocarbon,Radiocarbon - 2671,42GA34,"Garfield, UT",Tx-132,900,85
 Radiocarbon,Radiocarbon - 2671,42GA34,"Garfield, UT",Tx-133,1115,85
-Radiocarbon,Radiocarbon - 2451,42GA3303,"Garfield, UT",BETA-68657,2090,90
-Radiocarbon,Radiocarbon - 2501,42GA3132,"Garfield, UT",Beta-35559,5880,90
-Radiocarbon,Radiocarbon - 2504,42GA3199,"Garfield, UT",Beta-31187,2160,90
-Radiocarbon,Radiocarbon - 2506,42GA3205,"Garfield, UT",Beta-28322,2670,90
 Radiocarbon,Radiocarbon - 2467,42GA288,"Garfield, UT",Beta-34941,1770,90
 Radiocarbon,Radiocarbon - 2630,42GA4054,"Garfield, UT",BETA-161578,1220,90
 Radiocarbon,Radiocarbon - 2496,42GA3035,"Garfield, UT",Beta-28770,1650,100
 Radiocarbon,Radiocarbon - 2497,42GA3082,"Garfield, UT",Beta-28769,1570,100
-Radiocarbon,Radiocarbon - 2503,42GA3138,"Garfield, UT",Beta-35319,2760,100
-Radiocarbon,Radiocarbon - 2507,42GA3206,"Garfield, UT",Beta-32026,2950,100
 Radiocarbon,Radiocarbon - 2471,42GA102,"Garfield, UT",BETA-34934,1520,100
 Radiocarbon,Radiocarbon - 2559,42GA4521,"Garfield, UT",BETA-134611,1610,120
-Radiocarbon,Radiocarbon - 2558,42GA456,"Garfield, UT",BETA-161574,2030,120
-Radiocarbon,Radiocarbon - 2502,42GA3133,"Garfield, UT",Beta-35561,4980,130
-Radiocarbon,Radiocarbon - 2508,42GA3411,"Garfield, UT",Beta-31191,7560,130
 Radiocarbon,Radiocarbon - 2564,42GA3743,"Garfield, UT",BETA-23058,1500,140
 Radiocarbon,Radiocarbon - 2771,42GA3048,"Garfield, UT",BETA-16268,1850,140
-Radiocarbon,Radiocarbon - 2499,42GA3086,"Garfield, UT",Beta-32025,3230,140
 Radiocarbon,Radiocarbon - 2564,42GA3743,"Garfield, UT",BETA-23057,1910,160
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1824,1965,31
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1843,1862,34
 Radiocarbon,Radiocarbon - 2429,42SA21153A,"San Juan, UT",AA-84948,1839,36
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1801,1080,40
@@ -871,17 +564,12 @@ Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1817,1816,41
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1820,1934,41
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1821,1904,41
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1832,1924,41
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1842,1975,41
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1846,1882,41
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1803,1881,42
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1804,2004,42
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1810,2031,42
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1818,1782,42
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1861,1806,42
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1867,1795,42
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1872,1958,42
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1875,1914,42
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1807,1977,43
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1822,1903,43
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1826,1682,43
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1858,1862,43
@@ -899,13 +587,9 @@ Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1844,1876,45
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1845,1842,45
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1847,1908,45
 Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",WSU-2750,1860,45
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1783,2043,46
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1795,2040,46
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1798,1980,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1809,1839,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1834,1932,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1836,1893,46
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1849,1953,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1851,1929,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1855,1929,46
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1859,1829,46
@@ -921,37 +605,28 @@ Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1800,1797,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1838,1845,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1839,1650,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1848,1896,47
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1860,2086,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1866,1934,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1880,1884,47
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1786,1915,48
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1828,1896,48
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1837,1864,48
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1852,2004,48
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1813,1971,49
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1823,1793,50
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1863,1846,50
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1865,1876,50
-Radiocarbon,Radiocarbon - 2133,42SA20804,"San Juan, UT",BETA-69277,3950,50
 Radiocarbon,Radiocarbon - 2458,42SA18646,"San Juan, UT",BETA-5797,1460,50
 Radiocarbon,Radiocarbon - 2464,42SA22559,"San Juan, UT",BETA-77110,950,50
 Radiocarbon,Radiocarbon - 2733,42SA17119,"San Juan, UT",BETA-57131,1870,50
 Radiocarbon,Radiocarbon - 2811,42SA1563,"San Juan, UT",BETA-19918,760,50
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",WSU-2759,2065,50
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-77874,2320,50
 Radiocarbon,Radiocarbon - 2072,NA,"San Juan, UT",BETA-102492,1840,50
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1797,1792,51
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1808,1934,51
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1814,1965,51
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1850,1897,51
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1874,1825,52
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1877,1854,53
 Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",WSU-2751,1925,55
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1778,1956,56
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1776,1932,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1779,1938,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1782,1878,57
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1784,1958,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1785,1918,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1787,1939,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1790,1887,57
@@ -959,143 +634,60 @@ Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1793,1919,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1806,1903,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1812,1924,57
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1780,1907,58
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1788,1993,58
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1794,1880,58
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1799,1796,58
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1805,1831,58
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1791,1978,59
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1815,1830,59
 Radiocarbon,Radiocarbon - 2069,NA,"San Juan, UT",BETA-102496,1880,60
-Radiocarbon,Radiocarbon - 2375,NA,"San Juan, UT",BETA-97659,7350,60
-Radiocarbon,Radiocarbon - 2458,42SA18646,"San Juan, UT",BETA-57406,6100,60
 Radiocarbon,Radiocarbon - 2811,42SA1563,"San Juan, UT",BETA-19916,1180,60
 Radiocarbon,Radiocarbon - 2811,42SA1563,"San Juan, UT",BETA-19917,800,60
 Radiocarbon,Radiocarbon - 2910,42SA21291,"San Juan, UT",BETA-70052,780,60
-Radiocarbon,Radiocarbon - 2950,42SA21269,"San Juan, UT",BETA-69975,2820,60
-Radiocarbon,Radiocarbon - 2953,42SA21267,"San Juan, UT",BETA-69323,3180,60
-Radiocarbon,Radiocarbon - 2301,42SA17141,"San Juan, UT",Beta-21208,2080,60
 Radiocarbon,Radiocarbon - 2305,42SA20251,"San Juan, UT",Beta-30481,1170,60
-Radiocarbon,Radiocarbon - 2308,42SA20292,"San Juan, UT",Beta-30484,2120,60
-Radiocarbon,Radiocarbon - 2316,42SA5800,"San Juan, UT",Beta-20467,2740,60
 Radiocarbon,Radiocarbon - 2420,42SA16823,"San Juan, UT",Beta-12657,1380,60
 Radiocarbon,Radiocarbon - 2233,42SA22674,"San Juan, UT",Beta-122104,940,60
 Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-74066,1810,60
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",WSU-3512,1980,60
 Radiocarbon,Radiocarbon - 2072,NA,"San Juan, UT",BETA-102493,1730,60
-Radiocarbon,Radiocarbon - 2375,NA,"San Juan, UT",BETA-95277,7590,60
-Radiocarbon,Radiocarbon - 2375,NA,"San Juan, UT",BETA-95751,7860,60
 Radiocarbon,Radiocarbon - 2072,NA,"San Juan, UT",BETA-175650,1660,60
 Radiocarbon,Radiocarbon - 2072,NA,"San Juan, UT",BETA-175651,1640,60
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",AA-10379,6785,60
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Beta-95281,7590,60
 Radiocarbon,Radiocarbon - 2412,42SA735,"San Juan, UT",Y-1349,250,60
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-77870,7340,60
-Radiocarbon,Radiocarbon - 2077,NA7613,"San Juan, UT",AA-10378,6890,60
-Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1802,1951,63
 Radiocarbon,Radiocarbon - 2460,42SA22180,"San Juan, UT",A-1906,1907,65
-Radiocarbon,Radiocarbon - 2417,42SA9999,"San Juan, UT",BETA-32291,2610,65
 Radiocarbon,Radiocarbon - 2069,NA,"San Juan, UT",BETA-102495,1590,70
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-48227,1480,70
-Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-47743,6730,70
 Radiocarbon,Radiocarbon - 2464,42SA22559,"San Juan, UT",BETA-7705,1700,70
 Radiocarbon,Radiocarbon - 2811,42SA1563,"San Juan, UT",BETA-19915,1840,70
-Radiocarbon,Radiocarbon - 2300,42SA17107,"San Juan, UT",Beta-31790,5890,70
-Radiocarbon,Radiocarbon - 2303,42SA17597,"San Juan, UT",Beta-24478,2990,70
-Radiocarbon,Radiocarbon - 2308,42SA20292,"San Juan, UT",Beta-30485,2220,70
-Radiocarbon,Radiocarbon - 2312,42SA21091,"San Juan, UT",Beta-31962,2070,70
 Radiocarbon,Radiocarbon - 2316,42SA5800,"San Juan, UT",Beta-20466,1730,70
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-48141,6120,70
 Radiocarbon,Radiocarbon - 2233,42SA22674,"San Juan, UT",Beta-112580,870,70
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-52614,1400,70
 Radiocarbon,Radiocarbon - 2076,42JB394,"San Juan, UT",BETA-47894,1370,70
 Radiocarbon,Radiocarbon - 2296,NA,"San Juan, UT",BETA-95273,1750,70
-Radiocarbon,Radiocarbon - 2296,NA,"San Juan, UT",BETA-95274,2090,70
-Radiocarbon,Radiocarbon - 2417,42SA9999,"San Juan, UT",BETA-32290,2110,70
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-47069,866,70
-Radiocarbon,Radiocarbon - 2884,42SA20615,"San Juan, UT",AA-9179,2710,70
 Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-52165,1870,70
 Radiocarbon,Radiocarbon - 2072,NA,"San Juan, UT",BETA-102494,1670,80
-Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-47007,7790,80
 Radiocarbon,Radiocarbon - 2952,42SA21263,"San Juan, UT",BETA-70053,1030,80
 Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",A-495,1510,80
 Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-452,1820,80
 Radiocarbon,Radiocarbon - 2297,GG-69-18,"San Juan, UT",GX-2142,1708,80
 Radiocarbon,Radiocarbon - 2302,42SA17216,"San Juan, UT",Beta-19284,1720,80
 Radiocarbon,Radiocarbon - 2311,42SA20615,"San Juan, UT",Beta-30488,1360,80
-Radiocarbon,Radiocarbon - 2311,42SA20615,"San Juan, UT",Beta-37954,5290,80
 Radiocarbon,Radiocarbon - 2314,42SA21117,"San Juan, UT",Beta-31964,1670,80
-Radiocarbon,Radiocarbon - 2317,42SA8477,"San Juan, UT",Beta-57401,2040,80
 Radiocarbon,Radiocarbon - 2233,42SA22674,"San Juan, UT",Beta-112583,1190,80
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",WSU-3513,2050,80
 Radiocarbon,Radiocarbon - 2296,NA,"San Juan, UT",BETA-95275,1810,80
-Radiocarbon,Radiocarbon - 2296,NA,"San Juan, UT",BETA-95276,2520,80
 Radiocarbon,Radiocarbon - 2077,NA7613,"San Juan, UT",TX-852,1820,80
 Radiocarbon,Radiocarbon - 2381,42SA363,"San Juan, UT",Y-1350,1700,80
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-47741,1790,90
 Radiocarbon,Radiocarbon - 2910,42SA21291,"San Juan, UT",BETA-70051,870,90
-Radiocarbon,Radiocarbon - 2953,42SA21267,"San Juan, UT",BETA-69324,2360,90
-Radiocarbon,Radiocarbon - 2306,42SA20256,"San Juan, UT",Beta-30482,2220,90
-Radiocarbon,Radiocarbon - 2309,42SA20301,"San Juan, UT",Beta-30487,2330,90
-Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-47742,7560,90
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-74067,7680,90
 Radiocarbon,Radiocarbon - 2296,NA,"San Juan, UT",BETA-95272,1610,90
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-75141,650,90
 Radiocarbon,Radiocarbon - 2298,GG-70-187,"San Juan, UT",GX-2075,1610,95
-Radiocarbon,Radiocarbon - 2464,42SA22559,"San Juan, UT",BETA-77109,3370,100
 Radiocarbon,Radiocarbon - 2954,42SA21285,"San Juan, UT",BETA-70050,1020,100
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-1263,7340,100
 Radiocarbon,Radiocarbon - 2298,GG-70-187,"San Juan, UT",GX-2076,1510,100
-Radiocarbon,Radiocarbon - 2304,42SA17790,"San Juan, UT",Beta-18736,6580,100
 Radiocarbon,Radiocarbon - 2307,42SA20258,"San Juan, UT",Beta-30483,1500,100
-Radiocarbon,Radiocarbon - 2309,42SA20301,"San Juan, UT",Beta-30486,2640,100
-Radiocarbon,Radiocarbon - 2315,42SA415,"San Juan, UT",Beta-20469,2160,100
-Radiocarbon,Radiocarbon - 2375,NA,"San Juan, UT",BETA-97658,7580,100
-Radiocarbon,Radiocarbon - 2430,42SA21153,"San Juan, UT",Beta-40116,7440,100
 Radiocarbon,Radiocarbon - 2431,42SA21153,"San Juan, UT",BETA-40331,810,100
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-1261,6740,110
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-1264,7250,110
-Radiocarbon,Radiocarbon - 2299,42SA17092,"San Juan, UT",Beta-21209,3340,110
-Radiocarbon,Radiocarbon - 2313,42SA21095,"San Juan, UT",Beta-31963,6290,110
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",RL-240,2050,120
-Radiocarbon,Radiocarbon - 2054,42SA19114,"San Juan, UT",A-848,7740,120
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-1262,7630,120
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-447,7700,120
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-448,7540,120
-Radiocarbon,Radiocarbon - 2054,42SA19114,"San Juan, UT",A-849,7700,120
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Beta-33355,4510,130
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-1260,6840,130
-Radiocarbon,Radiocarbon - 2078,42SA-?,"San Juan, UT",Tx-454,7150,130
-Radiocarbon,Radiocarbon - 2054,42SA19114,"San Juan, UT",A-850,7150,130
-Radiocarbon,Radiocarbon - 2310,42SA20309,"San Juan, UT",Beta-34978,3710,230
-Radiocarbon,Radiocarbon - 2845,42SA8477,"San Juan, UT",BETA-57405,3240,270
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97619,7090,50
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97623,7120,50
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97616,7940,60
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97617,7980,60
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97618,7060,60
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97621,7220,60
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",Beta-97622,7130,60
-Radiocarbon,Radiocarbon - 2628,5HN55,"Hinsdale, CO",AA-14461,7888,72
 Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179495,340,30
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-178616,3620,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-178618,3760,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179496,3640,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179497,3540,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179498,3780,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179557,3660,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-179558,3680,40
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185026,3730,40
 Radiocarbon,Radiocarbon - 954,LA87059,"Catron, NM",Beta-178602,960,40
 Radiocarbon,Radiocarbon - 954,LA87059,"Catron, NM",Beta-178603,1280,40
 Radiocarbon,Radiocarbon - 955,LA87066,"Catron, NM",Beta-178608,1790,40
-Radiocarbon,Radiocarbon - 956,LA87068,"Catron, NM",Beta-178610,4830,40
-Radiocarbon,Radiocarbon - 956,LA87068,"Catron, NM",Beta-179494,4710,40
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-71284?,1640,50
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185022,3760,50
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185023,3810,50
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185024,3710,50
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185025,3700,50
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-185027,3660,50
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93494,1050,50
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93499,1210,50
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93500,1180,50
@@ -1110,12 +702,10 @@ Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-77881,1230,50
 Radiocarbon,Radiocarbon - 943,LA39975,"Catron, NM",Beta-76772,1710,50
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-76724,1160,50
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-78275,1300,50
-Radiocarbon,Radiocarbon - 950,LA70188,"Catron, NM",Beta-76773,2390,50
 Radiocarbon,Radiocarbon - 951,LA78439,"Catron, NM",Beta-76744,1470,50
 Radiocarbon,Radiocarbon - 951,LA78439,"Catron, NM",Beta-76774,1470,50
 Radiocarbon,Radiocarbon - 953,LA86249,"Catron, NM",Beta-178597,890,50
 Radiocarbon,Radiocarbon - 957,LA89846,"Catron, NM",Beta-93530,390,50
-Radiocarbon,Radiocarbon - 957,LA89846,"Catron, NM",Beta-93531,2490,50
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-71281?,990,60
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-71282?,1420,60
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-71283?,1500,60
@@ -1140,9 +730,7 @@ Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-77879,860,60
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-77880,1010,60
 Radiocarbon,Radiocarbon - 944,LA39998,"Catron, NM",Beta-77833,360,60
 Radiocarbon,Radiocarbon - 949,LA70185,"Catron, NM",Beta-78276,1270,60
-Radiocarbon,Radiocarbon - 951,LA78439,"Catron, NM",Beta-76775,3620,60
 Radiocarbon,Radiocarbon - 951,LA78439,"Catron, NM",Beta-78272,850,60
-Radiocarbon,Radiocarbon - 951,LA78439,"Catron, NM",Beta-78273,3590,60
 Radiocarbon,Radiocarbon - 952,LA86241,"Catron, NM",Beta-178592,1670,60
 Radiocarbon,Radiocarbon - 953,LA86249,"Catron, NM",Beta-178596,830,60
 Radiocarbon,Radiocarbon - 954,LA87059,"Catron, NM",Beta-178604,1140,60
@@ -1151,7 +739,6 @@ Radiocarbon,Radiocarbon - 936,LA104381,"Catron, NM",Beta-77837,1330,70
 Radiocarbon,Radiocarbon - 936,LA104381,"Catron, NM",Beta-77838,1490,70
 Radiocarbon,Radiocarbon - 936,LA104381,"Catron, NM",Beta-77840,1450,70
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-73760?,1730,70
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-178615,3640,70
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93502,1040,70
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93506,970,70
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93513,1030,70
@@ -1161,7 +748,6 @@ Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76344,1330,70
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76350,1050,70
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76352,700,70
 Radiocarbon,Radiocarbon - 942,LA39972,"Catron, NM",Beta-76360,1700,70
-Radiocarbon,Radiocarbon - 944,LA39998,"Catron, NM",Beta-77831,2220,70
 Radiocarbon,Radiocarbon - 944,LA39998,"Catron, NM",Beta-77834,630,70
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-71718,1140,70
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-71719,1250,70
@@ -1172,11 +758,8 @@ Radiocarbon,Radiocarbon - 952,LA86241,"Catron, NM",Beta-178594,1700,70
 Radiocarbon,Radiocarbon - 954,LA87059,"Catron, NM",Beta-178601,1370,70
 Radiocarbon,Radiocarbon - 955,LA87066,"Catron, NM",Beta-178607,1920,70
 Radiocarbon,Radiocarbon - 955,LA87066,"Catron, NM",Beta-178609,1820,70
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4187,3740,70
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4188,3120,70
 Radiocarbon,Radiocarbon - 936,LA104381,"Catron, NM",Beta-77839,1870,80
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-73761?,1570,80
-Radiocarbon,Radiocarbon - 938,LA137258,"Catron, NM",Beta-178617,3620,80
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93491,890,80
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93497,1010,80
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93515,1020,80
@@ -1187,9 +770,6 @@ Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76332,760,80
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76334,1140,80
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76338,960,80
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76347,1250,80
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76365,2930,80
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76367,2700,80
-Radiocarbon,Radiocarbon - 952,LA86241,"Catron, NM",Beta-178595,2090,80
 Radiocarbon,Radiocarbon - 937,LA11568,"Catron, NM",Beta-73758?,1560,90
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93492,580,90
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93496,1080,90
@@ -1201,40 +781,20 @@ Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76349,1100,90
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76351,1670,90
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76353,1150,90
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-76725,1250,90
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4182,2630,90
-Radiocarbon,Radiocarbon - 955,LA87066,"Catron, NM",Beta-178605,2040,90
-Radiocarbon,Radiocarbon - 955,LA87066,"Catron, NM",Beta-178606,2170,90
-Radiocarbon,Radiocarbon - 957,LA89846,"Catron, NM",Beta-93532,2490,90
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4183,2780,90
 Radiocarbon,Radiocarbon - 939,LA3279,"Catron, NM",Beta-93495,1240,100
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76336,840,100
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76341,1180,100
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76342,1270,100
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76355,930,100
-Radiocarbon,Radiocarbon - 942,LA39972,"Catron, NM",Beta-76359,2030,100
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76364,3200,100
 Radiocarbon,Radiocarbon - 947,LA45508,"Catron, NM",Beta-76726,490,100
 Radiocarbon,Radiocarbon - 936,LA104381,"Catron, NM",Beta-77835,1840,110
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76346,1100,110
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-77877,790,110
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76362,3370,110
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4184,2140,110
 Radiocarbon,Radiocarbon - 941,LA39969,"Catron, NM",Beta-76354,1120,120
 Radiocarbon,Radiocarbon - 943,LA39975,"Catron, NM",Beta-76771,1270,120
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76366,2910,120
 Radiocarbon,Radiocarbon - 946,LA45507,"Catron, NM",Beta-78274,1250,120
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4186,2980,120
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76361,2790,130
 Radiocarbon,Radiocarbon - 940,LA39968,"Catron, NM",Beta-76343,720,140
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",A-4167,3010,150
-Radiocarbon,Radiocarbon - 948,LA4935,"Catron, NM",AA-679,2420,170
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76368,3660,200
-Radiocarbon,Radiocarbon - 945,LA43766,"Catron, NM",Beta-76363,2930,260
-Radiocarbon,Radiocarbon - 1232,LA109455,"Torrance, NM",Beta-92322,3750,50
-Radiocarbon,Radiocarbon - 1232,LA109455,"Torrance, NM",Beta-92330,6870,60
 Radiocarbon,Radiocarbon - 1232,LA109455,"Torrance, NM",Beta-96749,360,60
-Radiocarbon,Radiocarbon - 1234,LA4974,"Torrance, NM",Beta-126392,5460,60
-Radiocarbon,Radiocarbon - 1234,LA4974,"Torrance, NM",Beta-126391,5780,70
 Radiocarbon,Radiocarbon - 1233,LA25676,"Torrance, NM",Beta-96714,1140,110
 Radiocarbon,Radiocarbon - 1241,LA53662,"Valencia, NM",Beta-21279,810,60
 Radiocarbon,Radiocarbon - 1241,LA53662,"Valencia, NM",Beta-21278,790,70
@@ -1250,66 +810,16 @@ Radiocarbon,Radiocarbon - 1157,P:8:65,"Navajo, AZ",Beta-280037,1240,40
 Radiocarbon,Radiocarbon - 1157,P:8:65,"Navajo, AZ",Beta-280038,1290,40
 Radiocarbon,Radiocarbon - 1157,P:8:65,"Navajo, AZ",Beta-280039,1300,40
 Radiocarbon,Radiocarbon - 1158,P:9:26/04-1394,"Navajo, AZ",Beta-154446,1090,40
-Radiocarbon,Radiocarbon - 1428,"J:14:21,NNAD","Navajo, AZ",Beta-102489,2180,40
-Radiocarbon,Radiocarbon - 1428,"J:14:21,NNAD","Navajo, AZ",Beta-94765,2080,40
-Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-175654,6940,40
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-101393,1890,40
-Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-117137,3120,40
-Radiocarbon,Radiocarbon - 1439,"J:2:55,NNAD","Navajo, AZ",Beta-158087,2040,40
-Radiocarbon,Radiocarbon - 1439,"J:2:55,NNAD","Navajo, AZ",Beta-158088,4450,40
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-118049,3110,40
-Radiocarbon,Radiocarbon - 1428,"J:14:21,NNAD","Navajo, AZ",Beta-158089,1960,40
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ","Beta-156068,CAMS",2120,40
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ","Beta-156068,VERA",2100,40
-Radiocarbon,Radiocarbon - 1435,J:14:36,"Navajo, AZ",Beta-158090,2150,40
-Radiocarbon,Radiocarbon - 1435,J:14:36,"Navajo, AZ",Beta-158091,2150,40
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-158092,1730,40
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-158093,1700,40
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-158094,1830,40
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ","Beta-156067,CAMS",2090,40
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ","Beta-156067,VERA",2110,40
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-135680,3120,40
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-135681,2170,40
 Radiocarbon,Radiocarbon - 1158,P:9:26/04-1394,"Navajo, AZ",Beta-153225,850,40
 Radiocarbon,Radiocarbon - 1160,P:9:39/04-379,"Navajo, AZ",Beta-154190,930,40
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-135679,3270,40
 Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57727,870,42
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-98103,2233,42
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57730,2052,43
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-63299,4055,43
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57720,2048,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57721,2185,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57722,2112,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57723,2078,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57724,2161,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57734,2288,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57736,2240,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57737,2287,44
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57719,2177,45
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57725,2119,45
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57738,2228,45
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57739,2302,45
-Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",A-5284,2775,45
 Radiocarbon,Radiocarbon - 1756,D:11:1158,"Navajo, AZ",DIC-1089,920,45
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61202,2127,46
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57729,2135,46
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57732,2186,46
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57735,2221,46
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57740,2133,46
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57731,2245,47
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61195,2200,49
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61196,2186,49
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61197,2179,49
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-3959,2050,50
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-3960,2080,50
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-3963,2380,50
 Radiocarbon,Radiocarbon - 1772,D:11:3131,"Navajo, AZ",Beta-5637,1330,50
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5643,1640,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-3953,2060,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-3954,1990,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-3955,2270,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-3956,2210,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-3957,2140,50
 Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57252,1290,50
 Radiocarbon,Radiocarbon - 1144,P:4:22,"Navajo, AZ",Beta-59406,1010,50
 Radiocarbon,Radiocarbon - 1145,P:60:116,"Navajo, AZ",Beta-50866,840,50
@@ -1327,9 +837,7 @@ Radiocarbon,Radiocarbon - 1151,P:61:126,"Navajo, AZ",Beta-73687,1630,50
 Radiocarbon,Radiocarbon - 1152,P:61:127,"Navajo, AZ",Beta-73690,1020,50
 Radiocarbon,Radiocarbon - 1152,P:61:127,"Navajo, AZ",Beta-73691,1020,50
 Radiocarbon,Radiocarbon - 1159,P:9:28,"Navajo, AZ",Beta-140847,690,50
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-118048,7530,50
 Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-79148,1920,50
-Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-175653,7080,50
 Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-79153,1660,50
 Radiocarbon,Radiocarbon - 1431,"J:14:28,NNAD","Navajo, AZ",Beta-79157,980,50
 Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-79160,1610,50
@@ -1337,76 +845,29 @@ Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-79161,1580,50
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-101394,1820,50
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-101395,1710,50
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-87912,1810,50
-Radiocarbon,Radiocarbon - 1439,"J:2:55,NNAD","Navajo, AZ",Beta-101391,2120,50
 Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-101392,810,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87898,2140,50
 Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87902,1840,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87904,2210,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87905,2210,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-94761,1990,50
 Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-94762,1740,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-94763,2080,50
 Radiocarbon,Radiocarbon - 1756,D:11:1158,"Navajo, AZ",DIC-1090,1150,50
-Radiocarbon,Radiocarbon - 1757,D:11:1161,"Navajo, AZ",DIC-1082,2260,50
 Radiocarbon,Radiocarbon - 1757,D:11:1161,"Navajo, AZ",DIC-1083,1940,50
 Radiocarbon,Radiocarbon - 1764,D:11:2030,"Navajo, AZ",Beta-10006,1210,50
 Radiocarbon,Radiocarbon - 1764,D:11:2030,"Navajo, AZ",Beta-10007,940,50
-Radiocarbon,Radiocarbon - 1765,D:11:2045,"Navajo, AZ",Beta-5629,1990,50
 Radiocarbon,Radiocarbon - 1767,D:11:2068,"Navajo, AZ",Beta-5625,1470,50
 Radiocarbon,Radiocarbon - 1767,D:11:2068,"Navajo, AZ",Beta-5627,1470,50
-Radiocarbon,Radiocarbon - 1768,D:11:2126,"Navajo, AZ",Beta-5630,2100,50
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-4511,2560,50
-Radiocarbon,Radiocarbon - 1777,D:7:1108,"Navajo, AZ",DIC-1207,2340,50
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-5617,2500,50
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1617,2030,50
-Radiocarbon,Radiocarbon - 1785,D:7:254,"Navajo, AZ",Beta-5615,2120,50
 Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",Beta-4494,1950,50
-Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",Beta-4504,2240,50
 Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-4499,1740,50
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-4502,2060,50
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-97790,2230,50
-Radiocarbon,Radiocarbon - 1797,D:7:713,"Navajo, AZ",DIC-1605,2070,50
 Radiocarbon,Radiocarbon - 1797,D:7:713,"Navajo, AZ",DIC-1606,1940,50
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ","Beta-156068,ETH",2100,50
 Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",Beta-79151,830,50
 Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",AA-19524,1750,50
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-118050,1760,50
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-118051,1720,50
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ","Beta-156067,ETH",2180,50
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-118046,3360,50
-Radiocarbon,Radiocarbon - 1426,J:14:13,"Navajo, AZ",Beta-118047,3070,50
-Radiocarbon,Radiocarbon - 1441,"J:3:7,NNAD","Navajo, AZ",Beta-94757,7960,50
 Radiocarbon,Radiocarbon - 1441,"J:3:7,NNAD","Navajo, AZ",Beta-94758,1820,50
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57733,2146,52
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61193,2208,53
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61198,2075,54
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61199,2113,54
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61200,2096,54
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61201,2205,55
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGA-2122,1180,55
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",AA-21783,1100,55
-Radiocarbon,Radiocarbon - 1757,D:11:1161,"Navajo, AZ",DIC-1080,2440,55
-Radiocarbon,Radiocarbon - 1758,D:11:1162,"Navajo, AZ",DIC-1084,2360,55
-Radiocarbon,Radiocarbon - 1758,D:11:1162,"Navajo, AZ",DIC-1086,2130,55
-Radiocarbon,Radiocarbon - 1762,D:11:1411,"Navajo, AZ",DIC-1213,2170,55
-Radiocarbon,Radiocarbon - 1777,D:7:1108,"Navajo, AZ",DIC-1206,2230,55
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1613,2080,55
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1615,2020,55
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-11068,2560,55
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-11069,2340,55
 Radiocarbon,Radiocarbon - 1797,D:7:713,"Navajo, AZ",DIC-1607,1940,55
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-61194,2149,58
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-3964,2260,60
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-3965,2090,60
 Radiocarbon,Radiocarbon - 1772,D:11:3131,"Navajo, AZ",Beta-5638,1890,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5639,2010,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5640,2210,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5645,2010,60
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5647,1850,60
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5648,1710,60
-Radiocarbon,Radiocarbon - 1782,D:7:2100,"Navajo, AZ",Beta-3961,3290,60
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",Beta-3356,2070,60
-Radiocarbon,Radiocarbon - 1791,D:7:310,"Navajo, AZ",Beta-3962,2460,60
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGA-2121,985,60
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGA-2267,1305,60
 Radiocarbon,Radiocarbon - 1144,P:4:22,"Navajo, AZ",Beta-59404,1020,60
@@ -1423,22 +884,11 @@ Radiocarbon,Radiocarbon - 1152,P:61:127,"Navajo, AZ",Beta-73689,930,60
 Radiocarbon,Radiocarbon - 1153,P:61:19,"Navajo, AZ",Beta-55547,1770,60
 Radiocarbon,Radiocarbon - 1154,P:61:191,"Navajo, AZ",Beta-55544/CAMS5796,1920,60
 Radiocarbon,Radiocarbon - 1154,P:61:191,"Navajo, AZ",Beta-55547/CAMS5797,1770,60
-Radiocarbon,Radiocarbon - 1425,"J:14:12,NNAD","Navajo, AZ",Beta-87910,7130,60
-Radiocarbon,Radiocarbon - 1425,"J:14:12,NNAD","Navajo, AZ",Beta-87911,1980,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73979,2230,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73980,6030,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73982,2180,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73984,2190,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-79146,3740,60
-Radiocarbon,Radiocarbon - 1428,"J:14:21,NNAD","Navajo, AZ",Beta-94766,2010,60
 Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-79159,1640,60
 Radiocarbon,Radiocarbon - 1433,J:14:34NNAD,"Navajo, AZ",Beta-101396,1730,60
-Radiocarbon,Radiocarbon - 1434,"J:14:35,NNAD","Navajo, AZ",Beta-94767,2120,60
-Radiocarbon,Radiocarbon - 1434,"J:14:35,NNAD","Navajo, AZ",Beta-94768,2080,60
 Radiocarbon,Radiocarbon - 1436,"J:14:37,NNAD","Navajo, AZ",Beta-94769,1800,60
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-87913,1770,60
 Radiocarbon,Radiocarbon - 1437,"J:14:38,NNAD","Navajo, AZ",Beta-87914,1750,60
-Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-56615,2720,60
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68381,1710,60
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68382,1500,60
 Radiocarbon,Radiocarbon - 1440,"J:3:6,NNAD","Navajo, AZ",Beta-94753,1750,60
@@ -1447,75 +897,26 @@ Radiocarbon,Radiocarbon - 1440,"J:3:6,NNAD","Navajo, AZ",Beta-94755,1840,60
 Radiocarbon,Radiocarbon - 1440,"J:3:6,NNAD","Navajo, AZ",Beta-94756,1820,60
 Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87899,1730,60
 Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87900,1780,60
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87901,1960,60
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-87903,2190,60
-Radiocarbon,Radiocarbon - 1757,D:11:1161,"Navajo, AZ",DIC-1081,2340,60
 Radiocarbon,Radiocarbon - 1761,D:11:1410,"Navajo, AZ",Beta-7788,1940,60
-Radiocarbon,Radiocarbon - 1761,D:11:1410,"Navajo, AZ",Beta-7790,2360,60
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-4513,2310,60
-Radiocarbon,Radiocarbon - 1766,D:11:2063,"Navajo, AZ",Beta-5624,2160,60
 Radiocarbon,Radiocarbon - 1767,D:11:2068,"Navajo, AZ",Beta-5626,1110,60
 Radiocarbon,Radiocarbon - 1767,D:11:2068,"Navajo, AZ",Beta-5628,1110,60
 Radiocarbon,Radiocarbon - 1768,D:11:2126,"Navajo, AZ",Beta-5631,1930,60
 Radiocarbon,Radiocarbon - 1768,D:11:2126,"Navajo, AZ",Beta-5632,1830,60
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-4509,2320,60
-Radiocarbon,Radiocarbon - 1769,D:11:244,"Navajo, AZ",Beta-4510,2380,60
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10084,1720,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10085,2120,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10086,2060,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10087,2260,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10089,2140,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10090,2140,60
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10091,2050,60
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-7783,2160,60
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-7789,2270,60
 Radiocarbon,Radiocarbon - 1778,D:7:151,"Navajo, AZ",Beta-4503,1900,60
-Radiocarbon,Radiocarbon - 1782,D:7:2100,"Navajo, AZ",Beta-4508,2620,60
 Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1610,1910,60
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1611,2070,60
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1614,2010,60
-Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1616,1990,60
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",Beta-4506,2230,60
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",Beta-4507,2380,60
-Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",Beta-4505,2510,60
-Radiocarbon,Radiocarbon - 1789,D:7:3017,"Navajo, AZ",Beta-4497,2240,60
-Radiocarbon,Radiocarbon - 1789,D:7:3017,"Navajo, AZ",Beta-4498,2490,60
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-4500,2170,60
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-4501,2110,60
-Radiocarbon,Radiocarbon - 1793,D:7:3141,"Navajo, AZ",Beta-5619,2010,60
 Radiocarbon,Radiocarbon - 1795,D:7:3194,"Navajo, AZ",Beta-5623,1140,60
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-31983,2180,60
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-97789,2220,60
-Radiocarbon,Radiocarbon - 1797,D:7:713,"Navajo, AZ",DIC-1608,1970,60
-Radiocarbon,Radiocarbon - 1797,D:7:713,"Navajo, AZ",DIC-1609,2270,60
 Radiocarbon,Radiocarbon - 1153,P:61:19,"Navajo, AZ",Beta-55544,1920,60
 Radiocarbon,Radiocarbon - 1156,P:61:193,"Navajo, AZ",Beta-61510/CAMS5826,1450,60
 Radiocarbon,Radiocarbon - 1156,P:61:193,"Navajo, AZ",Beta-61511/CAMS5827,1380,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-79145,1990,60
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",Beta-79149,2220,60
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",Beta-79150,2020,60
-Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-79162,3700,60
-Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-63306,7900,60
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-15940,2590,60
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-16022,2080,60
 Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-16023,1810,60
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73983,2160,60
 Radiocarbon,Radiocarbon - 1441,"J:3:7,NNAD","Navajo, AZ",Beta-94759,1810,60
-Radiocarbon,Radiocarbon - 1441,"J:3:7,NNAD","Navajo, AZ",Beta-94760,7930,60
-Radiocarbon,Radiocarbon - 1761,D:11:1410,"Navajo, AZ",DIC-1211,2140,65
-Radiocarbon,Radiocarbon - 1777,D:7:1108,"Navajo, AZ",DIC-1205,2150,65
 Radiocarbon,Radiocarbon - 1783,D:7:236,"Navajo, AZ",DIC-1612,1950,65
 Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-1676,1595,65
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",AA-19519,2035,65
 Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",AA-19520,1940,65
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",AA-19521,1995,65
-Radiocarbon,Radiocarbon - 1429,J:14:23,"Navajo, AZ",AA-19522,2005,65
 Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",AA-19523,1550,65
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",AA-19526,1535,65
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5642,1970,70
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5644,1860,70
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5646,2010,70
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-7200,6780,70
 Radiocarbon,Radiocarbon - 1155,P:61:192,"Navajo, AZ",Beta-55548/CAMS3722,790,70
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGa-2119,1540,70
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGA-2263,1225,70
@@ -1524,43 +925,13 @@ Radiocarbon,Radiocarbon - 1146,P:60:118,"Navajo, AZ",Beta-50868,1220,70
 Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57257,1350,70
 Radiocarbon,Radiocarbon - 1154,P:61:191,"Navajo, AZ",Beta-55546/CAMS3721,1660,70
 Radiocarbon,Radiocarbon - 1156,P:61:193,"Navajo, AZ",Beta-55549,1220,70
-Radiocarbon,Radiocarbon - 1427,"J:14:17,NNAD","Navajo, AZ",Beta-73981,2070,70
-Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-73989B,7880,70
-Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-79152,7880,70
 Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-79154,1270,70
-Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-73989A,7180,70
 Radiocarbon,Radiocarbon - 1759,D:11:1176,"Navajo, AZ",Beta-7781,1810,70
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",DIC-1212,2370,70
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-7784,1970,70
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-7785,2030,70
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-7786,2340,70
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-7201,7110,70
-Radiocarbon,Radiocarbon - 1785,D:7:254,"Navajo, AZ",Beta-5616,2180,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26270,2380,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26272,2365,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26274,2350,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26276,2440,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26280,2280,70
 Radiocarbon,Radiocarbon - 1153,P:61:19,"Navajo, AZ",Beta-55546,1660,70
-Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-73989,7880,70
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68383,1640,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-15939,2260,70
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68379,1810,70
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-97788,2260,70
-Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-3982,2465,75
 Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-1679,1540,75
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26281,2280,75
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26282,2210,75
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-3958,2400,80
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5641,2140,80
-Radiocarbon,Radiocarbon - 1776,D:7:105,"Navajo, AZ",I-7918,2280,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-7913,2580,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-7914,2110,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-7915,2015,80
 Radiocarbon,Radiocarbon - 1780,D:7:154,"Navajo, AZ",I-7917,935,80
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",Beta-4243,2395,80
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",UGA-3902,2165,80
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",UGA-3904,2245,80
 Radiocarbon,Radiocarbon - 1786,D:7:262,"Navajo, AZ",UGA-3910,1570,80
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",UGa-2118,1785,80
 Radiocarbon,Radiocarbon - 1147,P:60:123,"Navajo, AZ",Beta-50869,840,80
@@ -1568,108 +939,37 @@ Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57256,1300,80
 Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57262,1300,80
 Radiocarbon,Radiocarbon - 1154,P:61:191,"Navajo, AZ",Beta-55545,1700,80
 Radiocarbon,Radiocarbon - 1156,P:61:193,"Navajo, AZ",Beta-55550,1140,80
-Radiocarbon,Radiocarbon - 1425,"J:14:12,NNAD","Navajo, AZ",Beta-87907,7880,80
-Radiocarbon,Radiocarbon - 1442,"J:3:8,NNAD","Navajo, AZ",Beta-94764,2090,80
-Radiocarbon,Radiocarbon - 1760,D:11:1281,"Navajo, AZ",DIC-1208,2920,80
 Radiocarbon,Radiocarbon - 1764,D:11:2030,"Navajo, AZ",Beta-10082,1320,80
 Radiocarbon,Radiocarbon - 1770,D:11:3061,"Navajo, AZ",Beta-5633,1150,80
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10081,1930,80
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10088,2530,80
-Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-10080,2180,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8047,2170,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8402,2210,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8403,2000,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8404,2180,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8405,2120,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8406,2205,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8407,2170,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8408,2150,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8409,2090,80
-Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",I-8410,2100,80
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-9836,4750,80
 Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",Beta-4492,1840,80
-Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",Beta-4495,2210,80
-Radiocarbon,Radiocarbon - 1789,D:7:3017,"Navajo, AZ",Beta-4496,4480,80
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26273,2410,80
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26277,2340,80
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-31984,2570,80
 Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-31986,1890,80
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-31985,2440,80
-Radiocarbon,Radiocarbon - 1778,D:7:151,"Navajo, AZ",UGA-3976,2065,85
 Radiocarbon,Radiocarbon - 1786,D:7:262,"Navajo, AZ",UGA-3909,1410,85
 Radiocarbon,Radiocarbon - 1790,D:7:3045,"Navajo, AZ",UGA-3981,954,85
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",Beta-12611,2140,85
 Radiocarbon,Radiocarbon - 1756,D:11:1158,"Navajo, AZ",DIC-1088,1240,85
 Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",AA-57728,844,87
 Radiocarbon,Radiocarbon - 1786,D:7:262,"Navajo, AZ",UGA-3908,1185,90
-Radiocarbon,Radiocarbon - 1786,D:7:262,"Navajo, AZ",UGA-3911,2505,90
-Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-3983,2805,90
-Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-3984,2590,90
 Radiocarbon,Radiocarbon - 1144,P:4:22,"Navajo, AZ",Beta-59402,1060,90
 Radiocarbon,Radiocarbon - 1145,P:60:116,"Navajo, AZ",Beta-50867,1260,90
 Radiocarbon,Radiocarbon - 1147,P:60:123,"Navajo, AZ",Beta-50870,860,90
-Radiocarbon,Radiocarbon - 1425,"J:14:12,NNAD","Navajo, AZ",Beta-87909,7320,90
-Radiocarbon,Radiocarbon - 1432,"J:14:31,NNAD","Navajo, AZ",Beta-73988,7970,90
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",Beta-12608,2500,90
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",Beta-12610,2330,90
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",Beta-12612,2160,90
 Radiocarbon,Radiocarbon - 1779,D:7:152,"Navajo, AZ",Beta-10079,1910,90
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-10083,5600,90
 Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-10653,1000,90
 Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-1674,1845,90
-Radiocarbon,Radiocarbon - 1794,D:7:3144,"Navajo, AZ",Beta-5620,2870,90
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-15938,2150,90
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26278,2430,90
-Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68376,7570,90
 Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68380,1810,90
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",UGA-3903,1970,95
-Radiocarbon,Radiocarbon - 1755,D:,"Navajo, AZ",Beta-12609,2470,95
-Radiocarbon,Radiocarbon - 1775,D:7:103,"Navajo, AZ",GX-273,2020,95
-Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-5649,2040,100
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",UGA-3905,2120,100
-Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",UGA-3978,2745,100
-Radiocarbon,Radiocarbon - 1430,"J:14:26,NNAD","Navajo, AZ",Beta-73985,7870,100
-Radiocarbon,Radiocarbon - 1431,"J:14:28,NNAD","Navajo, AZ",Beta-79158,5990,100
-Radiocarbon,Radiocarbon - 1761,D:11:1410,"Navajo, AZ",Beta-7787,2230,100
-Radiocarbon,Radiocarbon - 1785,D:7:254,"Navajo, AZ",Beta-5614,2270,100
-Radiocarbon,Radiocarbon - 1794,D:7:3144,"Navajo, AZ",Beta-5621,2970,100
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26279,2580,100
 Radiocarbon,Radiocarbon - 1786,D:7:262,"Navajo, AZ",UGA-3907,1250,105
-Radiocarbon,Radiocarbon - 1760,D:11:1281,"Navajo, AZ",DIC-1209,3220,105
 Radiocarbon,Radiocarbon - 1152,P:61:127,"Navajo, AZ",Beta-73692,1050,110
 Radiocarbon,Radiocarbon - 1758,D:11:1162,"Navajo, AZ",Beta-10076,1560,110
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-39577,3040,110
 Radiocarbon,Radiocarbon - 1785,D:7:254,"Navajo, AZ",Beta-10074,1810,110
-Radiocarbon,Radiocarbon - 1792,D:7:3107,"Navajo, AZ",Beta-34277,2740,110
 Radiocarbon,Radiocarbon - 1793,D:7:3141,"Navajo, AZ",Beta-5618,1600,110
-Radiocarbon,Radiocarbon - 1784,D:7:239,"Navajo, AZ",UGA-3906,2320,120
 Radiocarbon,Radiocarbon - 1143,P:,"Navajo, AZ",A-550,1370,120
 Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57263,1290,120
 Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-10075,1840,120
 Radiocarbon,Radiocarbon - 1774,D:11:449,"Navajo, AZ",Beta-10078,1840,120
-Radiocarbon,Radiocarbon - 1781,D:7:2085,"Navajo, AZ",Beta-9835,4780,120
-Radiocarbon,Radiocarbon - 1772,D:11:3131,"Navajo, AZ",Beta-5636,2090,130
-Radiocarbon,Radiocarbon - 1431,"J:14:28,NNAD","Navajo, AZ",Beta-73987,7820,130
 Radiocarbon,Radiocarbon - 1768,D:11:2126,"Navajo, AZ",Beta-10077,1820,130
 Radiocarbon,Radiocarbon - 1773,D:11:3133,"Navajo, AZ",Beta-10099,1940,130
 Radiocarbon,Radiocarbon - 1788,D:7:3013,"Navajo, AZ",UGA-1678,1895,130
-Radiocarbon,Radiocarbon - 1760,D:11:1281,"Navajo, AZ",Beta-7780,2320,140
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26271,2880,140
-Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",UGA-3980,2675,145
-Radiocarbon,Radiocarbon - 1763,D:11:1504,"Navajo, AZ",Beta-4512,2040,150
-Radiocarbon,Radiocarbon - 1425,"J:14:12,NNAD","Navajo, AZ",Beta-87906,5910,160
-Radiocarbon,Radiocarbon - 1778,D:7:151,"Navajo, AZ",UGA-3977,2795,170
-Radiocarbon,Radiocarbon - 1778,D:7:151,"Navajo, AZ",UGA-3985,2635,170
 Radiocarbon,Radiocarbon - 1156,P:61:193,"Navajo, AZ",Beta-55551,1620,170
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-26275,3610,170
-Radiocarbon,Radiocarbon - 1796,"D:7:618,SIU","Navajo, AZ",Beta-2725,3610,170
-Radiocarbon,Radiocarbon - 1761,D:11:1410,"Navajo, AZ",DIC-1210,2390,185
 Radiocarbon,Radiocarbon - 1148,P:60:31,"Navajo, AZ",Beta-57259,1400,190
-Radiocarbon,Radiocarbon - 1758,D:11:1162,"Navajo, AZ",DIC-1087,2080,200
-Radiocarbon,Radiocarbon - 1438,J:14:41,"Navajo, AZ",Beta-68375,7010,200
-Radiocarbon,Radiocarbon - 1758,D:11:1162,"Navajo, AZ",DIC-1085,2260,205
-Radiocarbon,Radiocarbon - 1787,D:7:3003,"Navajo, AZ",UGA-3979,2090,250
-Radiocarbon,Radiocarbon - 1304,LA124584,"Bernalillo, NM",Beta-358112,3620,30
 Radiocarbon,Radiocarbon - 1305,LA124601,"Bernalillo, NM",Beta-358113,240,30
 Radiocarbon,Radiocarbon - 1306,LA60838,"Bernalillo, NM",Beta-26680,1300,70
 Radiocarbon,Radiocarbon - 1292,LA118501,"Cibola, NM",Beta-257768,890,40
@@ -1692,26 +992,16 @@ Radiocarbon,Radiocarbon - 1296,LA9075,"Cibola, NM",AA-3632,753,50
 Radiocarbon,Radiocarbon - 1293,LA153714,"Cibola, NM",Beta-238174,720,60
 Radiocarbon,Radiocarbon - 1294,LA3558,"Cibola, NM",Beta-44191,1270,60
 Radiocarbon,Radiocarbon - 1294,LA3558,"Cibola, NM",Beta-61009,1170,60
-Radiocarbon,Radiocarbon - 1296,LA9075,"Cibola, NM",AA-3634,6615,60
 Radiocarbon,Radiocarbon - 1293,LA153714,"Cibola, NM",Beta-238401,930,70
 Radiocarbon,Radiocarbon - 1294,LA3558,"Cibola, NM",Beta-61006,1320,70
 Radiocarbon,Radiocarbon - 1294,LA3558,"Cibola, NM",Beta-61007,1220,70
 Radiocarbon,Radiocarbon - 1294,LA3558,"Cibola, NM",Beta-61008,1260,70
 Radiocarbon,Radiocarbon - 1295,LA8763,"Cibola, NM",I-2909,1840,100
-Radiocarbon,Radiocarbon - 125,LA165819,"Doña Ana, NM",Beta-285950,2710,40
 Radiocarbon,Radiocarbon - 126,LA165820,"Doña Ana, NM",Beta-285952,1280,40
 Radiocarbon,Radiocarbon - 123,LA165813,"Doña Ana, NM",Beta-285948,990,40
 Radiocarbon,Radiocarbon - 124,LA165817,"Doña Ana, NM",Beta-285949,1210,40
-Radiocarbon,Radiocarbon - 125,LA165819,"Doña Ana, NM",Beta-285951,2650,40
-Radiocarbon,Radiocarbon - 127,LA165821,"Doña Ana, NM",Beta-285953,2560,40
-Radiocarbon,Radiocarbon - 128,LA165822,"Doña Ana, NM",Beta-285855,3230,40
-Radiocarbon,Radiocarbon - 128,LA165822,"Doña Ana, NM",Beta-285954,3020,40
-Radiocarbon,Radiocarbon - 129,LA165823,"Doña Ana, NM",Beta-285956,3610,40
-Radiocarbon,Radiocarbon - 130,LA165824,"Doña Ana, NM",Beta-285957,2400,40
 Radiocarbon,Radiocarbon - 131,LA165826,"Doña Ana, NM",Beta-285958,1490,40
 Radiocarbon,Radiocarbon - 131,LA165826,"Doña Ana, NM",Beta-285959,1630,40
-Radiocarbon,Radiocarbon - 132,LA165831,"Doña Ana, NM",Beta-285960,3960,40
-Radiocarbon,Radiocarbon - 133,LA165833,"Doña Ana, NM",Beta-285961,2640,40
 Radiocarbon,Radiocarbon - 134,LA26784,"Doña Ana, NM",Beta-81911,770,50
 Radiocarbon,Radiocarbon - 135,LA26788,"Doña Ana, NM",Beta-81913,640,50
 Radiocarbon,Radiocarbon - 135,LA26788,"Doña Ana, NM",Beta-81914,700,50
@@ -1732,7 +1022,6 @@ Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-81903,1140,50
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-81906,1090,50
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84964,1340,50
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84965,1320,50
-Radiocarbon,Radiocarbon - 148,LA86780,"Doña Ana, NM",Beta-80963,2400,50
 Radiocarbon,Radiocarbon - 134,LA26784,"Doña Ana, NM",Beta-81909,570,50
 Radiocarbon,Radiocarbon - 134,LA26784,"Doña Ana, NM",Beta-81910,740,50
 Radiocarbon,Radiocarbon - 135,LA26788,"Doña Ana, NM",Beta-81920,820,50
@@ -1741,20 +1030,13 @@ Radiocarbon,Radiocarbon - 122,LA16315,"Doña Ana, NM",Beta-72442,1150,60
 Radiocarbon,Radiocarbon - 135,LA26788,"Doña Ana, NM",Beta-81918,620,60
 Radiocarbon,Radiocarbon - 136,LA2865,"Doña Ana, NM",Beta-72445,590,60
 Radiocarbon,Radiocarbon - 136,LA2865,"Doña Ana, NM",Beta-76399,580,60
-Radiocarbon,Radiocarbon - 139,LA55868,"Doña Ana, NM",Beta-24485,2780,60
-Radiocarbon,Radiocarbon - 139,LA55868,"Doña Ana, NM",Beta-24486,3090,60
 Radiocarbon,Radiocarbon - 139,LA55868,"Doña Ana, NM",Beta-24487,1790,60
-Radiocarbon,Radiocarbon - 140,LA55870,"Doña Ana, NM",Beta-24489,3030,60
 Radiocarbon,Radiocarbon - 143,LA72861,"Doña Ana, NM",Beta-32095,340,60
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-81905,1360,60
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-81907,1190,60
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84961,1090,60
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84963,1270,60
 Radiocarbon,Radiocarbon - 147,LA86774,"Doña Ana, NM",Beta-80967,1350,60
-Radiocarbon,Radiocarbon - 148,LA86780,"Doña Ana, NM",Beta-80961,2080,60
-Radiocarbon,Radiocarbon - 148,LA86780,"Doña Ana, NM",Beta-80962,4210,60
-Radiocarbon,Radiocarbon - 148,LA86780,"Doña Ana, NM",Beta-80964,4200,60
-Radiocarbon,Radiocarbon - 148,LA86780,"Doña Ana, NM",Beta-80965,2270,60
 Radiocarbon,Radiocarbon - 122,LA16315,"Doña Ana, NM",Beta-72440,1200,60
 Radiocarbon,Radiocarbon - 122,LA16315,"Doña Ana, NM",Beta-72443,1110,60
 Radiocarbon,Radiocarbon - 122,LA16315,"Doña Ana, NM",Beta-72444,1050,60
@@ -1769,10 +1051,8 @@ Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-81904,1300,70
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84962,1270,70
 Radiocarbon,Radiocarbon - 145,LA79550,"Doña Ana, NM",Beta-33572,1340,70
 Radiocarbon,Radiocarbon - 147,LA86774,"Doña Ana, NM",Beta-80966,1390,70
-Radiocarbon,Radiocarbon - 147,LA86774,"Doña Ana, NM",Beta-80969,2040,70
 Radiocarbon,Radiocarbon - 149,LA97088,"Doña Ana, NM",Beta-76387,1410,70
 Radiocarbon,Radiocarbon - 135,LA26788,"Doña Ana, NM",Beta-81916,560,80
-Radiocarbon,Radiocarbon - 137,LA5529,"Doña Ana, NM",UCR-2420,2560,80
 Radiocarbon,Radiocarbon - 137,LA5529,"Doña Ana, NM",UCR-2422,1600,80
 Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",A-4366,850,80
 Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",A-4563,1490,80
@@ -1787,14 +1067,12 @@ Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",UCR-2120,600,100
 Radiocarbon,Radiocarbon - 144,LA73942,"Doña Ana, NM",Beta-84960,1140,110
 Radiocarbon,Radiocarbon - 149,LA97088,"Doña Ana, NM",Beta-76389,1200,130
 Radiocarbon,Radiocarbon - 149,LA97088,"Doña Ana, NM",Beta-76388,1310,150
-Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",A-4561,3669,170
 Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",A-4562,860,170
 Radiocarbon,Radiocarbon - 138,LA5531,"Doña Ana, NM",UCR-2121,960,200
 Radiocarbon,Radiocarbon - 1556,LA12587,"Los Alamos, NM",Beta-183748,650,40
 Radiocarbon,Radiocarbon - 1557,LA86534,"Los Alamos, NM",Beta-183760,860,40
 Radiocarbon,Radiocarbon - 1557,LA86534,"Los Alamos, NM",Beta-183761,730,40
 Radiocarbon,Radiocarbon - 1556,LA12587,"Los Alamos, NM",Beta-183747,870,70
-Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178781,150,30
 Radiocarbon,Radiocarbon - 921,LA116531,"Lincoln, NM",Beta-195964,1250,40
 Radiocarbon,Radiocarbon - 922,LA120972,"Lincoln, NM",Beta-285538,1140,40
 Radiocarbon,Radiocarbon - 922,LA120972,"Lincoln, NM",Beta-285539,1090,40
@@ -1811,7 +1089,6 @@ Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285550,1160,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285551,1160,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285552,190,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285553,1160,40
-Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285554,2130,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285555,1500,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285556,1200,40
 Radiocarbon,Radiocarbon - 923,LA120973,"Lincoln, NM",Beta-285557,1080,40
@@ -1829,30 +1106,17 @@ Radiocarbon,Radiocarbon - 924,LA129573,"Lincoln, NM",Beta-193078,1750,40
 Radiocarbon,Radiocarbon - 924,LA129573,"Lincoln, NM",Beta-193079,1570,40
 Radiocarbon,Radiocarbon - 924,LA129573,"Lincoln, NM",Beta-193083,1480,40
 Radiocarbon,Radiocarbon - 924,LA129573,"Lincoln, NM",Beta-193085,1630,40
-Radiocarbon,Radiocarbon - 925,LA130331,"Lincoln, NM",Beta-285533,3160,40
-Radiocarbon,Radiocarbon - 925,LA130331,"Lincoln, NM",Beta-285534,3100,40
-Radiocarbon,Radiocarbon - 925,LA130331,"Lincoln, NM",Beta-285535,3130,40
-Radiocarbon,Radiocarbon - 925,LA130331,"Lincoln, NM",Beta-285536,3030,40
 Radiocarbon,Radiocarbon - 926,LA138800,"Lincoln, NM",Beta-193665,960,40
 Radiocarbon,Radiocarbon - 927,LA139419,"Lincoln, NM",Beta-193056,1590,40
 Radiocarbon,Radiocarbon - 927,LA139419,"Lincoln, NM",Beta-193063,1470,40
 Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193050,1570,40
 Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193065,1620,40
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193074,2150,40
-Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177799,2040,40
 Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177800,1940,40
-Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177801,1980,40
-Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177803,2000,40
-Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177804,2020,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178780,720,40
-Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178782,2540,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178784,1870,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178785,1650,40
-Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178786,2200,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178787,570,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178788,1390,40
-Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178790,2600,40
-Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178791,2610,40
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178792,1470,40
 Radiocarbon,Radiocarbon - 922,LA120972,"Lincoln, NM",Beta-285537,1140,40
 Radiocarbon,Radiocarbon - 927,LA139419,"Lincoln, NM",Beta-193044,1590,50
@@ -1882,14 +1146,7 @@ Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193053,1440,60
 Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193066,1570,60
 Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193067,1440,60
 Radiocarbon,Radiocarbon - 928,LA139420,"Lincoln, NM",Beta-193068,1660,60
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193071,2020,60
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193073,2080,60
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193075,2040,60
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193076,2080,60
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193077,1980,60
-Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177798,2100,60
 Radiocarbon,Radiocarbon - 930,LA5377,"Lincoln, NM",Beta-177802,1950,60
-Radiocarbon,Radiocarbon - 931,LA58971,"Lincoln, NM",Beta-45648,1980,60
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-178779,280,60
 Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-45652,800,60
 Radiocarbon,Radiocarbon - 921,LA116531,"Lincoln, NM",Beta-177785,1070,60
@@ -1905,9 +1162,7 @@ Radiocarbon,Radiocarbon - 932,LA71167,"Lincoln, NM",Beta-45651,540,70
 Radiocarbon,Radiocarbon - 927,LA139419,"Lincoln, NM",Beta-193055,1510,80
 Radiocarbon,Radiocarbon - 931,LA58971,"Lincoln, NM",Beta-45645,1640,80
 Radiocarbon,Radiocarbon - 931,LA58971,"Lincoln, NM",Beta-45646,1690,80
-Radiocarbon,Radiocarbon - 931,LA58971,"Lincoln, NM",Beta-45650,1960,80
 Radiocarbon,Radiocarbon - 926,LA138800,"Lincoln, NM",Beta-193661,1400,90
-Radiocarbon,Radiocarbon - 929,LA139944,"Lincoln, NM",Beta-193072,2200,90
 Radiocarbon,Radiocarbon - 931,LA58971,"Lincoln, NM",Beta-45647,1830,90
 Radiocarbon,Radiocarbon - 924,LA129573,"Lincoln, NM",Beta-177792,1800,100
 Radiocarbon,Radiocarbon - 927,LA139419,"Lincoln, NM",Beta-193060,1370,100
@@ -1928,59 +1183,11 @@ Radiocarbon,Radiocarbon - 1001,LA67451,"Socorro, NM",Beta-149343,310,40
 Radiocarbon,Radiocarbon - 1000,LA126619,"Socorro, NM",Beta-144350,1180,50
 Radiocarbon,Radiocarbon - 1000,LA126619,"Socorro, NM",Beta-149347,1180,50
 Radiocarbon,Radiocarbon - 999,LA106535,"Socorro, NM",Beta-74840,1510,70
-Radiocarbon,Radiocarbon - 999,LA106535,"Socorro, NM",Beta-74839,2220,120
-Radiocarbon,Radiocarbon - 2126,5AA952,"Archuleta, CO",Beta-88036,4290,40
-Radiocarbon,Radiocarbon - 2126,5AA952,"Archuleta, CO",Beta-88037,4290,49
-Radiocarbon,Radiocarbon - 2126,5AA952,"Archuleta, CO",Beta-78365,3920,60
-Radiocarbon,Radiocarbon - 2126,5AA952,"Archuleta, CO",Beta-88035,3890,70
-Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164333,2270,40
-Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164337,1980,40
-Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164340,2190,40
-Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164342,2280,40
-Radiocarbon,Radiocarbon - 1474,LA115327,"McKinley, NM",Beta-123605,2070,40
 Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-140564,1250,40
 Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-140569,1120,40
-Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-143799,3320,40
 Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-143803,1200,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164322,2610,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164324,2350,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164325,2430,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164326,2450,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164327,2580,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164328,2490,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164330,2470,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164331,2420,40
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164332,2490,40
 Radiocarbon,Radiocarbon - 1481,LA48695,"McKinley, NM",Beta-136529,870,40
-Radiocarbon,Radiocarbon - 1481,LA48695,"McKinley, NM",Beta-138516,2960,40
-Radiocarbon,Radiocarbon - 1481,LA48695,"McKinley, NM",Beta-138517,4110,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2726,2240,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2732,2370,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2802,2290,40
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2734,2100,40
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2736,2070,40
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2737,2160,40
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2746,2180,40
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2675,3380,40
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2786,3430,40
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2790,7290,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2711,2480,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2712,2130,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2713,2260,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2714,2190,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2720,2250,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2721,2660,40
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2727,2400,40
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2722,2190,40
-Radiocarbon,Radiocarbon - 1485,LA80392,"McKinley, NM",UCI-348,4500,40
-Radiocarbon,Radiocarbon - 1486,LA80393,"McKinley, NM",UCR-2812,2840,40
-Radiocarbon,Radiocarbon - 1486,LA80393,"McKinley, NM",UCR-2813,3390,40
-Radiocarbon,Radiocarbon - 1486,LA80393,"McKinley, NM",UCR-2815,3070,40
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2670,2070,40
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2672,2080,40
 Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2673,1870,40
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2702,2190,40
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2793,2120,40
 Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2671,1540,40
 Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2674,640,40
 Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2676,1300,40
@@ -1990,130 +1197,41 @@ Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164344,1510,40
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164345,1550,40
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164336,240,50
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164339,350,50
-Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-143800,5310,50
-Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-143801,2680,50
 Radiocarbon,Radiocarbon - 1476,LA129241,"McKinley, NM",Beta-143802,880,50
 Radiocarbon,Radiocarbon - 1478,LA26308,"McKinley, NM",Beta-121229,1320,50
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164321,2310,50
 Radiocarbon,Radiocarbon - 1482,LA49838,"McKinley, NM",Beta-121233,880,50
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCR-2801,2510,50
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",Beta-47360,2090,50
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",Beta-47361,2170,50
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCI-295,3820,50
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCR-2709,4090,50
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2706,2070,50
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2754,2420,50
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2765,7680,50
-Radiocarbon,Radiocarbon - 1486,LA80393,"McKinley, NM",UCR-2814,2560,50
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCR-2685,3280,50
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2705,2070,50
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2707,2180,50
-Radiocarbon,Radiocarbon - 1485,LA80392,"McKinley, NM",UCI-349,4630,50
-Radiocarbon,Radiocarbon - 1485,LA80392,"McKinley, NM",UCI-350,4370,50
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164334,320,60
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164343,1420,60
-Radiocarbon,Radiocarbon - 1475,LA115330,"McKinley, NM",Beta-121238,2190,60
 Radiocarbon,Radiocarbon - 1475,LA115330,"McKinley, NM",Beta-121239,1750,60
-Radiocarbon,Radiocarbon - 1475,LA115330,"McKinley, NM",Beta-121240,2190,60
-Radiocarbon,Radiocarbon - 1475,LA115330,"McKinley, NM",Beta-121241,2070,60
-Radiocarbon,Radiocarbon - 1475,LA115330,"McKinley, NM",Beta-121242,2210,60
-Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121226,2090,60
 Radiocarbon,Radiocarbon - 1478,LA26308,"McKinley, NM",Beta-121228,970,60
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",UCI-300,2579,60
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-10544,2160,60
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2745,2230,60
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCR-2686,3940,60
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2769,2150,60
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCR-2684,3680,60
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCI-367,2290,60
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCI-368,2290,60
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164335,340,70
 Radiocarbon,Radiocarbon - 1473,LA115323,"McKinley, NM",Beta-121236,1170,70
-Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121224,1990,70
 Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121227,1940,70
-Radiocarbon,Radiocarbon - 1482,LA49838,"McKinley, NM",Beta-121232,2280,70
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2731,2110,70
-Radiocarbon,Radiocarbon - 1484,LA6448,"McKinley, NM",UCR-2735,2210,70
 Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2682,1550,70
-Radiocarbon,Radiocarbon - 1489,LA80434,"McKinley, NM",UCR-2792,3710,70
 Radiocarbon,Radiocarbon - 1472,LA104106,"McKinley, NM",Beta-164341,1250,80
-Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121223,2230,80
-Radiocarbon,Radiocarbon - 1479,LA26319,"McKinley, NM",Beta-121230,2350,80
-Radiocarbon,Radiocarbon - 1480,LA32964,"McKinley, NM",Beta-164329,2690,80
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",Beta-50797,2740,80
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",Beta-49141,4220,80
-Radiocarbon,Radiocarbon - 1487,LA80397,"McKinley, NM",UCR-2687,4180,80
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2701,1990,80
 Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2703,1950,80
-Radiocarbon,Radiocarbon - 1488,LA80419,"McKinley, NM",UCR-2704,2050,80
-Radiocarbon,Radiocarbon - 1473,LA115323,"McKinley, NM",Beta-121235,3130,90
-Radiocarbon,Radiocarbon - 1474,LA115327,"McKinley, NM",Beta-121237,2450,90
 Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121225,1700,90
-Radiocarbon,Radiocarbon - 1483,LA6444,"McKinley, NM",Beta-50796,2180,100
 Radiocarbon,Radiocarbon - 1477,LA26306,"McKinley, NM",Beta-121222,1920,120
-Radiocarbon,Radiocarbon - 1482,LA49838,"McKinley, NM",Beta-121234,1990,140
-Radiocarbon,Radiocarbon - 1457,LA111333,"Santa Fe, NM",Beta-170391,3020,40
-Radiocarbon,Radiocarbon - 1458,LA127578,"Santa Fe, NM",Beta-142609,3150,40
 Radiocarbon,Radiocarbon - 1460,LA156207,"Santa Fe, NM",Beta-255172,660,40
 Radiocarbon,Radiocarbon - 1460,LA156207,"Santa Fe, NM",Beta-265661,840,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132610,4540,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132613,3830,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132621,4090,40
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132626,1720,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143392,3910,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143393,5630,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143397,4450,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143400,3730,40
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143405,3820,40
 Radiocarbon,Radiocarbon - 1464,LA86150,"Santa Fe, NM",Beta-81971,920,40
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132615,1920,50
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132616,3190,50
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132617,850,50
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132619,5640,50
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143396,910,50
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143404,3300,50
 Radiocarbon,Radiocarbon - 1456,LA103919,"Santa Fe, NM",Beta-85899,510,50
 Radiocarbon,Radiocarbon - 1455,LA101412,"Santa Fe, NM",Beta-82887,1040,60
 Radiocarbon,Radiocarbon - 1455,LA101412,"Santa Fe, NM",Beta-82888,730,60
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132611,560,60
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132622,1680,60
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132625,1980,60
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143395,1100,60
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143399,820,60
 Radiocarbon,Radiocarbon - 1464,LA86150,"Santa Fe, NM",Beta-81973,1020,60
 Radiocarbon,Radiocarbon - 1465,LA86159,"Santa Fe, NM",Beta-81972,870,60
 Radiocarbon,Radiocarbon - 1558,X29SF2,"Santa Fe, NM",Tx-1994,1550,60
-Radiocarbon,Radiocarbon - 1459,LA139021,"Santa Fe, NM",Beta-186675,2580,70
-Radiocarbon,Radiocarbon - 1461,LA51912,"Santa Fe, NM",Beta-23854,2490,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132614,3660,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132618,4020,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132624,2150,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143394,4290,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143401,3570,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143402,3870,70
 Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143403,520,70
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56746,2600,70
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56749,2690,70
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56751,2820,70
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56754,2720,70
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132609,3660,80
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132620,4350,80
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132623,4090,80
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143390,2240,80
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56750,3080,80
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56753,2850,80
-Radiocarbon,Radiocarbon - 1458,LA127578,"Santa Fe, NM",Beta-142608,2840,90
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56748,2970,90
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56752,2680,90
-Radiocarbon,Radiocarbon - 1558,X29SF2,"Santa Fe, NM",Tx-1993,2510,90
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-132608,4650,100
-Radiocarbon,Radiocarbon - 1457,LA111333,"Santa Fe, NM",Beta-170390,2160,110
-Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56755,2920,110
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143391,3820,120
 Radiocarbon,Radiocarbon - 1463,LA65006,"Santa Fe, NM",Beta-56747,950,160
-Radiocarbon,Radiocarbon - 1462,LA61286,"Santa Fe, NM",Beta-143398,5450,200
 Radiocarbon,Radiocarbon - 538,LA183581,"Otero, NM",PRI-51661,940,24
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-89948&89949,3580,29
 Radiocarbon,Radiocarbon - 539,LA186210,"Otero, NM",ICA-16C/0949,880,30
 Radiocarbon,Radiocarbon - 540,LA186221,"Otero, NM",ICA-16C/0945,1630,30
 Radiocarbon,Radiocarbon - 541,LA186222,"Otero, NM",ICA-16C/0947,1780,30
@@ -2123,23 +1241,9 @@ Radiocarbon,Radiocarbon - 545,LA55129,"Otero, NM",ICA-16C/0941,1240,30
 Radiocarbon,Radiocarbon - 547,LA63658,"Otero, NM",ICA-16C/0940,530,30
 Radiocarbon,Radiocarbon - 548,LA63664,"Otero, NM",ICA-16C/0942,880,30
 Radiocarbon,Radiocarbon - 549,LA63665,"Otero, NM",ICA-16C/0943,740,30
-Radiocarbon,Radiocarbon - 550,LA63780,"Otero, NM",ICA-16C/0944,3440,30
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149378,3070,40
 Radiocarbon,Radiocarbon - 519,LA107928,"Otero, NM",Beta-84070,180,40
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167055,2700,40
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149351,1780,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149380,2960,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164062,3070,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164063,3050,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164067,3210,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164070,3140,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164071,3020,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164072,3000,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164078,3140,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172104,2840,40
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172105,1810,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172106,2890,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172110,2900,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206296,1230,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206298,990,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206299,1230,40
@@ -2149,10 +1253,7 @@ Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206305,1510,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206306,1080,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206307,1360,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206310,1230,40
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206311,2240,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206312,1020,40
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206313,2300,40
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206318,2150,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-223370,1050,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-223371,930,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-223372,990,40
@@ -2160,17 +1261,10 @@ Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-223373,980,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-223374,800,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-228908,1000,40
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-228910,490,40
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161796,3010,40
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161802,1650,40
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161803,1490,40
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161804,1550,40
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161806,3660,40
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161807,3490,40
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161810,3720,40
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161814,3490,40
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161823,1790,40
-Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161831,1960,40
-Radiocarbon,Radiocarbon - 528,LA165799,"Otero, NM",Beta-282019,3910,40
 Radiocarbon,Radiocarbon - 531,LA165803,"Otero, NM",Beta-282022,1550,40
 Radiocarbon,Radiocarbon - 534,LA165807,"Otero, NM",Beta-285946,1720,40
 Radiocarbon,Radiocarbon - 536,LA165811,"Otero, NM",Beta-283717,770,40
@@ -2184,11 +1278,6 @@ Radiocarbon,Radiocarbon - 559,LA86737,"Otero, NM",Beta-149246,960,40
 Radiocarbon,Radiocarbon - 535,LA165810,"Otero, NM",Beta-282025,1490,40
 Radiocarbon,Radiocarbon - 536,LA165811,"Otero, NM",Beta-285947,1010,40
 Radiocarbon,Radiocarbon - 537,LA165812,"Otero, NM",Beta-283716,980,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149367,3970,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164079,2870,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172108,3110,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-175111,2960,40
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164060,3420,40
 Radiocarbon,Radiocarbon - 529,LA165800,"Otero, NM",Beta-282020,1520,40
 Radiocarbon,Radiocarbon - 530,LA165802,"Otero, NM",Beta-282021,1640,40
 Radiocarbon,Radiocarbon - 531,LA165803,"Otero, NM",Beta-282023,1520,40
@@ -2199,18 +1288,9 @@ Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167034,1120,50
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167040,1010,50
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167043,890,50
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167046,910,50
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149354,2360,50
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149362,3110,50
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149379,2180,50
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-154633,2860,50
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158044,1750,50
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158045,1820,50
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164064,230,50
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-172103,2320,50
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206297,2330,50
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161797,3600,50
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161801,2010,50
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161816,3750,50
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161820,820,50
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161822,1170,50
 Radiocarbon,Radiocarbon - 544,LA37037,"Otero, NM",Beta-72436,1200,50
@@ -2218,12 +1298,9 @@ Radiocarbon,Radiocarbon - 544,LA37037,"Otero, NM",Beta-72439,830,50
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156943,1010,50
 Radiocarbon,Radiocarbon - 557,LA72859,"Otero, NM",Beta-76386,1040,50
 Radiocarbon,Radiocarbon - 558,LA86736,"Otero, NM",Beta-149240,1000,50
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6402,2945,55
 Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6403,1655,55
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6404,1955,55
 Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6411,1690,55
 Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36738,1860,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36742,2750,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167035,1240,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167036,1140,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167038,1430,60
@@ -2232,36 +1309,11 @@ Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167044,1780,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167045,1370,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167049,770,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167050,1730,60
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167052,1980,60
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167054,2080,60
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167056,3000,60
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167057,2440,60
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167060,2320,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-168872,350,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-168873,710,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174878,710,60
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174883,800,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149355,2200,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149359,3020,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149360,3110,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149361,2840,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149363,3090,60
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149365,840,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149366,2890,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149372,3030,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149373,3040,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149377,2900,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-154634,3240,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164065,3260,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164066,2940,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164068,2930,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164069,3000,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164073,2910,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164074,2980,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164075,3000,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164076,3080,60
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164077,3060,60
-Radiocarbon,Radiocarbon - 522,LA115262,"Otero, NM",Beta-156964,3760,60
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206317,1000,60
 Radiocarbon,Radiocarbon - 524,LA126181,"Otero, NM",Beta-156966,1590,60
 Radiocarbon,Radiocarbon - 524,LA126181,"Otero, NM",Beta-156967,1560,60
@@ -2269,16 +1321,10 @@ Radiocarbon,Radiocarbon - 524,LA126181,"Otero, NM",Beta-156968,810,60
 Radiocarbon,Radiocarbon - 524,LA126181,"Otero, NM",Beta-156969,1550,60
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161805,1420,60
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161808,810,60
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161811,3580,60
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161812,3750,60
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161813,3870,60
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161817,1120,60
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161818,3610,60
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161819,3520,60
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161821,900,60
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161824,860,60
 Radiocarbon,Radiocarbon - 526,LA128700,"Otero, NM",Beta-161825,1040,60
-Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161826,2000,60
 Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161832,1810,60
 Radiocarbon,Radiocarbon - 544,LA37037,"Otero, NM",Beta-72435,1790,60
 Radiocarbon,Radiocarbon - 544,LA37037,"Otero, NM",Beta-72438,820,60
@@ -2302,48 +1348,22 @@ Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76391,1040,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76392,850,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76393,910,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76396,970,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36739,5010,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6407,2085,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6408,2015,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6409,2880,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-73715,730,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-73716,900,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-73717,790,60
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-73718,790,60
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6405,2015,65
 Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6406,1935,65
 Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",AA-6410,1720,65
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36740,4790,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36741,2910,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36743,3610,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36745,3080,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-888,3150,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-955,3030,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-969,2770,70
-Radiocarbon,Radiocarbon - 517,LA104242,"Otero, NM",Beta-73173,2020,70
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-137051,1010,70
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167037,480,70
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167047,780,70
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167053,1370,70
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167061,3050,70
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174881?,2890,70
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174882,990,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149357,3120,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149358,2190,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149364,2920,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149368,3120,70
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158043,1860,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164061,2910,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-164159,2900,70
-Radiocarbon,Radiocarbon - 522,LA115262,"Otero, NM",Beta-156961,2310,70
 Radiocarbon,Radiocarbon - 522,LA115262,"Otero, NM",Beta-156962,1660,70
 Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206300,1070,70
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206314,2080,70
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206315,2090,70
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206316,1970,70
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161799,1330,70
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161800,1310,70
-Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161828,2900,70
 Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161829,1360,70
 Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161830,1270,70
 Radiocarbon,Radiocarbon - 553,LA64089,"Otero, NM",Beta-22364,850,70
@@ -2355,25 +1375,12 @@ Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156954,840,70
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-161834,760,70
 Radiocarbon,Radiocarbon - 557,LA72859,"Otero, NM",Beta-76383,480,70
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-73719,690,70
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149371,3040,70
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-812,7310,75
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-845,7110,75
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",ISGS-897,2690,80
 Radiocarbon,Radiocarbon - 518,LA104243,"Otero, NM",Beta-73175,1580,80
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167063,2910,80
 Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174879,1240,80
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-174880,2010,80
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149352,1720,80
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149353,1940,80
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149356,2920,80
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149370,2910,80
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149374,2060,80
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149375,1580,80
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149376,3070,80
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158042,1780,80
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206308,2050,80
-Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161798,3600,80
-Radiocarbon,Radiocarbon - 527,LA128708,"Otero, NM",Beta-161827,2400,80
 Radiocarbon,Radiocarbon - 553,LA64089,"Otero, NM",Beta-22365,460,80
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156935,860,80
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156951,830,80
@@ -2381,198 +1388,58 @@ Radiocarbon,Radiocarbon - 557,LA72859,"Otero, NM",Beta-76385,1260,80
 Radiocarbon,Radiocarbon - 558,LA86736,"Otero, NM",Beta-149239,1140,80
 Radiocarbon,Radiocarbon - 558,LA86736,"Otero, NM",Beta-149244,1270,80
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76390,1150,80
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",Beta-36744,3530,90
 Radiocarbon,Radiocarbon - 518,LA104243,"Otero, NM",Beta-73174,1240,90
-Radiocarbon,Radiocarbon - 520,LA110339,"Otero, NM",Beta-167062,3140,90
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158041,1750,90
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161809,870,90
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156938,960,90
 Radiocarbon,Radiocarbon - 555,LA6829,"Otero, NM",Beta-156956,700,90
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76394,1190,90
-Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-149369,2830,90
 Radiocarbon,Radiocarbon - 521,LA114103,"Otero, NM",Beta-158040,1780,100
 Radiocarbon,Radiocarbon - 525,LA128699,"Otero, NM",Beta-161815,1630,100
 Radiocarbon,Radiocarbon - 558,LA86736,"Otero, NM",Beta-149245,990,100
 Radiocarbon,Radiocarbon - 560,LA9301,"Otero, NM",GX-921,1755,105
-Radiocarbon,Radiocarbon - 522,LA115262,"Otero, NM",Beta-156963,2040,110
-Radiocarbon,Radiocarbon - 523,LA119530,"Otero, NM",Beta-206309,2520,110
-Radiocarbon,Radiocarbon - 546,LA62713,"Otero, NM",Beta-23873,3740,110
 Radiocarbon,Radiocarbon - 551,LA64076,"Otero, NM",Beta-23870,1790,110
-Radiocarbon,Radiocarbon - 552,LA64086,"Otero, NM",Beta-23872,2370,110
 Radiocarbon,Radiocarbon - 553,LA64089,"Otero, NM",Beta-22367,840,110
 Radiocarbon,Radiocarbon - 561,LA97128,"Otero, NM",Beta-76395,1210,120
-Radiocarbon,Radiocarbon - 516,LA10101,"Otero, NM",A-3070,2540,200
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-T-03,2475,15
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-T-05,2425,15
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-0767-F5,2470,20
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-F4,90,20
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-F6,2195,20
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-F7,2210,20
-Radiocarbon,Radiocarbon - 1529,LA17126,"Sandoval, NM",PRI-11-076-F8,2365,20
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402780,3040,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402781,3110,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402782,3130,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402784,3120,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402788,3120,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402789,3110,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402791,3120,30
 Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402794,300,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402796,3040,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-402798,3120,30
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117114,3120,40
-Radiocarbon,Radiocarbon - 1518,LA123288,"Sandoval, NM",Beta-263781,2640,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263783,2380,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263784,2370,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263785,2500,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263786,2270,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263787,2180,40
-Radiocarbon,Radiocarbon - 1519,LA123289,"Sandoval, NM",Beta-263788,2960,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263791,2090,40
 Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263792,1940,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263793,2170,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263795,2050,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263796,1960,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263797,2030,40
 Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263798,1900,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263799,2060,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263800,2060,40
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263801,2050,40
 Radiocarbon,Radiocarbon - 1521,LA123292,"Sandoval, NM",Beta-263802,1390,40
 Radiocarbon,Radiocarbon - 1521,LA123292,"Sandoval, NM",Beta-263803,1360,40
-Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219096,2990,40
-Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219097,3010,40
 Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219099,870,40
-Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219100,3030,40
 Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219102,920,40
 Radiocarbon,Radiocarbon - 1523,LA126406,"Sandoval, NM",Beta-219104,940,40
 Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219098,580,40
-Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219103,4010,40
-Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219105,3900,40
-Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219106,4050,40
-Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219107,4440,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231318,2540,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231319,2470,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231320,2540,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231321,2850,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231322,2510,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231323,2890,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231327,2490,40
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231328,2490,40
-Radiocarbon,Radiocarbon - 1536,LA6164,"Sandoval, NM",Beta-183771,2990,40
-Radiocarbon,Radiocarbon - 1536,LA6164,"Sandoval, NM",Beta-183772,2980,40
-Radiocarbon,Radiocarbon - 1528,LA158642,"Sandoval, NM",Beta-265703,3380,40
-Radiocarbon,Radiocarbon - 1528,LA158642,"Sandoval, NM",Beta-265705,3030,40
 Radiocarbon,Radiocarbon - 1526,LA158640,"Sandoval, NM",Beta-265700,1800,40
 Radiocarbon,Radiocarbon - 1526,LA158640,"Sandoval, NM",Beta-265701,1660,40
 Radiocarbon,Radiocarbon - 1527,LA158641,"Sandoval, NM",Beta-265704,820,40
 Radiocarbon,Radiocarbon - 1528,LA158642,"Sandoval, NM",Beta-265702,1240,40
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",AA-34173,3125,45
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",AA-34176,3055,45
 Radiocarbon,Radiocarbon - 1503,LA109137,"Sandoval, NM",Beta-92308,1120,50
-Radiocarbon,Radiocarbon - 1513,LA111584,"Sandoval, NM",Beta-96747,3870,50
-Radiocarbon,Radiocarbon - 1518,LA123288,"Sandoval, NM",Beta-263782,2900,50
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263789,2020,50
-Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263790,2170,50
-Radiocarbon,Radiocarbon - 1524,LA126409,"Sandoval, NM",Beta-219101,4600,50
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231324,2620,50
 Radiocarbon,Radiocarbon - 1533,LA27632,"Sandoval, NM",Beta-92328,1300,50
 Radiocarbon,Radiocarbon - 1538,LA6170,"Sandoval, NM",Beta-149026,1120,50
 Radiocarbon,Radiocarbon - 1538,LA6170,"Sandoval, NM",Beta-149027,1370,50
 Radiocarbon,Radiocarbon - 1502,LA109129,"Sandoval, NM",Beta-96736,1510,60
 Radiocarbon,Radiocarbon - 1502,LA109129,"Sandoval, NM",Beta-96737,1680,60
 Radiocarbon,Radiocarbon - 1502,LA109129,"Sandoval, NM",Beta-96740,1570,60
-Radiocarbon,Radiocarbon - 1503,LA109137,"Sandoval, NM",Beta-96713,4200,60
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117097,3050,60
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117099,3080,60
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117103,2990,60
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117111,3030,60
 Radiocarbon,Radiocarbon - 1508,LA110952,"Sandoval, NM",Beta-92303,1350,60
 Radiocarbon,Radiocarbon - 1511,LA110960,"Sandoval, NM",Beta-92312,1880,60
 Radiocarbon,Radiocarbon - 1512,LA110961,"Sandoval, NM",Beta-92315,1730,60
-Radiocarbon,Radiocarbon - 1514,LA111586,"Sandoval, NM",Beta-96746,4190,60
-Radiocarbon,Radiocarbon - 1515,LA111587,"Sandoval, NM",Beta-92309,6460,60
-Radiocarbon,Radiocarbon - 1516,LA119388,"Sandoval, NM",Beta-124307,2160,60
 Radiocarbon,Radiocarbon - 1520,LA123291,"Sandoval, NM",Beta-263794,1950,60
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231325,2660,60
-Radiocarbon,Radiocarbon - 1531,LA25851,"Sandoval, NM",Beta-96711,4070,60
-Radiocarbon,Radiocarbon - 1532,LA25864,"Sandoval, NM",Beta-92297,2500,60
-Radiocarbon,Radiocarbon - 1532,LA25864,"Sandoval, NM",Beta-92302,2060,60
 Radiocarbon,Radiocarbon - 1537,LA6169,"Sandoval, NM",Beta-149025,1290,60
 Radiocarbon,Radiocarbon - 1538,LA6170,"Sandoval, NM",Beta-149028,1170,60
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",SMU-20,4000,60
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117096,3240,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117100,2990,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117102,3020,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117105,3070,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117106,3440,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117107,2970,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117109,3210,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117110,3440,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117113,3140,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117115,3110,70
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117116,3300,70
 Radiocarbon,Radiocarbon - 1507,LA110951,"Sandoval, NM",Beta-92316,1600,70
-Radiocarbon,Radiocarbon - 1509,LA110955,"Sandoval, NM",Beta-96735,3860,70
 Radiocarbon,Radiocarbon - 1511,LA110960,"Sandoval, NM",Beta-92310,1690,70
-Radiocarbon,Radiocarbon - 1512,LA110961,"Sandoval, NM",Beta-92314,1960,70
 Radiocarbon,Radiocarbon - 1512,LA110961,"Sandoval, NM",Beta-92319,1880,70
-Radiocarbon,Radiocarbon - 1517,LA119390,"Sandoval, NM",Beta-124305,2210,70
-Radiocarbon,Radiocarbon - 1517,LA119390,"Sandoval, NM",Beta-124306,2190,70
-Radiocarbon,Radiocarbon - 1522,LA12566,"Sandoval, NM",DIC-595,3700,70
-Radiocarbon,Radiocarbon - 1525,LA155605,"Sandoval, NM",Beta-231326,2590,70
 Radiocarbon,Radiocarbon - 1533,LA27632,"Sandoval, NM",Beta-92325,1680,70
 Radiocarbon,Radiocarbon - 1502,LA109129,"Sandoval, NM",Beta-96733,1530,80
-Radiocarbon,Radiocarbon - 1504,LA110942,"Sandoval, NM",Beta-92293,2080,80
 Radiocarbon,Radiocarbon - 1505,LA110943,"Sandoval, NM",Beta-92307,1820,80
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117098,3520,80
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117101,3160,80
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117104,3100,80
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117112,3180,80
-Radiocarbon,Radiocarbon - 1508,LA110952,"Sandoval, NM",Beta-92295,2730,80
 Radiocarbon,Radiocarbon - 1508,LA110952,"Sandoval, NM",Beta-92298,1110,80
-Radiocarbon,Radiocarbon - 1512,LA110961,"Sandoval, NM",Beta-92311,2050,80
-Radiocarbon,Radiocarbon - 1530,LA25675,"Sandoval, NM",Beta-92326,3710,80
-Radiocarbon,Radiocarbon - 1531,LA25851,"Sandoval, NM",Beta-96748,3940,80
-Radiocarbon,Radiocarbon - 1532,LA25864,"Sandoval, NM",Beta-92299,2150,80
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",GX-917,1960,85
-Radiocarbon,Radiocarbon - 1506,LA110946,"Sandoval, NM",Beta-117108,3480,90
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",GX-918,3480,90
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",GX-916,3035,95
 Radiocarbon,Radiocarbon - 1512,LA110961,"Sandoval, NM",Beta-92317,1770,100
-Radiocarbon,Radiocarbon - 1532,LA25864,"Sandoval, NM",Beta-92304,2360,100
 Radiocarbon,Radiocarbon - 1533,LA27632,"Sandoval, NM",Beta-92324,1620,100
-Radiocarbon,Radiocarbon - 1534,LA45961,"Sandoval, NM",GX-25531,2030,100
-Radiocarbon,Radiocarbon - 1510,LA110957,"Sandoval, NM",Beta-92296,2380,110
 Radiocarbon,Radiocarbon - 1533,LA27632,"Sandoval, NM",Beta-92327,1930,110
-Radiocarbon,Radiocarbon - 1534,LA45961,"Sandoval, NM",GX-25533,2570,120
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",GX-374,5780,120
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",I-2908,2060,120
-Radiocarbon,Radiocarbon - 1542,LA9348,"Sandoval, NM",I-2213,5160,120
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",I-2211,3390,120
-Radiocarbon,Radiocarbon - 1508,LA110952,"Sandoval, NM",Beta-92300,2510,130
-Radiocarbon,Radiocarbon - 1535,LA50460,"Sandoval, NM",GX-25532,7670,130
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",GX-919,3610,130
-Radiocarbon,Radiocarbon - 1539,LA9224,"Sandoval, NM",I-2668,3090,140
-Radiocarbon,Radiocarbon - 1539,LA9224,"Sandoval, NM",M-988,4680,140
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",A-809A,7630,140
-Radiocarbon,Radiocarbon - 1522,LA12566,"Sandoval, NM",DIC-594,2620,145
-Radiocarbon,Radiocarbon - 1540,LA9261,"Sandoval, NM",GX-915,3750,160
-Radiocarbon,Radiocarbon - 1539,LA9224,"Sandoval, NM",I-2667,3510,160
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",I-2903,2290,170
-Radiocarbon,Radiocarbon - 1535,LA50460,"Sandoval, NM",GX-25535,7460,180
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",GX-375,6060,180
-Radiocarbon,Radiocarbon - 1535,LA50460,"Sandoval, NM",GX-25534,7090,190
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",SMU-56,3390,200
-Radiocarbon,Radiocarbon - 1543,LA9380,"Sandoval, NM",I-2210,2750,210
-Radiocarbon,Radiocarbon - 1539,LA9224,"Sandoval, NM",I-2629,3650,220
-Radiocarbon,Radiocarbon - 1541,LA9300,"Sandoval, NM",GX-376,6770,240
-Radiocarbon,Radiocarbon - 1536,LA6164,"Sandoval, NM",M-466,2440,250
-Radiocarbon,Radiocarbon - 2228,5LK159,"La Plata, CO",QL-1233,4210,80
 Radiocarbon,Radiocarbon - 2230,5LK372,"La Plata, CO",UGa-4165,1005,80
 Radiocarbon,Radiocarbon - 2230,5LK372,"La Plata, CO",UGa-4166,1440,80
 Radiocarbon,Radiocarbon - 2231,5LK6,"La Plata, CO",RL-225,1790,110
-Radiocarbon,Radiocarbon - 2229,5LK221,"La Plata, CO",RL-1018,2840,130
-Radiocarbon,Radiocarbon - 2230,5LK372,"La Plata, CO",UGa-4170,3825,190
 Radiocarbon,Radiocarbon - 117,LA1113,"Luna, NM",UCIAMS-148195,975,15
 Radiocarbon,Radiocarbon - 117,LA1113,"Luna, NM",UCIAMS-148196,945,15
 Radiocarbon,Radiocarbon - 117,LA1113,"Luna, NM",UCIAMS-155971,965,15
@@ -2623,7 +1490,3 @@ Radiocarbon,Radiocarbon - 1121,N:4:11059-409,"Yavapai, AZ",Beta-260627,1080,60
 Radiocarbon,Radiocarbon - 1122,N:4:1106-379,"Yavapai, AZ",Beta-260622,1380,60
 Radiocarbon,Radiocarbon - 1112,N:2:89-252,"Yavapai, AZ",Beta-234111,1470,70
 Radiocarbon,Radiocarbon - 1115,N:2:91-83,"Yavapai, AZ",Beta-234115,810,80
-Radiocarbon,Radiocarbon - 2526,5ML46,"Mineral, CO",RL-1591,3390,130
-Radiocarbon,Radiocarbon - 2525,5ML45,"Mineral, CO",RL-1592,4690,160
-Radiocarbon,Radiocarbon - 2525,5ML45,"Mineral, CO",RL-1593,4900,180
-Radiocarbon,Radiocarbon - 2525,5ML45,"Mineral, CO",RL-1594,7860,190

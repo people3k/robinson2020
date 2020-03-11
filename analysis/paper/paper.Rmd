@@ -37,6 +37,7 @@ editor_options:
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
+  cache = FALSE,
   echo = TRUE,
   fig.align = "center",
   fig.path = "../figures/",
@@ -196,6 +197,11 @@ if (!file.exists(
       Date_BP,
       SD
     ) %>%
+    # Get only raw dates between 1950 and 150 BP
+    dplyr::filter(
+      Date_BP > 150,
+      Date_BP <= 1950
+    ) %>%
     # Write the output to a new file (csv)
     readr::write_csv(
       here::here("analysis/data/derived_data/radiocarbon_data.csv")
@@ -260,6 +266,11 @@ if (!file.exists(
       Lab_Number,
       Date_BP,
       SD
+    ) %>%
+    # Get only raw dates between 1950 and 150 BP
+    dplyr::filter(
+      Date_BP > 150,
+      Date_BP <= 1950
     ) %>%
     # Write the output to a new file (csv)
     readr::write_csv(
@@ -380,7 +391,7 @@ county_counts %>%
     limits = c(0, 500),
     minor_breaks = seq(50, 450, 100),
     breaks = seq(0, 500, 100),
-    expand = expand_scale(mult = 0, add = 0),
+    expand = expansion(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -407,7 +418,7 @@ county_counts %>%
     limits = c(0, 5000),
     minor_breaks = seq(500, 4500, 1000),
     breaks = seq(0, 5000, 1000),
-    expand = expand_scale(mult = 0, add = 0),
+    expand = expansion(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -474,7 +485,7 @@ county_counts %>%
     limits = c(0, 80),
     minor_breaks = seq(10, 70, 20),
     breaks = seq(0, 80, 20),
-    expand = expand_scale(mult = 0, add = 0),
+    expand = expansion(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -501,7 +512,7 @@ county_counts %>%
     limits = c(0, 250),
     minor_breaks = seq(25, 225, 50),
     breaks = seq(0, 250, 50),
-    expand = expand_scale(mult = 0, add = 0),
+    expand = expansion(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -514,13 +525,13 @@ county_counts %>%
 
 ## Preparing the SPDs {-}
 
-To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `rcarbon::binprep` function with an `h`-value of 100. This effectively clusters dates from the same site that are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions between 1949--0 BP (1--1950 AD). We smoothed the SPD using a 21-year moving average, and normalised the total probability mass of the smoothed SPD to sum to unity.
+To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `robinson2020::binPrep` function using the "single linkage" agglomeration method with an `h`-value of 100 . This clusters dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions.
 
 ```{r radiocarbon-spds}
-# Set the time range for the reconstructions
-timerange <- c(1949, 0)
+timerange <- c(10000, 0)
 
-all_data$Radiocarbon %>%
+radiocarbon_spd <-
+  all_data$Radiocarbon %>%
   split(., .$`Study Area`) %>%
   tibble::tibble(
     `Study Area` = names(.),
@@ -540,17 +551,16 @@ all_data$Radiocarbon %>%
         calMatrix = TRUE,
         verbose = FALSE
       )),
-    Bins = list(rcarbon::binPrep(
+    Bins = list(robinson2020::binPrep(
       sites = Dates$SiteID,
-      ages = Calibrated,
+      ages = Dates$Date_BP,
       h = 100
     )),
     SPD = list(rcarbon::spd(
       x = Calibrated,
       bins = Bins,
-      spdnormalised = TRUE,
       timeRange = timerange,
-      runm = 21,
+      spdnormalised = TRUE,
       verbose = FALSE
     ))
   ) %>%
@@ -562,23 +572,19 @@ all_data$Radiocarbon %>%
         tibble::tibble(
           Type = "Radiocarbon Density",
           Date_BP = calBP,
-          Density = PrDens / sum(PrDens, na.rm = T)
+          Density = PrDens
         )
-    })) %>%
+    })) %T>%
   readr::write_rds(
     here::here("analysis/data/derived_data/radiocarbon_spd.rds"),
     compress = "gz"
   )
-
-radiocarbon_spd <- readr::read_rds(
-  here::here("analysis/data/derived_data/radiocarbon_spd.rds")
-)
 ```
 
-We treated the tree-ring dates much in the same way as the radiocarbon dates. We modeled faux-calibrated tree-ring date probabilities as discrete degenerate distributions ($\Pr(X=k_0)=1$) with $k_0$ equal to the tree-ring date --- in other words, a probability of $1$ at the date value, and $0$ elsewhere. Thinking of tree ring dates this way allows us to use the same binning and SPD algorithms as for radiocarbon dates.^[One might consider alternative probability distributions for non-cutting or near-cutting dates. The probability mass function in such a case would be zero for years prior to the date of the outer ring of the sample, and non-zero for subsequent years, presumably decaying quickly. For instance, we could imagine a study that derives empirical probability distributions for non-cutting dates based on cutting-dates from the same contexts.] Here, we did just that, binning the dates into site-phases using the `rcarbon::binprep` function, and constructing SPDs using `rcarbon::spd`, both with the same parameter selections as used for the radiocarbon samples. As above, we smoothed normalised the SPD.
+We treated the tree-ring dates much in the same way as the radiocarbon dates. We modeled faux-calibrated tree-ring date probabilities as discrete degenerate distributions ($\Pr(X=k_0)=1$) with $k_0$ equal to the tree-ring date --- in other words, a probability of $1$ at the date value, and $0$ elsewhere. Thinking of tree ring dates this way allows us to use the same binning and SPD algorithms as for radiocarbon dates.^[One might consider alternative probability distributions for non-cutting or near-cutting dates. The probability mass function in such a case would be zero for years prior to the date of the outer ring of the sample, and non-zero for subsequent years, presumably decaying quickly. For instance, we could imagine a study that derives empirical probability distributions for non-cutting dates based on cutting-dates from the same contexts.] Here, we did just that, binning the dates into site-phases using the `robinson2020::binPrep` function, and constructing SPDs using `rcarbon::spd`, both with the same parameter selections as used for the radiocarbon samples.
 
 ```{r treering-spds}
-calibrate_tree_ring_dates <- function(x) {
+calibrate_tree_ring_dates <- function(x, timeRange = c(50000, 0)) {
   out <- list(
     metadata = tibble::tibble(
       DateID = 1:length(x),
@@ -588,8 +594,8 @@ calibrate_tree_ring_dates <- function(x) {
       CalCurve = "intcal13",
       ResOffsets = 0,
       ResErrors = 0,
-      StartBP = timerange[1],
-      EndBP = timerange[2],
+      StartBP = timeRange[1],
+      EndBP = timeRange[2],
       Normalised = TRUE,
       F14C = FALSE,
       CalEPS = 1e-05
@@ -605,7 +611,7 @@ calibrate_tree_ring_dates <- function(x) {
           names_from = index,
           values_from = value
         ) %>%
-        dplyr::bind_rows(tibble::tibble(year_bp = timerange[1]:timerange[2])) %>%
+        dplyr::bind_rows(tibble::tibble(year_bp = timeRange[1]:timeRange[2])) %>%
         dplyr::filter(!duplicated(year_bp)) %>%
         dplyr::arrange(-year_bp) %>%
         dplyr::filter(year_bp >= 0) %>%
@@ -620,7 +626,8 @@ calibrate_tree_ring_dates <- function(x) {
   return(out)
 }
 
-all_data$`Tree-ring` %>%
+dendro_spd <-
+  all_data$`Tree-ring` %>%
   split(., .$`Study Area`) %>%
   tibble::tibble(
     `Study Area` = names(.),
@@ -633,8 +640,11 @@ all_data$`Tree-ring` %>%
   dplyr::rowwise() %>%
   dplyr::mutate(
     Calibrated = list(Dates %$%
-      calibrate_tree_ring_dates(x = Date_BP)),
-    Bins = list(rcarbon::binPrep(
+      calibrate_tree_ring_dates(
+        x = Date_BP,
+        timeRange = timerange
+      )),
+    Bins = list(robinson2020::binPrep(
       sites = Dates$SiteID,
       ages = Dates$Date_BP,
       h = 100
@@ -642,9 +652,8 @@ all_data$`Tree-ring` %>%
     SPD = list(rcarbon::spd(
       x = Calibrated,
       bins = Bins,
-      spdnormalised = TRUE,
       timeRange = timerange,
-      runm = 21,
+      spdnormalised = TRUE,
       verbose = FALSE
     ))
   ) %>%
@@ -656,22 +665,25 @@ all_data$`Tree-ring` %>%
         tibble::tibble(
           Type = "Tree-ring Density",
           Date_BP = calBP,
-          Density = PrDens / sum(PrDens, na.rm = T)
+          Density = PrDens
         )
-    })) %>%
+    })) %T>%
   readr::write_rds(
     here::here("analysis/data/derived_data/dendro_spd.rds"),
     compress = "gz"
   )
-
-dendro_spd <- readr::read_rds(
-  here::here("analysis/data/derived_data/dendro_spd.rds")
-)
 ```
 
 ## Comparing radiocarbon and tree-ring SPDs {-}
 
-```{r c14-tr-pop, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon and tree-ring density distributions in the UUSW, CMV, and NRG regions, and VEP population estimates for the CMV and NRG. Y-axis labels are omitted for simplicity; the maximum population in the lower panel is ~30,000 people, and the minimum is 0. Dates are given in AD.', fig.show = 'hold', out.width = '75%'}
+```{r c14-tr-pop, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon and tree-ring density distributions in the UUSW, CMV, and NRG regions, and VEP population estimates for the CMV and NRG. The radiocarbon and tree-ring density distributions for the UUSW and CMV are normalized such that the area under their densities is equal to the area under the VEP population estimates (i.e., the cumulative population). Years are given in AD.', fig.show = 'hold', out.width = '75%'}
+
+# A smoothing distribution to use throughout the analyses
+# This is a 21-year wide Gaussian distribution with a
+# mean of 0 and standard deviation of 5 years.
+# This is the smoother used in Bocinsky et al. 2016.
+dist <- dnorm(seq(-10, 10, 1), sd = 5)
+
 all_density <-
   dendro_spd %>%
   dplyr::select(`Study Area`, Density) %>%
@@ -681,38 +693,68 @@ all_density <-
     tidyr::unnest(cols = c(Density))) %>%
   dplyr::mutate(`Year AD` = 1950 - Date_BP) %>%
   dplyr::select(
-    `Year AD`,
-    Date_BP,
     `Study Area`,
     Type,
+    `Year AD`,
     Density
-  ) %>%
-  dplyr::rename(Value = Density)
+  )
 
 vep_demography <-
   robinson2020::vep_demography %>%
+  dplyr::mutate(End = ifelse(`Study Area` == "CMV" & Period == 20, 1300, End)) %>%
   dplyr::rowwise() %>%
-  dplyr::mutate(`Year AD` = list((Start + 1):End)) %>%
+  dplyr::mutate(`Year AD` = list(Start:(End - 1))) %>%
   dplyr::select(
     `Study Area`,
     `Year AD`,
+    `Period`,
     Population
   ) %>%
-  tidyr::unnest(`Year AD`) %>%
-  dplyr::mutate(
-    Type = "Population",
-    Date_BP = 1950 - `Year AD`
-  ) %>%
-  dplyr::rename(Value = Population)
+  tidyr::unnest(`Year AD`)
 
-all_density %>%
-  dplyr::bind_rows(vep_demography) %>%
+dplyr::left_join(all_density,
+  vep_demography,
+  by = c(
+    "Study Area",
+    "Year AD"
+  )
+) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type
+  ) %>%
+  dplyr::mutate(`Scaled Density` = Density * (sum(Population, na.rm = T) / sum(Density * !is.na(Population), na.rm = TRUE))) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type,
+    Period
+  ) %>%
+  # dplyr::mutate(`Binned Density` = ifelse(is.na(Population), NA, rep(mean(`Scaled Density`), dplyr::n()))) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type
+  ) %>%
+  dplyr::mutate(
+    `Raw Density` = ifelse(`Study Area` == "UUSW", Density, `Scaled Density`),
+    `Smoothed Density` = ifelse(Type == "Tree-ring Density", stats::filter(`Raw Density`, filter = dist), `Raw Density`),
+    `Raw Density` = ifelse(`Study Area` == "UUSW", `Raw Density`, NA)
+  ) %>%
+  dplyr::select(
+    `Study Area`,
+    Type,
+    `Year AD`,
+    Population,
+    `Raw Density`,
+    `Smoothed Density`,
+    # `Binned Density`
+  ) %>%
+  dplyr::ungroup() %>%
   dplyr::mutate(
     Type = factor(Type,
       levels = c(
-        "Radiocarbon Density",
         "Tree-ring Density",
-        "Population"
+        "Radiocarbon Density",
+        "VEP Population"
       ),
       ordered = TRUE
     ),
@@ -726,23 +768,40 @@ all_density %>%
   ) %>%
   ggplot(aes(x = `Year AD`)) +
   geom_line(aes(
-    y = Value,
-    color = `Study Area`,
-    size = `Study Area`
-  )) +
+    y = `Raw Density`,
+    color = Type
+  ),
+  size = 0.5,
+  alpha = 0.5
+  ) +
+  geom_line(aes(
+    y = `Population`
+  ),
+  size = 1.25
+  ) +
+  geom_line(aes(
+    y = `Smoothed Density`,
+    color = Type
+  ),
+  size = 0.75
+  ) +
+  # geom_line(aes(
+  #   y = `Binned Density`,
+  #   color = Type
+  # ),
+  # size = 1.25) +
+
   scale_color_manual(values = c(
-    "UUSW" = "#1b9e77",
-    "CMV" = "#d95f02",
-    "NRG" = "#7570b3"
+    "Tree-ring Density" = "#d95f02",
+    "Radiocarbon Density" = "#1b9e77",
+    "VEP Population" = "black"
   )) +
-  scale_size_manual(values = c(
-    "UUSW" = 1.25,
-    "CMV" = 0.75,
-    "NRG" = 0.75
-  )) +
-  # coord_cartesian(xlim = c(600,1600)) +
   xlab("Year AD") +
-  scale_x_continuous(breaks = c(1, seq(200, 2000, 200))) +
+  scale_x_continuous(
+    limits = c(200, 1800),
+    breaks = seq(200, 1800, 200),
+    expand = expansion(0, 0)
+  ) +
   theme_minimal(18) +
   theme(
     legend.title = element_blank(),
@@ -751,13 +810,13 @@ all_density %>%
     axis.title.x = element_text(size = 12),
     axis.text.x = element_text(size = 10),
     axis.title.y = element_blank(),
-    axis.text.y = element_blank(),
-    panel.grid.major.y = element_blank(),
-    panel.grid.minor.y = element_blank(),
+    # axis.text.y = element_blank(),
+    # panel.grid.major.y = element_blank(),
+    # panel.grid.minor.y = element_blank(),
     plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
   ) +
-  facet_wrap("Type",
-    nrow = 3,
+  facet_grid(
+    rows = vars(`Study Area`),
     scales = "free_y"
   )
 ```

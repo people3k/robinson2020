@@ -1,0 +1,41 @@
+#' @title Binning function of radiocarbon dates.
+#'
+#' @description Prepare a set of bins for controlling the aggregation of radiocarbon dates
+#' known to be from the same phase of same archaeological site (for use with \code{\link{spd}}). Used in cases where there is a concern that unusually high levels of sampling for radiocarbon at a given site or in a given site phase will impede comparison between sites or phases.
+#'
+#' @param sites a vector of character strings (or number to coerce to character) of all sites or site phases. If character strings are used these should not contain underscores (see also below)
+#' @param ages a vector of uncalibrated conventional radiocarbon ages or a \code{CalDates} class object obtained using the \code{\link{calibrate}} function.
+#' @param h a single numeric value passed to \code{\link{cutree}} control degree of grouping of similar ages in a phase site.
+#' @param method the agglomeration method to be used, passed on to \code{\link{hclust}}. Defaults to "complete" as in \code{\link{hclust}}.
+#'
+#' @details If \code{ages} is a \code{CalDates} class object, median dates are used for the clustering.
+#'
+#' @return A vector of character strings with the same length of the object supplied for the argument \code{ages} identifying intra-site or intra-phase grouping, for use with \code{\link{spd}}.The character strings effectively provide a "name" for each "phase" within a "site", using sequential integers after an underscore. For example if a site named "S001" had four dates grouped into two bins with two dates each, the resulting vector would be "S001_1", "S001_1", "S001_2", and "S001_2".
+
+#' @seealso \code{\link{spd}} for generating SPD; \code{\link{binsense}} for sensitivity analysis pertaining the choice of the parameter \code{h}.
+#' @import stats
+#' @import utils
+#' @export
+binPrep <- function(sites, ages, h, method = "complete") {
+  if (any(grepl("_", sites))) {
+    stop("sites should not contain elements with underscores")
+  }
+
+  clusters <- rep(NA, length(sites))
+
+  if (any(class(ages) %in% "CalDates")) {
+    ages <- medCal(ages)
+  }
+
+  for  (x in 1:length(unique(sites))) {
+    index <- which(sites == unique(sites)[x])
+    if (length(index) > 1) {
+      clusters[index] <- paste(unique(sites)[x], cutree(hclust(dist(ages[index]), method = method), h = h), sep = "_")
+    }
+    if (length(index) == 1) {
+      clusters[index] <- paste(unique(sites)[x], "1", sep = "_")
+    }
+  }
+
+  return(clusters)
+}
