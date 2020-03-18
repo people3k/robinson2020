@@ -4,11 +4,13 @@
 \name{four_corners_states}
 \alias{four_corners_states}
 \title{The boundaries of the Four Corners states}
-\format{Simple feature collection with 4 features and 2 fields:
+\format{
+Simple feature collection with 4 features and 2 fields:
 \describe{
   \item{STATEFP}{the state's FIPS code}
   \item{geometry}{the state's boundary}
- }}
+ }
+}
 \usage{
 four_corners_states
 }

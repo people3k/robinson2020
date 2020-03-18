@@ -4,7 +4,9 @@
 \name{four_corners_lcc_proj}
 \alias{four_corners_lcc_proj}
 \title{A nice projection for the Four Corners states}
-\format{A character string with the PROJ.4 projection information}
+\format{
+A character string with the PROJ.4 projection information
+}
 \usage{
 four_corners_lcc_proj
 }

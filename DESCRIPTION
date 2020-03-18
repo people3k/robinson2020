@@ -36,7 +36,7 @@ Suggests:
     git2r,
     styler,
     precommit (>= 0.0.0.9017)
-RoxygenNote: 7.0.2
+RoxygenNote: 7.1.0
 Depends:
     R (>= 3.1),
     magrittr

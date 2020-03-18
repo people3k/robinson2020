@@ -4,7 +4,9 @@
 \name{uusw_boundary}
 \alias{uusw_boundary}
 \title{The boundaries of the Upland US Southwest}
-\format{Geometry set for 1 feature}
+\format{
+Geometry set for 1 feature
+}
 \usage{
 uusw_boundary
 }

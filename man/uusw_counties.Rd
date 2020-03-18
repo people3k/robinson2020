@@ -4,11 +4,13 @@
 \name{uusw_counties}
 \alias{uusw_counties}
 \title{The boundaries of the Upland US Southwest counties used in Robinson et al. 2020}
-\format{SSimple feature collection with 40 features and 2 field:
+\format{
+SSimple feature collection with 40 features and 2 field:
 \describe{
   \item{County}{the county's name and state}
   \item{geometry}{the county's boundary}
- }}
+ }
+}
 \usage{
 uusw_counties
 }

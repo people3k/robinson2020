@@ -44,15 +44,15 @@ editor_options:
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
   cache = FALSE,
-  echo = TRUE,
+  echo = FALSE,
   fig.align = "center",
   fig.path = "../figures/",
   message = FALSE,
   warning = FALSE,
   collapse = TRUE,
   comment = "#>",
-  dev = "png",
-  dpi = 300
+  dev = "pdf" # ,
+  # dpi = 300
 )
 library(robinson2020)
 library(ggplot2)
@@ -84,6 +84,9 @@ uusw_counties <-
 # The VEP study areas
 vep_study_areas <-
   robinson2020::vep_study_areas
+
+# Truncate calendar dates to AD 200 - 1800
+trunc_dates <- c(1750, 150)
 
 theme_map <- function(base_size = 6.5,
                       base_family = "") {
@@ -162,6 +165,7 @@ The radiocarbon data presented here are derived from the [RADIOCARBON DATA DETAI
 
 ```{r prepare-radiocarbon-data}
 # Read in the radiocarbon database
+# Filter the 2-sigma calibrated ranges to the trunc_dates range
 if (!file.exists(
   here::here("analysis/data/derived_data/radiocarbon_data.csv")
 )) {
@@ -203,10 +207,18 @@ if (!file.exists(
       Date_BP,
       SD
     ) %>%
-    # Get only raw dates between 1950 and 150 BP
+    # retain dates whose calibrated 95% probability mass overlaps trunc_dates
     dplyr::filter(
-      Date_BP > 150,
-      Date_BP <= 1950
+      rcarbon::calibrate(
+        x = Date_BP,
+        errors = SD
+      ) %>%
+        rcarbon:::hpdi(credMass = 0.95) %>%
+        purrr::map_lgl(function(x) {
+          startdate <- max(x[, "startCalBP"])
+          enddate <- min(x[, "endCalBP"])
+          startdate > trunc_dates[[2]] && enddate <= trunc_dates[[1]]
+        })
     ) %>%
     # Write the output to a new file (csv)
     readr::write_csv(
@@ -273,10 +285,10 @@ if (!file.exists(
       Date_BP,
       SD
     ) %>%
-    # Get only raw dates between 1950 and 150 BP
+    # Get only raw dates within trunc_dates
     dplyr::filter(
-      Date_BP > 150,
-      Date_BP <= 1950
+      Date_BP > trunc_dates[[2]],
+      Date_BP <= trunc_dates[[1]]
     ) %>%
     # Write the output to a new file (csv)
     readr::write_csv(
@@ -394,9 +406,9 @@ county_counts %>%
     name = "Number of Radiocarbon Dates",
     palette = "Greys",
     direction = 1,
-    limits = c(0, 500),
-    minor_breaks = seq(50, 450, 100),
-    breaks = seq(0, 500, 100),
+    limits = c(0, 200),
+    minor_breaks = seq(25, 175, 50),
+    breaks = seq(0, 200, 50),
     expand = expansion(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
@@ -531,7 +543,7 @@ county_counts %>%
 
 ## Preparing the SPDs {-}
 
-To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `robinson2020::binPrep` function using the "single linkage" agglomeration method with an `h`-value of 100 . This clusters dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions.
+To prepare the radiocarbon dataset, we used functions provided by the `rcarbon` package for *R* [@rcarbon]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the 'intcal13' calibration curve. To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated calibrated radiocarbon dates known to be from the same phase of same archaeological site using the `robinson2020::binPrep` function using the "single linkage" agglomeration method with an `h`-value of 100. This clusters dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions.
 
 ```{r radiocarbon-spds}
 timerange <- c(10000, 0)
@@ -689,7 +701,7 @@ dendro_spd <-
 # This is a 21-year wide Gaussian distribution with a
 # mean of 0 and standard deviation of 5 years.
 # This is the smoother used in Bocinsky et al. 2016.
-dist <- dnorm(seq(-10, 10, 1), sd = 5)
+smoother <- dnorm(seq(-10, 10, 1), sd = 5)
 
 all_density <-
   dendro_spd %>%
@@ -742,8 +754,9 @@ dplyr::left_join(all_density,
   ) %>%
   dplyr::mutate(
     `Raw Density` = ifelse(`Study Area` == "UUSW", Density, `Scaled Density`),
-    `Smoothed Density` = ifelse(Type == "Tree-ring Density", stats::filter(`Raw Density`, filter = dist), `Raw Density`),
-    `Raw Density` = ifelse(`Study Area` == "UUSW", `Raw Density`, NA)
+    `Smoothed Density` = ifelse(Type == "Tree-ring Density", stats::filter(`Raw Density`, filter = smoother), `Raw Density`),
+    `Raw Density` = ifelse(`Study Area` == "UUSW", `Raw Density`, NA),
+    `Raw Density` = ifelse(Type == "Tree-ring Density", `Raw Density`, NA)
   ) %>%
   dplyr::select(
     `Study Area`,
@@ -778,6 +791,10 @@ dplyr::left_join(all_density,
       ordered = TRUE
     )
   ) %>%
+  dplyr::mutate(`Smoothed Density` = ifelse(`Study Area` == "Upland US Southwest Density" & Type == "Radiocarbon Density",
+    (`Smoothed Density` * 3),
+    `Smoothed Density`
+  )) %>%
   {
     ggplot(
       .,
@@ -847,6 +864,129 @@ dplyr::left_join(all_density,
       "Upland US Southwest Density",
       "Central Mesa Verde Population",
       "Northern Rio Grande Population"
+    )),
+    hjust = 0,
+    vjust = 1.5,
+    size = 4
+  )
+```
+
+## Supplementary material: Bin-width sensitivity {-}
+```{r bin-sensitivity, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon (A) and tree-ring (B) density distributions in the UUSW, given varying widths for binning dates within sites. The density distributions for the UUSW are normalized. Years are given in AD.', fig.show = 'hold', out.width = '75%'}
+densities <- c(0, 25, 50, 100, 150, 200)
+
+spds <-
+  radiocarbon_spd %>%
+  dplyr::filter(`Study Area` == "UUSW") %>%
+  dplyr::bind_rows(dendro_spd %>%
+    dplyr::filter(`Study Area` == "UUSW")) %>%
+  dplyr::mutate(Type = c(
+    "Radiocarbon",
+    "Tree-ring"
+  )) %>%
+  dplyr::select(Type, Dates, Calibrated) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(
+    Densities =
+      list(
+        densities %>%
+          magrittr::set_names(., .) %>%
+          purrr::map_dfr(~ rcarbon::spd(
+            x = Calibrated,
+            timeRange = timerange,
+            bins =
+              robinson2020::binPrep(
+                sites = Dates$SiteID,
+                ages = Dates$Date_BP,
+                h = .x,
+                method = "single"
+              ),
+            spdnormalised = TRUE,
+            verbose = FALSE
+          ) %$%
+            grid %>%
+            tibble::as_tibble() %$%
+            tibble::tibble(
+              Date_AD = 1950 - calBP,
+              Density = PrDens
+            ),
+          .id = "h"
+          ) %>%
+          dplyr::mutate(
+            `Bin Width (h)` =
+              factor(h,
+                levels = densities,
+                ordered = TRUE
+              )
+          ) %>%
+          dplyr::filter(Date_AD > 0) %>%
+          dplyr::select(`Bin Width (h)`,
+            `Year AD` = Date_AD,
+            Density
+          )
+      )
+  ) %>%
+  dplyr::select(Type, Densities) %>%
+  tidyr::unnest(cols = c(Densities))
+
+spds %>%
+  dplyr::group_by(Type, `Bin Width (h)`) %>%
+  dplyr::mutate(
+    Density =
+      ifelse(Type == "Tree-ring",
+        stats::filter(Density,
+          filter = smoother
+        ),
+        Density
+      )
+  ) %>%
+  dplyr::ungroup() %>%
+  {
+    ggplot2::ggplot(
+      .,
+      ggplot2::aes(
+        x = `Year AD`,
+        y = Density,
+        color = `Bin Width (h)`
+      )
+    ) +
+      ggplot2::geom_line() +
+      ggplot2::facet_wrap("Type",
+        nrow = 2,
+        scales = "free_y"
+      ) +
+      xlab("Year AD") +
+      scale_x_continuous(
+        limits = c(200, 1800),
+        breaks = seq(200, 1800, 200),
+        expand = expansion(0, 0)
+      ) +
+      scale_y_continuous(
+        limits = c(0, NA),
+        expand = expansion(0, 0)
+      ) +
+      theme_minimal(18) +
+      theme(
+        legend.title = element_text(size = 12),
+        # legend.justification = c(0, 1),
+        legend.position = "bottom",
+        legend.text = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(size = 10),
+        # panel.grid.major.y = element_blank(),
+        # panel.grid.minor.y = element_blank(),
+        plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
+      ) +
+      guides(color = guide_legend(nrow = 1))
+  } %>%
+  egg::tag_facet(
+    open = "",
+    close = "",
+    tag_pool = paste0(LETTERS, ". ", c(
+      "Radiocarbon Dates",
+      "Tree-ring Dates"
     )),
     hjust = 0,
     vjust = 1.5,

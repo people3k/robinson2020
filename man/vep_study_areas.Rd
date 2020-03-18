@@ -4,11 +4,13 @@
 \name{vep_study_areas}
 \alias{vep_study_areas}
 \title{The boundaries of the Village Ecodynamics Project (VEP) study areas}
-\format{Simple feature collection with 2 features and 1 field:
+\format{
+Simple feature collection with 2 features and 1 field:
 \describe{
   \item{Study Area}{the VEP study area's name}
   \item{geometry}{the VEP study area's boundary}
- }}
+ }
+}
 \usage{
 vep_study_areas
 }

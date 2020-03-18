@@ -4,14 +4,16 @@
 \name{vep_demography}
 \alias{vep_demography}
 \title{The Village Ecodynamics Project (VEP) demographic reconstructions}
-\format{A data frame with 32 rows and 5 variables:
+\format{
+A data frame with 32 rows and 5 variables:
 \describe{
   \item{Study Area}{the VEP study area}
   \item{Period}{the VEP modeling period}
   \item{Start}{the VEP modeling period starting year (AD)}
   \item{End}{the VEP modeling period ending year (AD)}
   \item{Population}{the VEP population estimate, in persons}
- }}
+ }
+}
 \usage{
 vep_demography
 }
