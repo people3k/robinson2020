@@ -36,7 +36,9 @@ Imports:
 Suggests: 
     devtools,
     git2r,
-    styler
+    styler,
+    sessioninfo,
+    pander
 RoxygenNote: 7.1.0
 Depends:
     R (>= 3.1),
