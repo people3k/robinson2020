@@ -1,65 +1,74 @@
+% Options for packages loaded elsewhere
+\PassOptionsToPackage{unicode}{hyperref}
+\PassOptionsToPackage{hyphens}{url}
+%
 \documentclass[
-]{sa}
-
+]{article}
+\usepackage{lmodern}
+\usepackage{amssymb,amsmath}
+\usepackage{ifxetex,ifluatex}
+\ifnum 0\ifxetex 1\fi\ifluatex 1\fi=0 % if pdftex
+  \usepackage[T1]{fontenc}
+  \usepackage[utf8]{inputenc}
+  \usepackage{textcomp} % provide euro and other symbols
+\else % if luatex or xetex
+  \usepackage{unicode-math}
+  \defaultfontfeatures{Scale=MatchLowercase}
+  \defaultfontfeatures[\rmfamily]{Ligatures=TeX,Scale=1}
+\fi
+% Use upquote if available, for straight quotes in verbatim environments
+\IfFileExists{upquote.sty}{\usepackage{upquote}}{}
+\IfFileExists{microtype.sty}{% use microtype if available
+  \usepackage[]{microtype}
+  \UseMicrotypeSet[protrusion]{basicmath} % disable protrusion for tt fonts
+}{}
+\makeatletter
+\@ifundefined{KOMAClassName}{% if non-KOMA class
+  \IfFileExists{parskip.sty}{%
+    \usepackage{parskip}
+  }{% else
+    \setlength{\parindent}{0pt}
+    \setlength{\parskip}{6pt plus 2pt minus 1pt}}
+}{% if KOMA class
+  \KOMAoptions{parskip=half}}
+\makeatother
+\usepackage{xcolor}
+\IfFileExists{xurl.sty}{\usepackage{xurl}}{} % add URL line breaks if available
+\IfFileExists{bookmark.sty}{\usepackage{bookmark}}{\usepackage{hyperref}}
+\hypersetup{
+  pdfauthor={Erick Robinson1,; Kyle Bocinsky2,3; Darcy Bird4; Jacob Freeman1; Robert L. Kelly5},
+  pdfkeywords={true},
+  hidelinks,
+  pdfcreator={LaTeX via pandoc}}
+\urlstyle{same} % disable monospaced font for URLs
+\usepackage[margin=1in]{geometry}
+\usepackage{longtable,booktabs}
+% Correct order of tables after \paragraph or \subparagraph
+\usepackage{etoolbox}
+\makeatletter
+\patchcmd\longtable{\par}{\if@noskipsec\mbox{}\fi\par}{}{}
+\makeatother
+% Allow footnotes in longtable head/foot
+\IfFileExists{footnotehyper.sty}{\usepackage{footnotehyper}}{\usepackage{footnote}}
+\makesavenoteenv{longtable}
+\usepackage{graphicx}
+\makeatletter
+\def\maxwidth{\ifdim\Gin@nat@width>\linewidth\linewidth\else\Gin@nat@width\fi}
+\def\maxheight{\ifdim\Gin@nat@height>\textheight\textheight\else\Gin@nat@height\fi}
+\makeatother
+% Scale images if necessary, so that they will not overflow the page
+% margins by default, and it is still possible to overwrite the defaults
+% using explicit options in \includegraphics[width, height, ...]{}
+\setkeys{Gin}{width=\maxwidth,height=\maxheight,keepaspectratio}
+% Set default figure placement to htbp
+\makeatletter
+\def\fps@figure{htbp}
+\makeatother
+\setlength{\emergencystretch}{3em} % prevent overfull lines
 \providecommand{\tightlist}{%
   \setlength{\itemsep}{0pt}\setlength{\parskip}{0pt}}
-
-\author{
-Erick Robinson\textsuperscript{1,*}
-
-\And
-Kyle Bocinsky\textsuperscript{2,3}
-
-\And
-Darcy Bird\textsuperscript{4}
-
-\And
-Jacob Freeman\textsuperscript{1}
-
-\And
-Robert L. Kelly\textsuperscript{5}
-
-}
-
-\title{Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates}
-
-\Plainauthor{Erick Robinson\textsuperscript{1,*}, Kyle Bocinsky\textsuperscript{2,3}, Darcy Bird\textsuperscript{4}, Jacob Freeman\textsuperscript{1}, Robert L. Kelly\textsuperscript{5}}
-
-\Shorttitle{Dendrochronological and radiocarbon dates in the American Southwest}
-
-\Abstract{
-The northern American Southwest provides one of the most well-documented cases of human population growth and decline in the world. The geographic extent of this decline in North America is unknown due to the lack of high-resolution palaeodemographic data from regions across and beyond the greater Southwest, where archaeological radiocarbon data is often the only available proxy for investigating these palaeodemographic processes. Radiocarbon time series across and beyond the greater Southwest suggest widespread population collapses from AD 1300--1600. However, radiocarbon data have potential biases caused by variable radiocarbon sample preservation, sample collection, and the non-linearity of the radiocarbon calibration curve. In order to be confident in the wider trends seen in radiocarbon time series across and beyond the greater Southwest, here we focus on regions that have multiple palaeodemographic proxies and compare those proxies to radiocarbon time series. We develop a new method for time series analysis and comparison between dendrochronological data and radiocarbon data. Results confirm a multiple proxy decline in human populations across the Upland US Southwest, Central Mesa Verde, and Northern Rio Grande from AD 1300--1600. These results lend confidence to single proxy radiocarbon-based reconstructions of paleodemography outside the Southwest that suggest post-AD 1300 population declines in many parts of North America.
-}
-
-\Keywords{dates-as-data, radiocarbon summed probability distributions, dendrochronology, palaeodemography, southwestern United States}
-
-%% publication information
-%% \Volume{50}
-%% \Issue{9}
-%% \Month{June}
-%% \Year{2012}
-%% \Submitdate{}
-%% \Acceptdate{2012-06-04}
-
-\Address{
-          }
-
-%% Publication information
-%% Edit as needed depending on status of manuscript.
-%% Replace Preprint with journal short name of accepted
-%% Pubs if copyright is open compliant. Add punctuation
-%% for formatting as desired.
-\Journal{Preprint}
-% \Volume{}
-% \Issue{} %Enter as "(Issue)" for APA
-% \Pages{} %Enter as "pp. m---n" for APA
-% \Year{}
-\Submitdate{\today} %Enter date you submitted preprint for review
-\Acceptdate{\today} %Enter date your paper was accepted for publication
-\DOI{
-DOI HERE
-} %Enter final DOI here
-
+\setcounter{secnumdepth}{5}
+\usepackage[labelfont={bf}]{caption}
 \newlength{\cslhangindent}
 \setlength{\cslhangindent}{1.5em}
 \newenvironment{cslreferences}%
@@ -67,12 +76,15 @@ DOI HERE
   \everypar{\setlength{\hangindent}{\cslhangindent}}\ignorespaces}%
   {\par}
 
-% Pandoc header
-\usepackage[labelfont={bf}]{caption}
-
-
+\title{true}
+\author{Erick Robinson\textsuperscript{1,*} \and Kyle Bocinsky\textsuperscript{2,3} \and Darcy Bird\textsuperscript{4} \and Jacob Freeman\textsuperscript{1} \and Robert L. Kelly\textsuperscript{5}}
+\date{April 17, 2020}
 
 \begin{document}
+\maketitle
+\begin{abstract}
+The northern American Southwest provides one of the most well-documented cases of human population growth and decline in the world. The geographic extent of this decline in North America is unknown due to the lack of high-resolution palaeodemographic data from regions across and beyond the greater Southwest, where archaeological radiocarbon data is often the only available proxy for investigating these palaeodemographic processes. Radiocarbon time series across and beyond the greater Southwest suggest widespread population collapses from AD 1300--1600. However, radiocarbon data have potential biases caused by variable radiocarbon sample preservation, sample collection, and the non-linearity of the radiocarbon calibration curve. In order to be confident in the wider trends seen in radiocarbon time series across and beyond the greater Southwest, here we focus on regions that have multiple palaeodemographic proxies and compare those proxies to radiocarbon time series. We develop a new method for time series analysis and comparison between dendrochronological data and radiocarbon data. Results confirm a multiple proxy decline in human populations across the Upland US Southwest, Central Mesa Verde, and Northern Rio Grande from AD 1300--1600. These results lend confidence to single proxy radiocarbon-based reconstructions of paleodemography outside the Southwest that suggest post-AD 1300 population declines in many parts of North America.
+\end{abstract}
 
 \textsuperscript{1} Utah State University\\
 \textsuperscript{2} Crow Canyon Archaeological Center\\
@@ -191,15 +203,6 @@ We treated the tree-ring dates in as similar a way possible as the radiocarbon d
 Figure \ref{fig:Figure4} presents radiocarbon and tree-ring SPDs for the UUSW, CMV, and NRG regions, as well as VEP population reconstructions for the CMV and NRG regions. Across the UUSW, we see striking agreement in directionality and timing between the radiocarbon and tree-ring series (Figure \ref{fig:Figure4}A); both series trend upwards until the late thirteenth century, and then decline rapidly. The tree-ring series --- the light orange line is the raw SPD, and the dark line is smoothed --- shows more variation on annual to decadal timescales, and yet matches the broad trends of the radiocarbon SPD. Roughly 150-year periodic fluctuations in the tree-ring SPD, described as periods of ``exploration'' and ``exploitation'' by Bocinsky et al. (\protect\hyperlink{ref-Bocinsky2016}{2016}), are not present in the radiocarbon SPD, the result of a much smaller sample size of site-phases and lower temporal resolution of radiocarbon dating relative to tree-ring dating.
 
 
-
-\begin{verbatim}
-#>           used (Mb) gc trigger   (Mb) limit (Mb)  max used   (Mb)
-#> Ncells  716943 38.3    1232191   65.9         NA   1232191   65.9
-#> Vcells 1639461 12.6  508769831 3881.7     716800 507690663 3873.4
-#>           used (Mb) gc trigger   (Mb) limit (Mb)  max used   (Mb)
-#> Ncells  717083 38.3    1232191   65.9         NA   1232191   65.9
-#> Vcells 1639786 12.6  407015865 3105.3     716800 507690663 3873.4
-\end{verbatim}
 
 \begin{figure}
 
@@ -426,7 +429,7 @@ As can be seen in Figure \ref{fig:FigureS1}, binning in general has little impac
 \section*{Colophon}\label{colophon}}
 \addcontentsline{toc}{section}{Colophon}
 
-This report is part of a research compendium developed using the \texttt{rrtools} package for reproducible research (Marwick, \protect\hyperlink{ref-rrtools}{2019}, \protect\hyperlink{ref-Marwick2017}{2017}). This report was generated on 2020-04-17 08:31:33 using the following computational environment and dependencies:
+This report is part of a research compendium developed using the \texttt{rrtools} package for reproducible research (Marwick, \protect\hyperlink{ref-rrtools}{2019}, \protect\hyperlink{ref-Marwick2017}{2017}). This report was generated on 2020-04-17 11:04:15 using the following computational environment and dependencies:
 
 \textbf{R version 3.6.3 (2020-02-29)}
 
@@ -443,7 +446,5 @@ en\_US.UTF-8\textbar\textbar en\_US.UTF-8\textbar\textbar en\_US.UTF-8\textbar\t
 
 \textbf{loaded via a namespace (and not attached):}
 \emph{Rcpp(v.1.0.4)}, \emph{compiler(v.3.6.3)}, \emph{pillar(v.1.4.3)}, \emph{tools(v.3.6.3)}, \emph{digest(v.0.6.25)}, \emph{evaluate(v.0.14)}, \emph{lifecycle(v.0.2.0)}, \emph{tibble(v.3.0.0)}, \emph{gtable(v.0.3.0)}, \emph{pkgconfig(v.2.0.3)}, \emph{rlang(v.0.4.5)}, \emph{cli(v.2.0.2)}, \emph{yaml(v.2.2.1)}, \emph{xfun(v.0.13)}, \emph{withr(v.2.1.2)}, \emph{stringr(v.1.4.0)}, \emph{dplyr(v.0.8.5)}, \emph{knitr(v.1.28)}, \emph{vctrs(v.0.2.4)}, \emph{rprojroot(v.1.3-2)}, \emph{grid(v.3.6.3)}, \emph{tidyselect(v.1.0.0)}, \emph{glue(v.1.4.0)}, \emph{here(v.0.1)}, \emph{R6(v.2.4.1)}, \emph{fansi(v.0.4.1)}, \emph{rmarkdown(v.2.1)}, \emph{bookdown(v.0.18)}, \emph{pander(v.0.6.3)}, \emph{purrr(v.0.3.3)}, \emph{backports(v.1.1.6)}, \emph{scales(v.1.1.0)}, \emph{ellipsis(v.0.3.0)}, \emph{htmltools(v.0.4.0)}, \emph{assertthat(v.0.2.1)}, \emph{colorspace(v.1.4-1)}, \emph{stringi(v.1.4.6)}, \emph{munsell(v.0.5.0)} and \emph{crayon(v.1.3.4)}
-
-
 
 \end{document}

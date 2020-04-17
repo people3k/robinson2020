@@ -41,30 +41,31 @@ keywords:
       - southwestern United States
 doi: [DOI HERE]
 journal: Preprint
-documentclass: sa
+# documentclass: sa
 bibliography: robinson2020_references.bib
 # csl: "philosophical-transactions-of-the-royal-society-b.csl"
 csl: "journal-of-archaeological-science.csl"
 link-citations: true
 output: 
     bookdown::pdf_document2:
-      template: templates/template.tex
+      # template: templates/template.tex
       latex_engine: xelatex
       keep_tex: true
       fig_caption: yes
+      toc: false
       extra_dependencies:
         caption: ["labelfont={bf}"]
       pandoc_args:
       - --lua-filter=templates/scholarly-metadata.lua
       - --lua-filter=templates/author-info-blocks.lua
-      - --lua-filter=templates/pagebreak.lua
+      # - --lua-filter=templates/pagebreak.lua
 editor_options: 
   chunk_output_type: console
 ---
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  cache = FALSE,
+  cache = TRUE,
   echo = FALSE,
   fig.align = "center",
   fig.path = here::here("analysis/figures/"),
@@ -743,10 +744,6 @@ all_density <-
     `Year AD`,
     Density
   )
-
-rm(radiocarbon_spd, dendro_spd)
-gc(verbose = FALSE)
-gc(verbose = FALSE)
 
 vep_demography <-
   robinson2020::vep_demography %>%
