@@ -280,7 +280,7 @@
   \AtEndDocument{\makefooter}
 \fi
 %% required packages
-\RequirePackage{hyperref}
+\RequirePackage[unicode,breaklinks]{hyperref}
 %% new \maketitle
 \def\@myoddhead{
   {\color{white} SocArXiv}\\[-1.42cm]
