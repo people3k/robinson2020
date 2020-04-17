@@ -340,7 +340,7 @@ all_data <- list(
   ))
 ```
 
-Our final dataset includes `r nrow(all_data$Radiocarbon) %>% format(big.mark = ',')` radiocarbon dates from `r all_data$Radiocarbon$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data$Radiocarbon$Date_BP)`--`r min(all_data$Radiocarbon$Date_BP)` BP (uncalibrated; `r -1 * (1950 - max(all_data$Radiocarbon$Date_BP)) - 1` BC--`r 1950 - min(all_data$Radiocarbon$Date_BP)` AD) and `r nrow(all_data[['Tree-ring']]) %>% format(big.mark = ',')` tree-ring dates from `r all_data[["Tree-ring"]]$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data[['Tree-ring']]$Date_BP)` -- `r min(all_data[['Tree-ring']]$Date_BP)` BP (`r 1950 - max(all_data[['Tree-ring']]$Date_BP)`--`r 1950 - min(all_data[['Tree-ring']]$Date_BP)` AD). Table \@ref(tab:Table1) presents the counts of dates and sites of each date type in the CMV and NRG study areas.
+Our final dataset includes `r nrow(all_data$Radiocarbon) %>% format(big.mark = ',')` radiocarbon dates from `r all_data$Radiocarbon$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data$Radiocarbon$Date_BP)`--`r min(all_data$Radiocarbon$Date_BP)` BP (uncalibrated; `r -1 * (1950 - max(all_data$Radiocarbon$Date_BP)) - 1` BC--`r 1950 - min(all_data$Radiocarbon$Date_BP)` AD) and `r nrow(all_data[['Tree-ring']]) %>% format(big.mark = ',')` tree-ring dates from `r all_data[["Tree-ring"]]$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data[['Tree-ring']]$Date_BP)`--`r min(all_data[['Tree-ring']]$Date_BP)` BP (`r 1950 - max(all_data[['Tree-ring']]$Date_BP)`--`r 1950 - min(all_data[['Tree-ring']]$Date_BP)` AD). Table \@ref(tab:Table1) presents the counts of dates and sites of each date type in the CMV and NRG study areas.
 
 ```{r Table1}
 all_data %>%
@@ -741,6 +741,10 @@ all_density <-
     `Year AD`,
     Density
   )
+
+rm(radiocarbon_spd, dendro_spd)
+gc()
+gc()
 
 vep_demography <-
   robinson2020::vep_demography %>%

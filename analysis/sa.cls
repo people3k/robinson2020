@@ -78,6 +78,8 @@
 \usepackage{unicode-math}
 \setmainfont[Ligatures=TeX]{Alegreya}
 \usepackage{booktabs}
+\usepackage[all]{nowidow}
+
 \IfFileExists{upquote.sty}{\RequirePackage{upquote}}{}
 %% bibliography
 \if@shortnames

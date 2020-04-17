@@ -10,7 +10,7 @@ COPY . /robinson2020
 RUN . /etc/environment \
 
 # build this compendium package
-&& R -e "devtools::install('/robinson2020', dependencies = TRUE, quick = TRUE, )" \
+&& R -e "devtools::install('/robinson2020', dependencies = TRUE, quick = TRUE)" \
 
 # render the manuscript into a pdf
 && R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
