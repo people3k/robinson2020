@@ -49,8 +49,8 @@ link-citations: true
 output: 
     bookdown::pdf_document2:
       # template: templates/template.tex
-      latex_engine: xelatex
-      keep_tex: true
+      latex_engine: lualatex
+      # keep_tex: true
       fig_caption: yes
       toc: false
       extra_dependencies:
