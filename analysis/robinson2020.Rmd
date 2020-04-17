@@ -61,7 +61,7 @@ editor_options:
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  cache = TRUE,
+  cache = FALSE,
   echo = FALSE,
   fig.align = "center",
   fig.path = here::here("analysis/figures/"),
@@ -220,7 +220,8 @@ if (!file.exists(
     dplyr::filter(
       rcarbon::calibrate(
         x = Date_BP,
-        errors = SD
+        errors = SD,
+        verbose = FALSE
       ) %>%
         rcarbon:::hpdi(credMass = 0.95) %>%
         purrr::map_lgl(function(x) {

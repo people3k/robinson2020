@@ -31,7 +31,8 @@ Imports:
     purrr,
     ggplot2,
     egg,
-    lubridate
+    lubridate,
+    kableExtra
 Suggests: 
     devtools,
     git2r,
