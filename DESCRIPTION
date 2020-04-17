@@ -30,12 +30,12 @@ Imports:
     rmapshaper,
     purrr,
     ggplot2,
-    egg
+    egg,
+    lubridate
 Suggests: 
     devtools,
     git2r,
-    styler,
-    precommit (>= 0.0.0.9017)
+    styler
 RoxygenNote: 7.1.0
 Depends:
     R (>= 3.1),
@@ -43,4 +43,5 @@ Depends:
 URL: https://github.com/bocinsky/robinson2020
 BugReports: https://github.com/bocinsky/robinson2020/issues
 Remotes: 
-    lorenzwalthert/precommit
+    lorenzwalthert/precommit,
+    benmarwick/rrtools

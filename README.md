@@ -14,19 +14,15 @@ This repository contains the data and code for our paper:
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0002-0789-3724),
 > R. Kyle Bocinsky
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-1862-3428),
-> Jacob Freeman
-> [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-7402-8450),
 > Darcy Bird
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0003-3466-6284),
+> Jacob Freeman
+> [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-7402-8450),
 > Robert L.
 > Kelly[![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-9737-0152),
 > (2020). *Dendrochronological dates confirm a Late Prehistoric
 > population decline in the American Southwest derived from radiocarbon
-> dates*. Under review.
-
-<!-- Our pre-print is online here: -->
-
-<!-- > Authors, (YYYY). _Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates_. Name of journal/book, Accessed 10 Mar 2020. Online at <https://doi.org/xxx/xxx> -->
+> dates*. *Philosophical Transactions B*. In Press.
 
 ### How to cite
 
@@ -35,11 +31,11 @@ Please cite this compendium as:
 > Bocinsky, R. Kyle, Darcy Bird, and Erick Robinson, (2020). *Compendium
 > of R code and data for Dendrochronological dates confirm a Late
 > Prehistoric population decline in the American Southwest derived from
-> radiocarbon dates*. Accessed 10 Mar 2020.
+> radiocarbon dates*. Accessed 16 Apr 2020.
 
 ## Contents
 
-The **analysis** directory contains:
+The [:file\_folder: analysis](/analysis) directory contains:
 
   - [:file\_folder: paper](/analysis/paper): R Markdown source document
     for the manuscript. Includes code to reproduce the figures and
@@ -64,8 +60,8 @@ You can download the compendium as a zip from from this URL:
 [master.zip](/archive/master.zip). After unzipping, open the `Proj` file
 in RStudio, and run `devtools::install()` to ensure you have the
 packages this analysis depends on (also listed in the
-[DESCRIPTION](/DESCRIPTION) file). Then open `paper.Rmd` and knit to
-produce the `paper.docx`.
+[DESCRIPTION](/DESCRIPTION) file). Then open `robinson2020.Rmd` and knit
+to produce the paper in PDF format.
 
 Or, simply install straight from Github:
 

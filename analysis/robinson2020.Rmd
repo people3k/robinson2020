@@ -1,0 +1,1100 @@
+---
+title: 
+    main: Dendrochronological dates confirm a Late Prehistoric population decline in the American Southwest derived from radiocarbon dates
+    short: Dendrochronological and radiocarbon dates in the American Southwest
+date: "`r format(lubridate::as_date('2020-04-16'), '%d %B, %Y')`"
+author:
+  - Erick Robinson:
+      email: erick.robinson@usu.edu
+      institute: [USU]
+      correspondence: true
+  - Kyle Bocinsky:
+      email: kbocinsky@crowcanyon.org
+      institute: [CCAC,UM]
+      correspondence: false
+  - Darcy Bird:
+      email: darcy.bird@wsu.edu
+      institute: [WSU]
+      correspondence: false
+  - Jacob Freeman:
+      email: jacob.freeman@usu.edu
+      institute: [USU]
+      correspondence: false
+  - Robert L. Kelly:
+      email: rlkelly@uwyo.edu 
+      institute: [UW]
+      correspondence: false
+institute:
+  - USU: Utah State University
+  - CCAC: Crow Canyon Archaeological Center
+  - UM: University of Montana
+  - WSU: Washington State University
+  - UW: University of Wyoming
+abstract: >
+  The northern American Southwest provides one of the most well-documented cases of human population growth and decline in the world. The geographic extent of this decline in North America is unknown due to the lack of high-resolution palaeodemographic data from regions across and beyond the greater Southwest, where archaeological radiocarbon data is often the only available proxy for investigating these palaeodemographic processes. Radiocarbon time series across and beyond the greater Southwest suggest widespread population collapses from AD 1300--1600. However, radiocarbon data have potential biases caused by variable radiocarbon sample preservation, sample collection, and the non-linearity of the radiocarbon calibration curve. In order to be confident in the wider trends seen in radiocarbon time series across and beyond the greater Southwest, here we focus on regions that have multiple palaeodemographic proxies and compare those proxies to radiocarbon time series. We develop a new method for time series analysis and comparison between dendrochronological data and radiocarbon data. Results confirm a multiple proxy decline in human populations across the Upland US Southwest, Central Mesa Verde, and Northern Rio Grande from AD 1300--1600. These results lend confidence to single proxy radiocarbon-based reconstructions of paleodemography outside the Southwest that suggest post-AD 1300 population declines in many parts of North America.
+keywords:
+    formatted:
+      - dates-as-data
+      - radiocarbon summed probability distributions
+      - dendrochronology
+      - palaeodemography
+      - southwestern United States
+doi: [DOI HERE]
+journal: Preprint
+documentclass: sa
+bibliography: robinson2020_references.bib
+csl: "philosophical-transactions-of-the-royal-society-b.csl"
+link-citations: true
+output: 
+    bookdown::pdf_document2:
+      template: templates/template.tex
+      latex_engine: xelatex
+      keep_tex: true
+      fig_caption: yes
+      pandoc_args:
+      - --lua-filter=templates/scholarly-metadata.lua
+      - --lua-filter=templates/author-info-blocks.lua
+      - --lua-filter=templates/pagebreak.lua
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, echo = FALSE, message = FALSE}
+knitr::opts_chunk$set(
+  cache = TRUE,
+  echo = FALSE,
+  fig.align = "center",
+  fig.path = here::here("analysis/figures/"),
+  message = FALSE,
+  warning = FALSE,
+  collapse = TRUE,
+  comment = "#>",
+  dev = "pdf"
+)
+library(robinson2020)
+library(ggplot2)
+```
+
+\newpage
+<!-- \raggedright -->
+# Introduction {-}
+The spatial and temporal ubiquity of archaeological radiocarbon dates makes them an unprecedented proxy for human paleodemography. The past decade has witnessed a rapid increase in the use of archaeological radiocarbon time series to reconstruct prehistoric population growth and decline in various regions of the world [@Bevan2019; @Crema2016; @Goldberg2016; @Palmisano2019; @Peros2010; @Russell2009; @Shennan2013; @Wang2014; @Williams2012]. One of the first aggregations of radiocarbon dates for palaeodemographic analysis was by Berry [@Berry1982] in his study of population growth, decline and migration across the American Southwest. Radiocarbon time series were used as a complement to earlier periods that lacked robust dendrochronological records. Berry [@Berry1982: 120] noted that they were “not even remotely related to population size”, but rather the “relative probability of occupation through time” and “the major trends in these charts (i.e., peaks and troughs) should provide a reliable indication of the direction of change”. Later, Rick [@Rick1987: 56] more formally outlined the use of radiocarbon time series as a method for paleodemography by developing an ‘inference chain’ that detailed the various biases involved in their use and interpretation. Rick identified three biases [@Rick1987]: creation bias, preservation bias, and investigation bias. Over the past decade, as archaeologists have assembled and analysed large radiocarbon datasets from various regions of the world, there has been considerable focus on these biases, notably creation [@Crombe2014; @Freeman2018; @Naudinot2014] and preservation bias [@Peros2010; @Williams2012; @Bluhm2019; @Surovell2007; @Surovell2009], as well as bias caused by the radiocarbon calibration process [@Williams2012; @Armit2013; @Bamforth2012; @Contreras2014; @Michczynski2006; @Timpson2014]. Of the three biases Rick identified, investigation bias has been the most understudied thus far. Investigation bias occurs when investigators gather more radiocarbon samples for particular periods of time or specific geographic regions, which leads to periods or regions with more or less radiocarbon representation than the average time period or region. The biased selection of radiocarbon samples would then appear to be relative increases or decreases in population when they are merely artefacts of research history and fieldwork practice. Investigation bias has been understudied because for many regions of the world radiocarbon data are the only currently available proxy evidence enabling reconstructions of paleodemography in continuous time series spanning millennia. Assessing the impact of investigation bias on radiocarbon-based reconstructions of paleodemography requires comparison with other paleodemographic proxies.
+
+The American Southwest provides one the best available case studies for assessing the role of investigation bias in radiocarbon-based reconstructions of paleodemography. It also has one of the most well-documented cases of population growth and decline in the world [@Bocinsky2016; @Hill2004; @Kohler2010b; @Robinson2019; @Freeman2018PNAS]. For almost a century, researchers have collected multiple proxies, such as dendrochronological records, settlement size records, and ceramic seriation records to address the magnitude of this population growth and decline. However, a critical knowledge gap still exists for the exact scale of population decline across and beyond the Southwest [@Cameron2010; @Boyer2010]. This gap is because the less intensively researched regions lack multiple proxies for robust reconstructions of paleodemography. In these regions, radiocarbon data are the only available proxy time series for reconstructing paleodemography. Over the past six years, we have collected all available radiocarbon data across and beyond the Southwest [@Robinson2019]. Initial analyses of this new radiocarbon dataset have revealed extensive population decline from AD 1300--1600 across and beyond the Southwest [@Robinson2019; @Freeman2018PNAS]. Therefore, the geographic extent of Late Prehistoric population decline could be much broader than previously expected.
+
+The potential importance of this widespread population decline for research on Late Prehistoric archaeology of the American West requires comparison of the sensitivity of lower-resolution radiocarbon data against other higher-resolution palaeodemographic proxies. In the most well-documented regions (such as the northern American Southwest) we expect radiocarbon records to reflect the highest amount of investigation bias, as researchers have the option of selecting from a suite of other higher-resolution proxies, including dendrochronology and ceramic seriation. Investigation bias can create an artificial ‘edge effect’ spuriously appearing as a decrease in population. Here we develop a new method for arraying dendrochronological records as time series for comparison against radiocarbon time series. We focus on the broader region of the Upland US Southwest (UUSW) for which there is a robust dendrochronological record [@Bocinsky2016].
+
+We also focus on the more concentrated and intensively investigated Central Mesa Verde (CMV) and Northern Rio Grande (NRG) regions of the UUSW (Figure \@ref(fig:Figure1)), for which multiproxy palaeodemographic reconstructions were produced by the Village Ecodynamics Project (VEP) [@Ortman2016; @Schwindt2016]. The VEP is an interdisciplinary, multi-method research initiative aimed at better understanding demography of ancestral Pueblo farmers and human-environment interaction across the UUSW. As part of the project, VEP researchers cataloged data on all known archaeological habitation sites within a 4,600-km2 area in the CMV [@Schwindt2016] and a 6,900-km2 area in the NRG [@Ortman2016], to which most of the CMV population migrated during the thirteenth century AD [@Ortman2016]. They integrated data including pitstructure and room count estimates, the presence of diagnostic architectural features, surface ceramic tallies, surveyor assessments, and limited dendrochronological data in an empirical Bayesian framework to develop population estimates for each region resolved to periods ranging from 20 to 125 years in length [@Ortman2016; @Schwindt2016]. The VEP estimates are the highest quality regional palaeodemographic reconstructions currently available in the UUSW, and are completely independent of the radiocarbon records for the region. They are therefore useful in exploring the impact of investigation bias in the radiocarbon record.
+
+(ref:fig1) The UUSW as defined in this study (region with black border). The white dashed area represents the UUSW as defined in [@Bocinsky2016]. VEP study areas are white boxes. CMV: Central Mesa Verde; NRG: Northern Rio Grande.
+
+```{r Figure1, fig.height=6.5, fig.width=6.5, out.width = '50%', fig.cap="(ref:fig1)"}
+# A nice projection of the Four Corners states to use for mapping
+four_corners_lcc_proj <-
+  robinson2020::four_corners_lcc_proj
+
+# The Four Corners states in four_corners_lcc_proj
+four_corners_states <-
+  robinson2020::four_corners_states
+
+# The UUSW as defined in Bocinsky et al. 2016
+uusw_boundary <- robinson2020::uusw_boundary
+
+# The UUSW study area for this analysis
+uusw_counties <-
+  robinson2020::uusw_counties
+
+# The VEP study areas
+vep_study_areas <-
+  robinson2020::vep_study_areas
+
+# Truncate calendar dates to AD 200 - 1800
+trunc_dates <- c(1750, 150)
+
+theme_map <- function(base_size = 6.5,
+                      base_family = "") {
+  theme_bw(
+    base_size = base_size,
+    base_family = base_family
+  ) %+replace%
+    theme(
+      axis.line = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_blank(),
+      panel.background = element_blank(),
+      panel.border = element_blank(),
+      panel.grid = element_blank(),
+      panel.grid.major = element_line(colour = "transparent"),
+      panel.grid.minor = element_line(colour = "transparent"),
+      legend.key = element_blank(),
+      legend.position = "top",
+      plot.background = element_blank(),
+      plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+ggplot() +
+  geom_sf(data = four_corners_states) +
+  geom_raster(
+    data = robinson2020::swus_hillshade_500m,
+    mapping = aes(
+      x = x,
+      y = y,
+      alpha = ID
+    ),
+    na.rm = TRUE
+  ) +
+  scale_alpha(
+    range = c(0.8, 0),
+    na.value = 0,
+    limits = c(0, 255),
+    guide = "none"
+  ) +
+  geom_sf(
+    data = four_corners_states,
+    fill = NA
+  ) +
+  geom_sf(
+    data = uusw_counties %>%
+      sf::st_union() %>%
+      rmapshaper::ms_filter_islands(),
+    fill = NA,
+    color = "black"
+  ) +
+  geom_sf(
+    data = uusw_boundary,
+    fill = NA,
+    linetype = 2,
+    color = "white"
+  ) +
+  geom_sf(
+    data = vep_study_areas,
+    fill = NA,
+    color = "white",
+    size = 1
+  ) +
+  geom_sf_text(
+    data = vep_study_areas,
+    aes(label = `Study Area`),
+    size = 3
+  ) +
+  theme_map(16)
+```
+
+We expect that substantial investigation bias is present in radiocarbon records if those records substantially diverge from the dendrochronological and multiproxy reconstructions. If the lower-resolution radiocarbon records reveal similar trends to the two other records, we expect investigation bias does not substantially impact the ability of radiocarbon records to be used as relative measures of the directionality of population change through time. This would, in turn, lend more confidence to radiocarbon records across the American West that reveal extensive post AD 1300 population declines but lack other palaeodemographic proxies.
+
+# Methods {-}
+Here we compare two large collections of radiocarbon and tree-ring dates drawn from the UUSW. After harmonizing those datasets with one another and calibrating the radiocarbon dates, we calculate binned summed probability distributions across the UUSW, CMV, and NRG. The radiocarbon dates we analyse here are drawn from the National Science Foundation supported project, “Populating a Radiocarbon Database for North America,” which have been uploaded to the Canadian Archaeological Radiocarbon Database (CARD; https://www.canadianarchaeology.ca). Tree-ring data are those presented in [@Bocinsky2016]. Both datasets are available on the Digital Archaeological Record (see Data Accessibility).
+
+## Study Area {-}
+The UUSW was geographically defined by [@Bocinsky2016] as the region between 105--113°W and 32--38°N. Here, we refine that definition in two ways. First, because location data for our radiocarbon database are only resolved to the county level for most sites [@Robinson2019], we define our study region to include all counties whose geographic centroids fall within the region from [@Bocinsky2016]. Second, because of the generally poor tree-ring date record in the Sonoran Desert, we exclude the Phoenix and Tucson basins by dropping Maricopa, Pinal, and Pima counties in Arizona. Figure \@ref(fig:Figure1) shows the original UUSW from [@Bocinsky2016] and revised study area used in this analysis, as well as the two VEP study areas.
+
+## Period of Interest {-}
+Here, we focus our analyses on the period for which data are most abundant: 1750--150 BP, or AD 200--1800. This period includes the periods of the VEP population estimates for the CMV (AD 600--1280) and NRG (AD 900--1760), and extends 400 years earlier than the CMV estimates to allow us to assess trends in the radiocarbon record leading up to the VEP reconstructions, and to control for edge effects. While the VEP demographic estimates are for ancestral Pueblo populations only, it is likely that the tree-ring records include samples from Spanish colonial contexts after AD 1600 or so.
+
+## Datasets {-}
+```{r prepare-radiocarbon-data}
+# Read in the radiocarbon database
+# Filter the 2-sigma calibrated ranges to the trunc_dates range
+if (!file.exists(
+  here::here("analysis/data/derived_data/radiocarbon_data.csv")
+)) {
+  readr::read_csv(
+    here::here("analysis/data/raw_data/robinson_et_al_2020_radiocarbon.csv")
+  ) %>%
+    dplyr::mutate(
+      Type = "Radiocarbon",
+      Site_ID = Site_ID %>% stringr::str_c("Radiocarbon - ", .)
+    ) %>%
+    dplyr::select(
+      Type,
+      SiteID = Site_ID,
+      Site_Number,
+      County,
+      Lab_Number,
+      Date_BP,
+      SD
+    ) %>%
+    # retain dates whose calibrated 95% probability mass overlaps trunc_dates
+    dplyr::filter(
+      rcarbon::calibrate(
+        x = Date_BP,
+        errors = SD
+      ) %>%
+        rcarbon:::hpdi(credMass = 0.95) %>%
+        purrr::map_lgl(function(x) {
+          startdate <- max(x[, "startCalBP"])
+          enddate <- min(x[, "endCalBP"])
+          startdate > trunc_dates[[2]] && enddate <= trunc_dates[[1]]
+        })
+    ) %>%
+    # Write the output to a new file (csv)
+    readr::write_csv(
+      here::here("analysis/data/derived_data/radiocarbon_data.csv")
+    )
+}
+
+radiocarbon_data <-
+  readr::read_csv(
+    here::here("analysis/data/derived_data/radiocarbon_data.csv")
+  )
+```
+
+We cleaned the radiocarbon database by first removing all non-archaeological dates. To ensure our data are reasonably precise, we removed all radiocarbon dates with 1σ errors greater than 300 years and more than 25% of the uncalibrated age. We removed dates with duplicate lab numbers whose radiocarbon ages, 1σ errors, or county information did not match. We then trimmed these data to counties within the UUSW. We retained radiocarbon dates that likely derive from our period of interest by first calibrating all of the dates, then retaining dates whose 95% calibrated probability masses overlapped 1750--150 BP.
+
+```{r prepare-treering-data}
+# Read in the Bocinsky et al. 2016 tree ring data
+# https://doi.org/10.6067/XCV82J6D7B
+
+if (!file.exists(
+  here::here("analysis/data/derived_data/dendro_data.csv")
+)) {
+  readr::read_csv(
+    here::here("analysis/data/raw_data/BOCINSKY_ET_AL_2015_TREE_RINGS.csv")
+  ) %>%
+    # Convert to spatial object
+    sf::st_as_sf(
+      coords = c("LON", "LAT"),
+      crs = 4326
+    ) %>%
+    sf::st_transform(four_corners_lcc_proj) %>%
+    # Convert dates to BP
+    dplyr::mutate(
+      Date_BP = 1950 - Outer_Date_AD,
+      Type = ifelse(C_Level %in% c(2, 3),
+        "Cutting or Near-cutting",
+        "Non-cutting"
+      )
+    ) %>%
+    # drop C_Level
+    dplyr::select(
+      Seq_Number,
+      Site_Number,
+      Lab_Number,
+      Type,
+      Date_BP
+    ) %>%
+    dplyr::rename(SiteID = Seq_Number) %>%
+    sf::st_intersection(uusw_counties) %>%
+    sf::st_drop_geometry() %>%
+    dplyr::mutate(
+      Type = Type %>% stringr::str_c("Dendro - ", .),
+      SiteID = SiteID %>% stringr::str_c("Dendro - ", .),
+      SD = 0
+    ) %>%
+    dplyr::filter(Type == "Dendro - Cutting or Near-cutting") %>%
+    dplyr::mutate(Type = "Tree-ring") %>%
+    dplyr::select(
+      Type,
+      SiteID,
+      Site_Number,
+      County,
+      Lab_Number,
+      Date_BP,
+      SD
+    ) %>%
+    # Get only raw dates within trunc_dates
+    dplyr::filter(
+      Date_BP > trunc_dates[[2]],
+      Date_BP <= trunc_dates[[1]]
+    ) %>%
+    # Write the output to a new file (csv)
+    readr::write_csv(
+      here::here("analysis/data/derived_data/dendro_data.csv")
+    )
+}
+
+dendro_data <-
+  readr::read_csv(
+    here::here("analysis/data/derived_data/dendro_data.csv")
+  )
+```
+
+We draw on the tree-ring date database presented in [@Bocinsky2016]. These data were compiled by Tim Kohler and Rebecca Higgins from many contributors, and the vast majority of dates were produced by the Laboratory of Tree Ring Research at the University of Arizona. The original dataset contained 32,863 cutting, near-cutting, and non-cutting dates from across the US Southwest. Here, we only use the dates that are most likely to be accurate — cutting dates (‘B’, ‘G’, ‘L’, ‘c’, or ‘r’ dates, with or without a ‘+’) for which we know the year the tree died, and near-cutting dates (‘v’ or ‘v+’ dates) which are likely within 0--3 years of the true date of the outermost ring. The [@Bocinsky2016] data contain site locations; for this analysis, we first spatially cropped the database to our study area, and then translated those locations to the county level. We converted the original date determinations to BP to match calibrated radiocarbon year conventions, and retained dates within 1750--150 BP.
+
+Finally, due to much of the radiocarbon data only being resolved to the county level, we had to approximate inclusion in the VEP, CMV and NRG study areas. The CMV study area conforms well to Montezuma county, Colorado; the NRG overlaps with Los Alamos, Rio Arriba, Sandoval, Santa Fe, and Taos counties in New Mexico. In the analyses below, dates were included as “within” each study area if they derive from those respective counties.
+
+```{r all-data}
+all_data <- list(
+  Radiocarbon = radiocarbon_data,
+  `Tree-ring` = dendro_data
+) %>%
+  purrr::map(~ dplyr::mutate(.x,
+    `Study Area` = ifelse(County == "Montezuma, CO",
+      "CMV",
+      NA
+    ),
+    `Study Area` = ifelse(County %in% c(
+      "Los Alamos, NM",
+      "Rio Arriba, NM",
+      "Sandoval, NM",
+      "Santa Fe, NM",
+      "Taos, NM"
+    ),
+    "NRG",
+    `Study Area`
+    )
+  ))
+```
+
+Our final dataset includes `r nrow(all_data$Radiocarbon) %>% format(big.mark = ',')` radiocarbon dates from `r all_data$Radiocarbon$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data$Radiocarbon$Date_BP)`--`r min(all_data$Radiocarbon$Date_BP)` BP (uncalibrated; `r -1 * (1950 - max(all_data$Radiocarbon$Date_BP)) - 1` BC--`r 1950 - min(all_data$Radiocarbon$Date_BP)` AD) and `r nrow(all_data[['Tree-ring']]) %>% format(big.mark = ',')` tree-ring dates from `r all_data[["Tree-ring"]]$SiteID %>% unique() %>% length %>% format(big.mark = ',')` unique sites, dating from `r max(all_data[['Tree-ring']]$Date_BP)` -- `r min(all_data[['Tree-ring']]$Date_BP)` BP (`r 1950 - max(all_data[['Tree-ring']]$Date_BP)`--`r 1950 - min(all_data[['Tree-ring']]$Date_BP)` AD). Table \@ref(tab:Table1) presents the counts of dates and sites of each date type in the CMV and NRG study areas.
+
+```{r Table1}
+all_data %>%
+  dplyr::bind_rows() %>%
+  dplyr::bind_rows(all_data %>%
+    dplyr::bind_rows() %>%
+    dplyr::mutate(`Study Area` = "UUSW Total")) %>%
+  dplyr::filter(!is.na(`Study Area`)) %>%
+  dplyr::mutate(`Study Area` = factor(`Study Area`,
+    levels = c(
+      "UUSW Total",
+      "CMV",
+      "NRG"
+    )
+  )) %>%
+  dplyr::group_by(Type, SiteID, `Study Area`) %>%
+  dplyr::summarise(Dates = dplyr::n()) %>%
+  dplyr::group_by(Type, `Study Area`) %>%
+  dplyr::summarise(
+    Dates = sum(Dates),
+    Sites = dplyr::n()
+  ) %>%
+  tidyr::pivot_wider(names_from = Type, values_from = Dates:Sites) %>%
+  dplyr::select(`Study Area`, Dates_Radiocarbon, Sites_Radiocarbon, `Dates_Tree-ring`, `Sites_Tree-ring`) %>%
+  knitr::kable(
+    caption = "Counts of radiocarbon and tree-ring dates and sites in this study.",
+    booktabs = TRUE,
+    format.args = list(big.mark = ","),
+    col.names = c("Study Area", "Dates", "Sites", "Dates", "Sites")
+  ) %>%
+  kableExtra::add_header_above(c(" " = 1, "Radiocarbon" = 2, "Tree-ring" = 2))
+```
+
+Date densities across the study area were very uneven, with high counts of radiocarbon dates deriving from Navajo County, Arizona, and almost a third of the tree-ring dates in our study being from Montezuma County, Colorado. Below, we overcome some of these sampling issues by binning dates by site and occupation phase. Still, these disparities likely demonstrate more fundamental differences in research design across archaeological projects. There are very few radiocarbon dates from the two VEP study areas, indicating a clear bias towards using tree-ring dating where (and when) possible. Figure \@ref(fig:Figure2) presents the number of radiocarbon and tree-ring dates by county within our study area. Figure \@ref(fig:Figure3) presents the number of unique sites with radiocarbon and tree-ring dates by county within our study area. There are similar ratios of radiocarbon dates to sites with radiocarbon dates for the CMV and NRG (roughly 2:1), but sites in the CMV tend to have a third more tree-ring dates than those in the NRG (20:1 versus 15:1, respectively).
+
+```{r Figure2, fig.height=9, fig.width=6.5, fig.cap='The number of radiocarbon and tree-ring dates by county in this study.', fig.show = 'hold', out.width = '45%'}
+county_counts <-
+  all_data %>%
+  dplyr::bind_rows() %>%
+  dplyr::group_by(Type, County) %>%
+  dplyr::summarise(Dates = dplyr::n()) %>%
+  dplyr::left_join(uusw_counties,
+    by = "County"
+  ) %>%
+  sf::st_as_sf()
+
+theme_map <- function(base_size = 6.5,
+                      base_family = "") {
+  theme_bw(
+    base_size = base_size,
+    base_family = base_family
+  ) %+replace%
+    theme(
+      axis.line = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_blank(),
+      panel.background = element_blank(),
+      panel.border = element_blank(),
+      panel.grid = element_blank(),
+      panel.grid.major = element_line(colour = "transparent"),
+      panel.grid.minor = element_line(colour = "transparent"),
+      legend.key = element_blank(),
+      legend.position = "bottom",
+      legend.background = element_blank(),
+      legend.key.width = unit(0.15, "npc"),
+      legend.text = element_text(size = rel(1)),
+      plot.background = element_blank(),
+      plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+county_counts %>%
+  dplyr::filter(Type == "Radiocarbon") %>%
+  ggplot() +
+  geom_sf(
+    data = four_corners_states,
+    fill = NA
+  ) +
+  geom_sf(aes(fill = Dates),
+    color = "black"
+  ) +
+  scale_fill_distiller(
+    name = "Number of Radiocarbon Dates",
+    palette = "Greys",
+    direction = 1,
+    limits = c(0, 200),
+    minor_breaks = seq(25, 175, 50),
+    breaks = seq(0, 200, 50),
+    expand = expansion(mult = 0, add = 0),
+    guide = guide_colorbar(title.position = "top")
+  ) +
+  geom_sf(
+    data = uusw_counties,
+    fill = NA,
+    color = "black"
+  ) +
+  theme_map(16)
+
+county_counts %>%
+  dplyr::filter(Type == "Tree-ring") %>%
+  ggplot() +
+  geom_sf(
+    data = four_corners_states,
+    fill = NA
+  ) +
+  geom_sf(aes(fill = Dates),
+    color = "black"
+  ) +
+  scale_fill_distiller(
+    name = "Number of Tree-ring Dates",
+    palette = "Greys",
+    direction = 1,
+    limits = c(0, 5000),
+    minor_breaks = seq(500, 4500, 1000),
+    breaks = seq(0, 5000, 1000),
+    expand = expansion(mult = 0, add = 0),
+    guide = guide_colorbar(title.position = "top")
+  ) +
+  geom_sf(
+    data = uusw_counties,
+    fill = NA,
+    color = "black"
+  ) +
+  theme_map(16)
+```
+
+```{r Figure3, fig.height=9, fig.width=6.5, fig.cap='The number of sites with radiocarbon and tree-ring dates by county in this study.', fig.show = 'hold', out.width = '45%'}
+county_counts <-
+  all_data %>%
+  dplyr::bind_rows() %>%
+  dplyr::select(Type, SiteID, County) %>%
+  dplyr::distinct() %>%
+  dplyr::group_by(Type, County) %>%
+  dplyr::summarise(Dates = dplyr::n()) %>%
+  dplyr::left_join(uusw_counties,
+    by = "County"
+  ) %>%
+  sf::st_as_sf()
+
+theme_map <- function(base_size = 6.5,
+                      base_family = "") {
+  theme_bw(
+    base_size = base_size,
+    base_family = base_family
+  ) %+replace%
+    theme(
+      axis.line = element_blank(),
+      axis.text = element_blank(),
+      axis.ticks = element_blank(),
+      axis.title = element_blank(),
+      panel.background = element_blank(),
+      panel.border = element_blank(),
+      panel.grid = element_blank(),
+      panel.grid.major = element_line(colour = "transparent"),
+      panel.grid.minor = element_line(colour = "transparent"),
+      legend.key = element_blank(),
+      legend.position = "bottom",
+      legend.background = element_blank(),
+      legend.key.width = unit(0.15, "npc"),
+      legend.text = element_text(size = rel(1)),
+      plot.background = element_blank(),
+      plot.margin = margin(t = 0, r = 0, b = 0, l = 0, unit = "npc")
+    )
+}
+
+county_counts %>%
+  dplyr::filter(Type == "Radiocarbon") %>%
+  ggplot() +
+  geom_sf(
+    data = four_corners_states,
+    fill = NA
+  ) +
+  geom_sf(aes(fill = Dates),
+    color = "black"
+  ) +
+  scale_fill_distiller(
+    name = "Number of Sites with Radiocarbon Dates",
+    palette = "Greys",
+    direction = 1,
+    limits = c(0, 80),
+    minor_breaks = seq(10, 70, 20),
+    breaks = seq(0, 80, 20),
+    expand = expansion(mult = 0, add = 0),
+    guide = guide_colorbar(title.position = "top")
+  ) +
+  geom_sf(
+    data = uusw_counties,
+    fill = NA,
+    color = "black"
+  ) +
+  theme_map(16)
+
+county_counts %>%
+  dplyr::filter(Type == "Tree-ring") %>%
+  ggplot() +
+  geom_sf(
+    data = four_corners_states,
+    fill = NA
+  ) +
+  geom_sf(aes(fill = Dates),
+    color = "black"
+  ) +
+  scale_fill_distiller(
+    name = "Number of Sites with Tree-ring Dates",
+    palette = "Greys",
+    direction = 1,
+    limits = c(0, 250),
+    minor_breaks = seq(25, 225, 50),
+    breaks = seq(0, 250, 50),
+    expand = expansion(mult = 0, add = 0),
+    guide = guide_colorbar(title.position = "top")
+  ) +
+  geom_sf(
+    data = uusw_counties,
+    fill = NA,
+    color = "black"
+  ) +
+  theme_map(16)
+```
+
+## Preparing the SPDs {-}
+To prepare the radiocarbon dataset, we used functions provided by the rcarbon package for R [@Bevan2019]. We calibrated the radiocarbon dates using the methods of [@Bronk2008], using the ‘intcal13’ calibration curve [@Reimer2013]. To control for the inconsistent number of dates among  the archaeological sites represented in the database (a form of investigation bias), we aggregated radiocarbon dates known to be from the same phase of an archaeological site using the rcarbon::binPrep function using the single linkage agglomeration method with an h-value of 100 (see [Supplementary Material] for a discussion of various h-values). This creates clusters of dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the resulting site-phase probability distributions. 
+
+```{r radiocarbon-spds}
+timerange <- c(10000, 0)
+
+radiocarbon_spd <-
+  all_data$Radiocarbon %>%
+  split(., .$`Study Area`) %>%
+  tibble::tibble(
+    `Study Area` = names(.),
+    Dates = .
+  ) %>%
+  dplyr::bind_rows(tibble::tibble(
+    `Study Area` = "UUSW",
+    Dates = list(all_data$Radiocarbon)
+  )) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(
+    Calibrated = list(Dates %$%
+      rcarbon::calibrate(
+        x = Date_BP,
+        errors = SD,
+        timeRange = timerange,
+        calMatrix = TRUE,
+        verbose = FALSE
+      )),
+    Bins = list(rcarbon::binPrep(
+      sites = Dates$SiteID,
+      ages = Dates$Date_BP,
+      h = 100,
+      method = "single"
+    )),
+    SPD = list(rcarbon::spd(
+      x = Calibrated,
+      bins = Bins,
+      timeRange = timerange,
+      spdnormalised = TRUE,
+      verbose = FALSE
+    ))
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(Density = SPD %>%
+    purrr::map(function(x) {
+      x$grid %>%
+        tibble::as_tibble() %$%
+        tibble::tibble(
+          Type = "Radiocarbon Density",
+          Date_BP = calBP,
+          Density = PrDens
+        )
+    })) %T>%
+  readr::write_rds(
+    here::here("analysis/data/derived_data/radiocarbon_spd.rds"),
+    compress = "gz"
+  )
+```
+
+We treated the tree-ring dates in as similar a way possible as the radiocarbon dates. We modeled faux-calibrated tree-ring date probabilities as discrete degenerate distributions ($\Pr(X=k_0)=1$) with $k_0$ equal to the tree-ring date — in other words, a probability of $1$ at the date value, and $0$ elsewhere. This is akin to modeling the tree ring date as a normal distribution with a mean of the date value, and a standard deviation of zero. Thinking of tree ring dates this way allows us to use the same binning and SPD algorithms as for radiocarbon dates.^[One might consider alternative probability distributions for non-cutting or near-cutting dates. The probability mass function in such a case would be zero for years prior to the date of the outer ring of the sample, and non-zero for subsequent years, presumably decaying quickly. For instance, we could imagine a study that derives empirical probability distributions for non-cutting dates based on cutting-dates from the same contexts.] Here, we binned the tree-ring dates into site-phases using the rcarbon::binPrep function and constructing SPDs using `rcarbon::spd`, both with the same parameter selections as used for the radiocarbon samples. As above, we averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions.
+
+```{r treering-spds}
+calibrate_tree_ring_dates <- function(x, timeRange = c(50000, 0)) {
+  out <- list(
+    metadata = tibble::tibble(
+      DateID = 1:length(x),
+      CRA = x,
+      Error = 0,
+      Details = NA,
+      CalCurve = "intcal13",
+      ResOffsets = 0,
+      ResErrors = 0,
+      StartBP = timeRange[1],
+      EndBP = timeRange[2],
+      Normalised = TRUE,
+      F14C = FALSE,
+      CalEPS = 1e-05
+    ),
+    grids = NA,
+    calmatrix =
+      tibble::tibble(
+        index = 1:length(x),
+        year_bp = x,
+        value = TRUE
+      ) %>%
+        tidyr::pivot_wider(
+          names_from = index,
+          values_from = value
+        ) %>%
+        dplyr::bind_rows(tibble::tibble(year_bp = timeRange[1]:timeRange[2])) %>%
+        dplyr::filter(!duplicated(year_bp)) %>%
+        dplyr::arrange(-year_bp) %>%
+        dplyr::filter(year_bp >= 0) %>%
+        tibble::column_to_rownames("year_bp") %>%
+        as.matrix() %>%
+        tidyr::replace_na(0) %>%
+        magrittr::set_colnames(NULL)
+  )
+
+  attr(out, "class") <- c("CalDates", "list")
+
+  return(out)
+}
+
+dendro_spd <-
+  all_data$`Tree-ring` %>%
+  split(., .$`Study Area`) %>%
+  tibble::tibble(
+    `Study Area` = names(.),
+    Dates = .
+  ) %>%
+  dplyr::bind_rows(tibble::tibble(
+    `Study Area` = "UUSW",
+    Dates = list(all_data$`Tree-ring`)
+  )) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(
+    Calibrated = list(Dates %$%
+      calibrate_tree_ring_dates(
+        x = Date_BP,
+        timeRange = timerange
+      )),
+    Bins = list(rcarbon::binPrep(
+      sites = Dates$SiteID,
+      ages = Dates$Date_BP,
+      h = 100,
+      method = "single"
+    )),
+    SPD = list(rcarbon::spd(
+      x = Calibrated,
+      bins = Bins,
+      timeRange = timerange,
+      spdnormalised = TRUE,
+      verbose = FALSE
+    ))
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(Density = SPD %>%
+    purrr::map(function(x) {
+      x$grid %>%
+        tibble::as_tibble() %$%
+        tibble::tibble(
+          Type = "Tree-ring Density",
+          Date_BP = calBP,
+          Density = PrDens
+        )
+    })) %T>%
+  readr::write_rds(
+    here::here("analysis/data/derived_data/dendro_spd.rds"),
+    compress = "gz"
+  )
+```
+
+
+# Results {-}
+Figure \@ref(fig:Figure4) presents radiocarbon and tree-ring SPDs for the UUSW, CMV, and NRG regions, as well as VEP population reconstructions for the CMV and NRG regions. Across the UUSW, we see striking agreement in directionality and timing between the radiocarbon and tree-ring series (Figure \@ref(fig:Figure4)A); both series trend upwards until the late thirteenth century, and then decline rapidly. The tree-ring series — the light orange line is the raw SPD, and the dark line is smoothed — shows more variation on annual to decadal timescales, and yet matches the broad trends of the radiocarbon SPD. Roughly 150-year periodic fluctuations in the tree-ring SPD, described as periods of “exploration” and “exploitation” by [@Bocinsky2016], are not present in the radiocarbon SPD, the result of a much smaller sample size of site-phases and lower temporal resolution of radiocarbon dating relative to tree-ring dating.
+
+(ref:fig4) Radiocarbon and tree-ring density distributions in the UUSW (A), CMV (B), and NRG (C) regions, and VEP population estimates for the CMV and NRG. The dark orange tree-ring density curve smooths the raw tree-ring density (light orange) using a 21-year center-aligned Gaussian kernel with a 5-year standard deviation, following [@Bocinsky2016]. In Panel A, the radiocarbon density (y-axis) is scaled by a factor of 3 to facilitate comparison with the tree-ring density over the target time period. The radiocarbon and tree-ring densities (y-axis) in panels B and C are scaled such that the area under their densities is equal to the area under the VEP population estimates (i.e., the cumulative population).
+
+```{r Figure4, fig.height=6.5, fig.width=6.5, fig.cap='(ref:fig4)', fig.show = 'hold', out.width = '75%'}
+
+# This is a 21-year wide Gaussian distribution with a
+# mean of 0 and standard deviation of 5 years.
+# This is the smoother used in Bocinsky et al. 2016.
+smoother <- dnorm(seq(-10, 10, 1), sd = 5)
+
+all_density <-
+  dendro_spd %>%
+  dplyr::select(`Study Area`, Density) %>%
+  tidyr::unnest(cols = c(Density)) %>%
+  dplyr::bind_rows(radiocarbon_spd %>%
+    dplyr::select(`Study Area`, Density) %>%
+    tidyr::unnest(cols = c(Density))) %>%
+  dplyr::mutate(`Year AD` = 1950 - Date_BP) %>%
+  dplyr::select(
+    `Study Area`,
+    Type,
+    `Year AD`,
+    Density
+  )
+
+vep_demography <-
+  robinson2020::vep_demography %>%
+  dplyr::mutate(End = ifelse(`Study Area` == "CMV" & Period == 20, 1300, End)) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(`Year AD` = list(Start:(End - 1))) %>%
+  dplyr::select(
+    `Study Area`,
+    `Year AD`,
+    `Period`,
+    Population
+  ) %>%
+  tidyr::unnest(`Year AD`)
+
+dplyr::left_join(all_density,
+  vep_demography,
+  by = c(
+    "Study Area",
+    "Year AD"
+  )
+) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type
+  ) %>%
+  dplyr::mutate(`Scaled Density` = Density * (sum(Population, na.rm = T) / sum(Density * !is.na(Population), na.rm = TRUE))) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type,
+    Period
+  ) %>%
+  dplyr::group_by(
+    `Study Area`,
+    Type
+  ) %>%
+  dplyr::mutate(
+    `Raw Density` = ifelse(`Study Area` == "UUSW", Density, `Scaled Density`),
+    `Smoothed Density` = ifelse(Type == "Tree-ring Density", stats::filter(`Raw Density`, filter = smoother), `Raw Density`),
+    `Raw Density` = ifelse(`Study Area` == "UUSW", `Raw Density`, NA),
+    `Raw Density` = ifelse(Type == "Tree-ring Density", `Raw Density`, NA)
+  ) %>%
+  dplyr::select(
+    `Study Area`,
+    Type,
+    `Year AD`,
+    Population,
+    `Raw Density`,
+    `Smoothed Density`,
+    # `Binned Density`
+  ) %>%
+  dplyr::ungroup() %>%
+  dplyr::mutate(
+    Type = factor(Type,
+      levels = c(
+        "Tree-ring Density",
+        "Radiocarbon Density",
+        "VEP Population"
+      ),
+      ordered = TRUE
+    ),
+    `Study Area` = factor(`Study Area`,
+      levels = c(
+        "UUSW",
+        "CMV",
+        "NRG"
+      ),
+      labels = c(
+        "Upland US Southwest Density",
+        "Central Mesa Verde Population",
+        "Northern Rio Grande Population"
+      ),
+      ordered = TRUE
+    )
+  ) %>%
+  dplyr::mutate(`Smoothed Density` = ifelse(`Study Area` == "Upland US Southwest Density" & Type == "Radiocarbon Density",
+    (`Smoothed Density` * 3),
+    `Smoothed Density`
+  )) %>%
+  {
+    ggplot(
+      .,
+      aes(x = `Year AD`)
+    ) +
+      geom_line(aes(
+        y = `Raw Density`,
+        color = Type
+      ),
+      size = 0.5,
+      alpha = 0.5
+      ) +
+      geom_line(aes(
+        y = `Population`
+      ),
+      size = 1.25
+      ) +
+      geom_line(aes(
+        y = `Smoothed Density`,
+        color = Type
+      ),
+      size = 0.75
+      ) +
+      scale_color_manual(
+        values = c(
+          "Tree-ring Density" = "#d95f02",
+          "Radiocarbon Density" = "#1b9e77",
+          "VEP Population" = "black"
+        ),
+        limits = c(
+          "Tree-ring Density",
+          "Radiocarbon Density",
+          "VEP Population"
+        )
+      ) +
+      xlab("Year AD") +
+      scale_x_continuous(
+        limits = c(200, 1800),
+        breaks = seq(200, 1800, 200),
+        expand = expansion(0, 0)
+      ) +
+      theme_minimal(18) +
+      theme(
+        legend.title = element_blank(),
+        legend.justification = c(0, 1),
+        legend.position = "bottom",
+        legend.text = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(size = 10),
+        # panel.grid.major.y = element_blank(),
+        # panel.grid.minor.y = element_blank(),
+        plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
+      ) +
+      facet_wrap(
+        # rows =
+        vars(`Study Area`),
+        ncol = 1,
+        scales = "free_y"
+      )
+  } %>%
+  egg::tag_facet(
+    open = "",
+    close = "",
+    tag_pool = paste0(LETTERS, ". ", c(
+      "Upland US Southwest Density",
+      "Central Mesa Verde Population",
+      "Northern Rio Grande Population"
+    )),
+    hjust = 0,
+    vjust = 1.5,
+    size = 4
+  )
+```
+
+Comparisons between the CMV and NRG regional SPDs and the VEP population estimates are also revealing. In Figures \@ref(fig:Figure4)B and \@ref(fig:Figure4)C, the regional SPDs have been scaled such that the areas under their densities (the orange and green lines) are equal to the area under the VEP population estimates (the black lines). For both regions, the radiocarbon and tree-ring SPDs capture the broad directionality of the VEP population estimates. In the CMV region (Figure \@ref(fig:Figure4)B), the radiocarbon SPD has substantial probability mass prior to the VEP reconstruction, which is likely due to sampling bias in the radiocarbon record that is skewed in this region towards older (pre-Pueblo) sites. The radiocarbon SPD also does not capture the Pueblo I (AD 750--900) population peak (which may be too short-lived to be captured by such a small sample of radiocarbon dates), and seems to begin declining by the early thirteenth century AD. The tree-ring SPDs better capture the variability in population, though include a decline in the mid AD 1100s that is not in the VEP population estimates. In the NRG region (Figure \@ref(fig:Figure4)C), both SPDs rise until about AD 1250, then decline thereafter. The high peak in the tree-ring record at AD 1250, far in excess of the VEP population estimate, is particularly interesting — it likely signals the net impact of the immigration of many thousands of people to the NRG region, and the resulting (and simultaneous) burst in construction. Such a sudden and synchronous demographic and architectural event is hard to capture in the relatively lower resolution and sparsely sampled radiocarbon record, which tends to be smeared across sub-centennial scales courtesy of the calibration process [@Baillie1991].
+
+These results yield key insights on the relative sensitivity of the radiocarbon record to capture long-term, coarse-grained demographic change across the Southwest. As stated in the introduction, our aim is to understand how well the radiocarbon record captures population declines across the Southwest, as we need to develop a measure of confidence in radiocarbon records from regions across and beyond the Southwest that lack other demographic proxies. Both the radiocarbon and tree-ring SPDs show declines post-AD 1300 across all regions. In both the CMV and NRG the decline in the radiocarbon SPD begins earlier than in the VEP population series. This may indicate that radiocarbon time series make the decline seem to begin earlier than it actually does, which could be caused by a ‘cliff’ in the radiocarbon calibration curve from AD 1200--1300 that is surrounded by two plateaus at AD 1100--1200 and AD 1400 [@Reimer2013].
+
+Comparisons of the radiocarbon and dendrochronological record with the architecture/ceramic record show similarities and differences that reinforce the need for multiple-proxy studies of palaeodemography when moving between broader and finer spatial scales. While the multi-proxy population reconstruction for the CMV region was similar to the radiocarbon and dendrochronological records, it showed a different trend for the NRG region (lower panel, Figure \@ref(fig:Figure4)). There, the population reconstruction peaks from AD 1300--1400, whereas the radiocarbon record declines, at first quickly and then slowly. These different trends between the VEP population reconstructions and dendrochronological and radiocarbon proxies reflect some investigation bias in both the radiocarbon and dendrochronological records at smaller, intra-regional scales, which calls for caution in the use of radiocarbon records to assess possible paleo-migration scenarios at finer spatial scales. This result reinforces other work that has called for the use of multiple proxies as cross-checks on radiocarbon time series [@Williams2012, @Crombe2014].
+
+The central aim in comparing radiocarbon to dendrochronological records here was to assess the potential impacts of investigation bias in radiocarbon records, caused by researchers not taking radiocarbon samples in favour of other types of chronometric techniques (e.g., diagnostic artefact counts, tree-ring dates). Specifically, we are interested in the potential impact of this kind of bias in the post AD 1300 decline of radiocarbon SPDs across and beyond the Southwest. Similarities in the decline of both radiocarbon and dendrochronological records across the UUSW suggest that, at this particular regional scale, radiocarbon records reflect long-term, coarse-grained trends in paleodemography. Indeed, not only do we see corresponding declines in the radiocarbon and dendrochronological records at this large scale, but these patterns are also consistent with previous work on demographic and social change in the American Southwest: the Coalescent Communities Database, a Southwest-wide database of room counts and occupation spans of habitation sites with 12 rooms or more, supports a “population decline that began between AD 1300 and 1350 and continued to European contact (Hill et al. 2004:Figures 2,4)” [@Phillips2018; @Hill2004].
+
+# Conclusion {-}
+Understanding the geographic scale of post-AD 1300 human population declines in the American Southwest requires a reliance on radiocarbon-based reconstructions of palaeodemography, as radiocarbon is often the only proxy record available in many regions for developing continuous time series. However, radiocarbon records may include investigation bias caused by researchers not selecting radiocarbon samples in favour of Late Prehistoric diagnostic artefacts or other dating methods. In this paper we develop a new method for systematically comparing radiocarbon time series against multiple palaeodemographic proxies. We selected three regions—the Upland US Southwest, Central Mesa Verde, and the Northern Rio Grande—where we expected the most investigation bias to occur, because in these regions multiple higher resolution dating techniques are available. Results indicated that all three palaeodemographic proxies reveal post-AD 1300 population declines. While there is some variability at finer spatial and temporal scales that warrant the collection of other data that can be used to cross-check and validate the resolution of radiocarbon records, at coarse-grained, large spatial and temporal scales radiocarbon records provide a robust relative measure of long-term palaeodemographic trends. These results lend confidence to single proxy radiocarbon-based reconstructions of palaeodemography outside the Southwest that suggest post-AD 1300 population declines in many parts of North America. 
+
+Investigation bias is an inevitable issue that all researchers using radiocarbon records have to address. The results of this paper advance our confidence in radiocarbon records as a coarse-grained measure of the directionality of human paleodemographic trends. The methods developed can be used for other regions of the world that have dendrochronological records, such as Europe [@Kuniholm2001; @Haneca2009; @Hillam1990], where comparisons with radiocarbon records could help to advance knowledge of Neolithic ‘booms and busts’ of populations [@Shennan2013; @Whitehouse2014] and to overcome limitations of the Bronze Age radiocarbon calibration plateau [@Armit2013].
+
+
+#### Acknowledgements {-}
+We thank the guest editorial board for inviting us to contribute to this volume. We thank two anonymous reviewers for their helpful suggestions for improvement. We thank our colleagues in the PAGES People3000 working group, and PAGES for funding this working group. We thank the National Foundation for supporting this research. Lastly, we thank the generations of different stakeholders working across the Southwest for their collection, storage and publication of the data presented here.
+
+#### Data Accessibility {-}
+A compendium of data and code used in this analysis is available on Github at https://github.com/people3k/robinson2020 and is archived with Zenodo at https://doi.org/10.5281/zenodo.3647599. Radiocarbon data used in this analysis are archived with the Digital Archaeological Record (tDAR) and are available at https://doi.org/10.6067/XCV8455460. Tree-ring data used here are archived with tDAR at https://doi.org/10.6067/XCV82J6D7B. Archaeological site locations are protected by US federal and state statutes. In order to protect these sensitive data, we pre-processed both the radiocarbon and tree-ring data; data included in the Github repository do not include site locations, and researchers will need to gain permission from the State Historic Preservation Office (SHPO) of each state in order to access the site location data.
+
+#### Ethics {-}
+No ethical issues are associated with this paper.
+
+#### Authors’ contributions {-}
+E.R. and R.K.B designed the study, collected and analysed the data, and wrote the first draft. J.F. and D.B collected and organized data. R.L.K collected data. All authors revised/improved the manuscript. 
+
+#### Competing interests {-}
+We have no competing interests.
+
+#### Funding {-}
+Funding for this research was provided by NSF grants BCS-1418858, BCS-1624061, BCS-1822033 and PAGES (Past Global Changes) funding to the Working Group [Paleoclimate and the Peopling of the Earth (PEOPLE 3000)](http://www.pastglobalchanges.org/ini/wg/arctic2k/170-initiatives/working-group/people-3000/1732-people-3000). 
+
+<!-- The following line inserts a page break  -->
+\newpage
+
+# References {-}
+<!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
+<div id="refs"></div>
+
+<!-- The following line inserts a page break  -->
+\newpage
+
+# Supplementary Material: Cut-width sensitivity for temporal binning {-}
+Uneven sampling across archaeological contexts is a persistant problem when constructing summed probability distributions from radiocarbon dates, and perhaps even a larger issue for the more ubiquitous tree-ring dates in regions like the Upland US Southwest. In SPDs of radiocarbon dates, it is conventional to combine dates from single sites prior to creating the SPDs. Dates from separate components or phases of multi-component sites should be counted separately, however.
+
+To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated dates known to be from the same phase of same archaeological site using the `rcarbon::binPrep` function using the “single linkage” agglomeration method with a cut width (or $h$-value) of 100 [@rcarbon]. This clusters dates from the same site that are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. Binned calibrated dates are then summed, and the resulting probability mass function is divided by the number of dates in the site-phase.
+
+Because the wider archaeological SPD research community still lacks a standard protocol for determining $h$, we perform a sensitivity analysis to demonstrate that the resulting SPDs for radiocarbon and tree-ring dates stabilize at a cut width of 100 or so. We calculated SPDs at 25-year intervals from 0 (only duplicate dates are binned) to 150 years (effectively binning by site).
+
+As can be seen in Figure \@ref(fig:FigureS1), binning in general has little impact on the resulting SPDs, but cut widths above $h=100$ years are virtually indistinguishable. The shape of the radiocarbon SPD (panel A) stabilizes above $h=0$ and its values stabilize by $h=100$. The tree-ring SPD arguably stabilizes in both shape and value above $h=75$ or so, but in the analysis we use $h=100$ to keep our methods consistent between the radiocarbon and tree-ring SPDs.
+
+```{r FigureS1, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon (A) and tree-ring (B) density distributions in the UUSW, given varying cut widths for binning dates within sites. The density distributions for the UUSW are normalized. Years are given in AD.', fig.show = 'hold', out.width = '75%'}
+cut_widths <- seq(0, 150, 25)
+
+radiocarbon_spd <-
+  here::here("analysis/data/derived_data/radiocarbon_spd.rds") %>%
+  readr::read_rds()
+
+dendro_spd <-
+  here::here("analysis/data/derived_data/dendro_spd.rds") %>%
+  readr::read_rds()
+
+# This is a 21-year wide Gaussian distribution with a
+# mean of 0 and standard deviation of 5 years.
+# This is the smoother used in Bocinsky et al. 2016.
+smoother <- dnorm(seq(-10, 10, 1), sd = 5)
+
+timerange <- c(10000, 0)
+
+spds <-
+  radiocarbon_spd %>%
+  dplyr::filter(`Study Area` == "UUSW") %>%
+  dplyr::bind_rows(dendro_spd %>%
+    dplyr::filter(`Study Area` == "UUSW")) %>%
+  dplyr::mutate(Type = c(
+    "Radiocarbon",
+    "Tree-ring"
+  )) %>%
+  dplyr::select(Type, Dates, Calibrated) %>%
+  dplyr::rowwise() %>%
+  dplyr::mutate(
+    Densities =
+      list(
+        cut_widths %>%
+          magrittr::set_names(., .) %>%
+          purrr::map_dfr(~ rcarbon::spd(
+            x = Calibrated,
+            timeRange = timerange,
+            bins =
+              rcarbon::binPrep(
+                sites = Dates$SiteID,
+                ages = Dates$Date_BP,
+                h = .x,
+                method = "single"
+              ),
+            spdnormalised = TRUE,
+            verbose = FALSE
+          ) %$%
+            grid %>%
+            tibble::as_tibble() %$%
+            tibble::tibble(
+              Date_AD = 1950 - calBP,
+              Density = PrDens
+            ),
+          .id = "h"
+          ) %>%
+          dplyr::mutate(
+            `Cut Width (h)` =
+              factor(h,
+                levels = cut_widths,
+                ordered = TRUE
+              )
+          ) %>%
+          dplyr::filter(Date_AD > 0) %>%
+          dplyr::select(`Cut Width (h)`,
+            `Year AD` = Date_AD,
+            Density
+          )
+      )
+  ) %>%
+  dplyr::select(Type, Densities) %>%
+  tidyr::unnest(cols = c(Densities))
+
+spds %>%
+  dplyr::group_by(Type, `Cut Width (h)`) %>%
+  dplyr::mutate(
+    Density =
+      ifelse(Type == "Tree-ring",
+        stats::filter(Density,
+          filter = smoother
+        ),
+        Density
+      )
+  ) %>%
+  dplyr::ungroup() %>%
+  {
+    ggplot2::ggplot(
+      .,
+      ggplot2::aes(
+        x = `Year AD`,
+        y = Density,
+        color = `Cut Width (h)`
+      )
+    ) +
+      ggplot2::geom_line() +
+      ggplot2::facet_wrap("Type",
+        nrow = 2,
+        scales = "free_y"
+      ) +
+      xlab("Year AD") +
+      scale_x_continuous(
+        limits = c(200, 1800),
+        breaks = seq(200, 1800, 200),
+        expand = expansion(0, 0)
+      ) +
+      scale_y_continuous(
+        limits = c(0, NA),
+        expand = expansion(0, 0)
+      ) +
+      theme_minimal(18) +
+      theme(
+        legend.title = element_text(size = 12),
+        legend.position = "bottom",
+        legend.text = element_text(size = 12),
+        axis.title.x = element_text(size = 12),
+        axis.text.x = element_text(size = 10),
+        axis.title.y = element_blank(),
+        axis.text.y = element_text(size = 10),
+        plot.margin = unit(c(0.25, 0.5, 0.25, 0.25), "in")
+      ) +
+      guides(color = guide_legend(nrow = 1))
+  } %>%
+  egg::tag_facet(
+    open = "",
+    close = "",
+    tag_pool = paste0(LETTERS, ". ", c(
+      "Radiocarbon Dates",
+      "Tree-ring Dates"
+    )),
+    hjust = 0,
+    vjust = 1.5,
+    size = 4
+  )
+```
+
+\newpage
+
+# Colophon {-}
+
+This report is part of a research compendium developed using the `rrtools` package for reproducible research [@Marwick2017, @rrtools]. This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
+
+```{r colophon, cache = FALSE}
+# which R packages and versions?
+if ("devtools" %in% installed.packages()) devtools::session_info()
+```
+
+The current Git commit details are:
+
+```{r}
+# what commit is this file at?
+if ("git2r" %in% installed.packages() &
+  git2r::in_repository(path = ".")) {
+  git2r::repository(here::here())
+}
+```
