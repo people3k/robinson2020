@@ -78,6 +78,11 @@ knitr::opts_chunk$set(
 )
 library(robinson2020)
 library(ggplot2)
+
+# Fix for deprecated ggplot2::expand_scale function
+if (utils::packageVersion("ggplot2") >= "3.3.0") {
+  expand_scale <- expansion
+}
 ```
 
 \newpage
@@ -435,7 +440,7 @@ county_counts %>%
     limits = c(0, 200),
     minor_breaks = seq(25, 175, 50),
     breaks = seq(0, 200, 50),
-    expand = expansion(mult = 0, add = 0),
+    expand = expand_scale(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -462,7 +467,7 @@ county_counts %>%
     limits = c(0, 5000),
     minor_breaks = seq(500, 4500, 1000),
     breaks = seq(0, 5000, 1000),
-    expand = expansion(mult = 0, add = 0),
+    expand = expand_scale(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -529,7 +534,7 @@ county_counts %>%
     limits = c(0, 80),
     minor_breaks = seq(10, 70, 20),
     breaks = seq(0, 80, 20),
-    expand = expansion(mult = 0, add = 0),
+    expand = expand_scale(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -556,7 +561,7 @@ county_counts %>%
     limits = c(0, 250),
     minor_breaks = seq(25, 225, 50),
     breaks = seq(0, 250, 50),
-    expand = expansion(mult = 0, add = 0),
+    expand = expand_scale(mult = 0, add = 0),
     guide = guide_colorbar(title.position = "top")
   ) +
   geom_sf(
@@ -863,7 +868,7 @@ dplyr::left_join(all_density,
       scale_x_continuous(
         limits = c(200, 1800),
         breaks = seq(200, 1800, 200),
-        expand = expansion(0, 0)
+        expand = expand_scale(0, 0)
       ) +
       theme_minimal(18) +
       theme(
@@ -1052,11 +1057,11 @@ spds %>%
       scale_x_continuous(
         limits = c(200, 1800),
         breaks = seq(200, 1800, 200),
-        expand = expansion(0, 0)
+        expand = expand_scale(0, 0)
       ) +
       scale_y_continuous(
         limits = c(0, NA),
-        expand = expansion(0, 0)
+        expand = expand_scale(0, 0)
       ) +
       theme_minimal(18) +
       theme(
