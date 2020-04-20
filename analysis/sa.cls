@@ -173,8 +173,8 @@
 \Pubaddress{Publisher's Address}
 \Pubyear{YYYY}
 \ISBN{x-xxxxx-xxx-x}
-\Pages{xv + 123}
-\Price{USD 69.95 (P)}
+\Pages{}
+\Price{}
 \URL{http://link/to/webpage/}
 \DOI{osf.io/0000}
 \if@article

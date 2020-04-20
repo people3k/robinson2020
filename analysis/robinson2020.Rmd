@@ -49,7 +49,7 @@ link-citations: true
 output: 
     bookdown::pdf_document2:
       template: templates/template.tex
-      latex_engine: lualatex
+      latex_engine: xelatex
       fig_caption: yes
       toc: false
       extra_dependencies:

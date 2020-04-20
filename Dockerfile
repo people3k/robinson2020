@@ -1,5 +1,5 @@
 # get the rocker/binder image
-FROM rocker/geospatial:3.6.3
+FROM rocker/geospatial:devel
 LABEL maintainer='Kyle Bocinsky'
 USER root
 COPY . /robinson2020
@@ -8,4 +8,4 @@ COPY . /robinson2020
 RUN R -e "devtools::install('/robinson2020', dependencies = TRUE, quick = TRUE, upgrade = 'never')"
 
 # Render the document
-RUN R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
+#RUN R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
