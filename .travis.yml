@@ -4,7 +4,8 @@ env:
   global:
   - REPO=$DOCKER_USER/robinson2020
 
-sudo: required
+os: linux
+dist: xenial
 
 warnings_are_errors: false
 
@@ -16,7 +17,7 @@ services:
 before_install:
     # create & run container using our dockerfile, i.e. compile pkg and render Rmd
   - docker build -t $REPO .
-  - docker exec -t $REPO R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
+  - docker run $REPO:latest R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
 
 # push our custom docker container to docker hub, env vars stored on travis-ci.org
 after_success:
