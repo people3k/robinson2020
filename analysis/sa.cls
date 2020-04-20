@@ -74,11 +74,14 @@
 \LoadClass[11pt,a4paper,twoside]{article}
 %% required packages
 \RequirePackage{graphicx,xcolor,ae,fancyvrb}
-\RequirePackage[T1]{fontenc}
-\usepackage{unicode-math}
+\RequirePackage{fontspec}
 \setmainfont[Ligatures=TeX]{Alegreya}
-\usepackage{booktabs}
+\usepackage{unicode-math}
+
 \usepackage[all]{nowidow}
+
+\usepackage{booktabs}
+\usepackage{colortbl}
 
 \IfFileExists{upquote.sty}{\RequirePackage{upquote}}{}
 %% bibliography
@@ -224,7 +227,7 @@
 \else
   \Hyperauthor{\@Plainauthor}
   \Keywords{---!!!---at least one keyword is required---!!!---}
-  \Footername{Affiliation}
+  \Footername{}
   \Firstdate{\textit{Submitted:} \@Submitdate}
   \Seconddate{\textit{Accepted:} \@Acceptdate}
 \fi
@@ -247,12 +250,12 @@
 
   \if@nojss
     \begin{samepage}
-    \textbf{\large \@Footername: \nopagebreak}\\[.3\baselineskip] \nopagebreak
+    \textbf{\large \@Footername \nopagebreak}\\[.3\baselineskip] \nopagebreak
     \@Address \nopagebreak
     \end{samepage}
   \else
     \begin{samepage}
-    \textbf{\large \@Footername: \nopagebreak}\\[.3\baselineskip] \nopagebreak
+    \textbf{\large \@Footername \nopagebreak}\\[.3\baselineskip] \nopagebreak
     \@Address \nopagebreak
     \vfill
     \hrule \nopagebreak

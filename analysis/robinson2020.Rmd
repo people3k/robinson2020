@@ -8,7 +8,7 @@ author:
       email: erick.robinson@usu.edu
       institute: [USU]
       correspondence: true
-  - Kyle Bocinsky:
+  - R. Kyle Bocinsky:
       email: kbocinsky@crowcanyon.org
       institute: [CCAC,UM]
       correspondence: false
@@ -41,14 +41,15 @@ keywords:
       - southwestern United States
 doi: [DOI HERE]
 journal: Preprint
-# documentclass: sa
+documentclass: sa
 bibliography: robinson2020_references.bib
 # csl: "philosophical-transactions-of-the-royal-society-b.csl"
-csl: "journal-of-archaeological-science.csl"
+# csl: "journal-of-archaeological-science.csl"
+csl: "apa.csl"
 link-citations: true
 output: 
     bookdown::pdf_document2:
-      # template: templates/template.tex
+      template: templates/template.tex
       latex_engine: lualatex
       fig_caption: yes
       toc: false
@@ -60,6 +61,8 @@ output:
       - --lua-filter=templates/pagebreak.lua
 editor_options: 
   chunk_output_type: console
+header-includes:
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0}       \renewcommand{\thefigure}{S\arabic{figure}}}
 ---
 
 ```{r setup, echo = FALSE, message = FALSE}
@@ -369,6 +372,7 @@ all_data %>%
   dplyr::select(`Study Area`, Dates_Radiocarbon, Sites_Radiocarbon, `Dates_Tree-ring`, `Sites_Tree-ring`) %>%
   knitr::kable(
     caption = "Counts of radiocarbon and tree-ring dates and sites in this study.",
+    format = "latex",
     booktabs = TRUE,
     format.args = list(big.mark = ","),
     col.names = c("Study Area", "Dates", "Sites", "Dates", "Sites")
@@ -931,14 +935,13 @@ Funding for this research was provided by NSF grants BCS-1418858, BCS-1624061, B
 
 <!-- The following line inserts a page break  -->
 \newpage
-
 # References {-}
 <!-- The following line ensures the references appear here for the MS Word or HTML output files, rather than right at the end of the document (this will not work for PDF files):  -->
 <div id="refs"></div>
 
 <!-- The following line inserts a page break  -->
 \newpage
-
+\beginsupplement
 # Supplementary Material: Cut-width sensitivity for temporal binning {-}
 Uneven sampling across archaeological contexts is a persistant problem when constructing summed probability distributions from radiocarbon dates, and perhaps even a larger issue for the more ubiquitous tree-ring dates in regions like the Upland US Southwest. In SPDs of radiocarbon dates, it is conventional to combine dates from single sites prior to creating the SPDs. Dates from separate components or phases of multi-component sites should be counted separately, however.
 
@@ -1083,14 +1086,13 @@ spds %>%
 ```
 
 \newpage
-
 # Colophon {-}
-
 This report is part of a research compendium developed using the `rrtools` package for reproducible research [@Marwick2017; @rrtools]. This report was generated on `r Sys.time()` using the following computational environment and dependencies: 
 
 ```{r colophon-r, cache = FALSE}
 # which R packages and versions?
-if (requireNamespace("pander", quietly = TRUE)) pander::pander(sessionInfo())
-gc()
-gc()
+sess <- sessionInfo()
+sess$basePkgs %<>% sort()
+sess$loadedOnly %<>% magrittr::extract(sort(names(sess$loadedOnly)))
+if (requireNamespace("pander", quietly = TRUE)) pander::pander(sess)
 ```

@@ -1,16 +1,14 @@
-# get the base image, the rocker/verse has R, RStudio and pandoc
-FROM rocker/geospatial:3.6.3
-
+# get the rocker/binder image
+FROM rocker/binder:3.6.2
 # required
 MAINTAINER Kyle Bocinsky <bocinsky@gmail.com>
-
-COPY . /robinson2020
+LABEL maintainer='Kyle Bocinsky'
+USER root
+COPY . ${HOME}
+RUN chown -R ${NB_USER} ${HOME}
+USER ${NB_USER}
 
 # go into the repo directory
 RUN . /etc/environment \
-
-# build this compendium package
-&& R -e "devtools::install('/robinson2020', dependencies = TRUE, quick = TRUE)" \
-
-# render the manuscript into a pdf
-&& R -e "rmarkdown::render('/robinson2020/analysis/robinson2020.Rmd')"
+&& R -e "devtools::install('${HOME}', dependencies = TRUE, quick = TRUE)" \
+&& R -e "rmarkdown::render('${HOME}/analysis/robinson2020.Rmd')"
