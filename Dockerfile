@@ -19,6 +19,6 @@ USER ${NB_USER}
 RUN R -e "devtools::install('${HOME}', dependencies = TRUE, quick = TRUE, upgrade = 'never')"
 
 # Render the document
-USER root
-RUN R -e "rmarkdown::render('${HOME}/analysis/robinson2020.Rmd')"
-USER ${NB_USER}
+#USER root
+#RUN R -e "rmarkdown::render('${HOME}/analysis/robinson2020.Rmd')"
+#USER ${NB_USER}
