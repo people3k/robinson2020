@@ -39,7 +39,7 @@ keywords:
       - dendrochronology
       - palaeodemography
       - southwestern United States
-doi: [DOI HERE]
+doi: [10.31235/osf.io/hbecz]
 journal: Preprint
 documentclass: sa
 bibliography: robinson2020_references.bib
@@ -49,7 +49,7 @@ link-citations: true
 output: 
     bookdown::pdf_document2:
       template: templates/template.tex
-      latex_engine: xelatex
+      latex_engine: lualatex
       fig_caption: yes
       toc: false
       extra_dependencies:
@@ -60,13 +60,16 @@ output:
       - --lua-filter=templates/pagebreak.lua
 editor_options: 
   chunk_output_type: console
-header-includes:
-  \newcommand{\beginsupplement}{\setcounter{table}{0}  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0}       \renewcommand{\thefigure}{S\arabic{figure}}}
+header-includes: >
+  \newcommand{\beginsupplement}{\setcounter{table}{0}  
+  \renewcommand{\thetable}{S\arabic{table}} \setcounter{figure}{0}       
+  \renewcommand{\thefigure}{S\arabic{figure}}} 
+#  \setmainfont[Ligatures=TeX]{Nimbus Roman No9 L}
 ---
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  cache = FALSE,
+  cache = TRUE,
   echo = FALSE,
   fig.align = "center",
   fig.path = here::here("analysis/figures/"),
@@ -573,7 +576,7 @@ county_counts %>%
 ```
 
 ## Preparing the SPDs {-}
-To prepare the radiocarbon dataset, we used functions provided by the rcarbon package for R [@Bevan2019]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the ‘intcal13’ calibration curve [@Reimer2013]. To control for the inconsistent number of dates among  the archaeological sites represented in the database (a form of investigation bias), we aggregated radiocarbon dates known to be from the same phase of an archaeological site using the rcarbon::binPrep function using the single linkage agglomeration method with an h-value of 100 (see [Supplementary Material] for a discussion of various h-values). This creates clusters of dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the resulting site-phase probability distributions.^[Using this method, a site-phase with a single date and a site-phase with 10 dates would each contribute equally to the resulting SPD. This method of developing the SPD is therefore a model of the relative abundance of site occupation events through time rather than of dates through time. This method does not account for investigation biases deriving from the definition of “site” or the decision to use a particular dating technique at a site in the first place.]
+To prepare the radiocarbon dataset, we used functions provided by the rcarbon package for R [@Bevan2019]. We calibrated the radiocarbon dates using the methods of @Bronk2008, using the ‘intcal13’ calibration curve [@Reimer2013]. To control for the inconsistent number of dates among  the archaeological sites represented in the database (a form of investigation bias), we aggregated radiocarbon dates known to be from the same phase of an archaeological site using the rcarbon::binPrep function using the single linkage agglomeration method with an h-value of 100 (see [Supplementary Material](#supp) for a discussion of various h-values). This creates clusters of dates from the same site whose mean values (uncalibrated) are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. We constructed summed probability distributions (SPDs) from the calibrated dates using the `rcarbon::spd` function. We averaged probability distributions of binned dates, and then constructed SPDs from the resulting site-phase probability distributions.^[Using this method, a site-phase with a single date and a site-phase with 10 dates would each contribute equally to the resulting SPD. This method of developing the SPD is therefore a model of the relative abundance of site occupation events through time rather than of dates through time. This method does not account for investigation biases deriving from the definition of “site” or the decision to use a particular dating technique at a site in the first place.]
 
 ```{r radiocarbon-spds}
 timerange <- c(10000, 0)
@@ -946,7 +949,7 @@ Funding for this research was provided by NSF grants BCS-1418858, BCS-1624061, B
 <!-- The following line inserts a page break  -->
 \newpage
 \beginsupplement
-# Supplementary Material: Cut-width sensitivity for temporal binning {-}
+# Supplementary Material: Cut-width sensitivity for temporal binning {- #supp}
 Uneven sampling across archaeological contexts is a persistant problem when constructing summed probability distributions from radiocarbon dates, and perhaps even a larger issue for the more ubiquitous tree-ring dates in regions like the Upland US Southwest. In SPDs of radiocarbon dates, it is conventional to combine dates from single sites prior to creating the SPDs. Dates from separate components or phases of multi-component sites should be counted separately, however.
 
 To control for inconsistent sample size across the archaeological sites represented in the database, we aggregated dates known to be from the same phase of same archaeological site using the `rcarbon::binPrep` function using the “single linkage” agglomeration method with a cut width (or $h$-value) of 100 [@rcarbon]. This clusters dates from the same site that are within 100 years of each other, and splits site occupations into distinct phases separated by 100 years or more. Binned calibrated dates are then summed, and the resulting probability mass function is divided by the number of dates in the site-phase.

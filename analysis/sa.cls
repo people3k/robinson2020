@@ -75,7 +75,6 @@
 %% required packages
 \RequirePackage{graphicx,xcolor,ae,fancyvrb}
 \RequirePackage{fontspec}
-\setmainfont[Ligatures=TeX]{Alegreya}
 \usepackage{unicode-math}
 
 \usepackage[all]{nowidow}
@@ -269,7 +268,7 @@
     {\@Journal~ \@Year ~\@Volume\@Issue ~\@Pages}
     \hfill
     \@Firstdate\\ \nopagebreak
-    {\href{http://\@DOI}{\tt \@DOI}}
+    {\href{\@DOI}{\tt \@DOI}}
     \hfill
     \@Seconddate  \nopagebreak
     \vspace{.3\baselineskip}
@@ -293,7 +292,7 @@
    {\fontfamily{phv} \fontsize{28}{32} \selectfont SocArXiv}
    \vfill
    {\it \small \@Journal~: \@Submitdate %
-            \hfill \href{http://\@DOI}{\@DOI}}}\\[0.1cm]
+            \hfill \href{\@DOI}{\@DOI}}}\\[0.1cm]
      \hrule height 3pt}}
 \if@review
   \renewcommand{\maketitle}{
@@ -512,7 +511,7 @@
   \newcommand\@doi[1]{doi:\discretionary{}{}{}#1}\else
   \newcommand\@doi{doi:\discretionary{}{}{}\begingroup
 \urlstyle{tt}\Url}\fi
-\newcommand{\doi}[1]{\href{http://#1}{\normalfont\texttt{\@doi{#1}}}}
+\newcommand{\doi}[1]{\href{#1}{\normalfont\texttt{\@doi{#1}}}}
 \newcommand{\E}{\mathsf{E}}
 \newcommand{\VAR}{\mathsf{VAR}}
 \newcommand{\COV}{\mathsf{COV}}
