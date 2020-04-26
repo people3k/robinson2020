@@ -46,6 +46,8 @@ bibliography: robinson2020_references.bib
 # csl: "philosophical-transactions-of-the-royal-society-b.csl"
 csl: "apa.csl"
 link-citations: true
+params:
+  cache: TRUE
 output: 
     bookdown::pdf_document2:
       template: templates/template.tex
@@ -69,7 +71,7 @@ header-includes: >
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  cache = TRUE,
+  cache = params$cache,
   echo = FALSE,
   fig.align = "center",
   fig.path = here::here("analysis/figures/"),

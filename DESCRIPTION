@@ -25,20 +25,19 @@ Imports:
     sf,
     rcarbon,
     tibble,
-    viridis,
     readr,
     rmapshaper,
     purrr,
     ggplot2,
     egg,
     lubridate,
-    kableExtra
+    kableExtra,
+    pander
 Suggests: 
     devtools,
     git2r,
     styler,
-    sessioninfo,
-    pander
+    sessioninfo
 RoxygenNote: 7.1.0
 Depends:
     R (>= 3.1),
