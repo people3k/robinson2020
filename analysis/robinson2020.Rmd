@@ -1104,4 +1104,7 @@ sess <- sessionInfo()
 sess$basePkgs %<>% sort()
 sess$loadedOnly %<>% magrittr::extract(sort(names(sess$loadedOnly)))
 if (requireNamespace("pander", quietly = TRUE)) pander::pander(sess)
+
+gc()
+gc()
 ```
