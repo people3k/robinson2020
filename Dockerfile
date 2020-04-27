@@ -58,7 +58,7 @@ RUN r -e "Sys.setenv('CTAN_REPO' = paste0('https://www.texlive.info/tlnet-archiv
 RUN r -e "devtools::install('${HOME}', dependencies = TRUE, quick = TRUE, upgrade = 'never')"
 
 # Render the document
-#RUN r -e "rmarkdown::render('${HOME}/analysis/robinson2020.Rmd', params = list(cache = FALSE))"
+#RUN r -e "rmarkdown::render('${HOME}/analysis/robinson2020.Rmd', params = list(clean = TRUE))"
 
 ## Become normal user again
 USER ${NB_USER}

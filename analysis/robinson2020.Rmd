@@ -47,7 +47,7 @@ bibliography: robinson2020_references.bib
 csl: "apa.csl"
 link-citations: true
 params:
-  cache: TRUE
+  clean: FALSE
 output: 
     bookdown::pdf_document2:
       template: templates/template.tex
@@ -71,7 +71,7 @@ header-includes: >
 
 ```{r setup, echo = FALSE, message = FALSE}
 knitr::opts_chunk$set(
-  cache = params$cache,
+  cache = TRUE,
   echo = FALSE,
   fig.align = "center",
   fig.path = here::here("analysis/figures/"),
@@ -87,6 +87,13 @@ library(ggplot2)
 # Fix for deprecated ggplot2::expand_scale function
 if (utils::packageVersion("ggplot2") >= "3.3.0") {
   expand_scale <- expansion
+}
+
+if (params$clean) {
+  unlink(here::here("analysis/robinson2020.pdf"))
+  unlink(here::here("analysis/robinson2020_cache"), recursive = TRUE)
+  unlink(here::here("analysis/figures/."), recursive = TRUE)
+  unlink(here::here("analysis/data/derived_data/."), recursive = TRUE)
 }
 ```
 
@@ -1101,12 +1108,13 @@ This report is part of a research compendium developed using the `rrtools` packa
 ```{r colophon-r, cache = FALSE}
 # which R packages and versions?
 sess <- sessionInfo()
+sess$locale <- Sys.getlocale("LC_COLLATE")
 sess$basePkgs %<>% sort()
 sess$loadedOnly %<>% magrittr::extract(sort(names(sess$loadedOnly)))
 if (requireNamespace("pander", quietly = TRUE)) pander::pander(sess)
 ```
 
-```{r gc, echo = FALSE, message = FALSE}
+```{r gc, echo = FALSE, message = FALSE, results='hide'}
 gc()
 gc()
 ```
