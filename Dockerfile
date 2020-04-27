@@ -1,5 +1,7 @@
 FROM rocker/geospatial:3.6.3
 
+LABEL maintainer="bocinsky@gmail.com"
+
 ENV NB_USER rstudio
 ENV NB_UID 1000
 ENV VENV_DIR /srv/venv

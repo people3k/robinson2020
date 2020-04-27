@@ -1,4 +1,5 @@
 FROM people3k/robinson2020:1.0.0
+LABEL maintainer="bocinsky@gmail.com"
 
 ## Declares build arguments
 ARG NB_USER
