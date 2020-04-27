@@ -16,8 +16,8 @@ services:
 
 before_install:
     # create & run container using our dockerfile, i.e. compile pkg and render Rmd
-  - docker build -t $REPO .
-  - docker run $REPO:latest r -e "rmarkdown::render('/home/rstudio/analysis/robinson2020.Rmd', params = list(cache = FALSE))"
+  - docker build -t $REPO:1.0.0 .
+  - docker run $REPO:1.0.0 r -e "rmarkdown::render('/home/rstudio/analysis/robinson2020.Rmd', params = list(cache = FALSE))"
 
 # push our custom docker container to docker hub, env vars stored on travis-ci.org
 after_success:
