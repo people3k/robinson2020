@@ -920,6 +920,13 @@ dplyr::left_join(all_density,
   )
 ```
 
+```{r gc3, echo = FALSE, message = FALSE, results='hide'}
+# This chunk is here to deal with memory limits of Travis CI
+rm(list = ls())
+gc()
+gc()
+```
+
 Comparisons between the CMV and NRG regional SPDs and the VEP population estimates are also revealing. In Figures \@ref(fig:Figure4)B and \@ref(fig:Figure4)C, the regional SPDs have been scaled such that the areas under their densities (the orange and green lines) are equal to the area under the VEP population estimates (the black lines). For both regions, the radiocarbon and tree-ring SPDs capture the broad directionality of the VEP population estimates. In the CMV region (Figure \@ref(fig:Figure4)B), the radiocarbon SPD has substantial probability mass prior to the VEP reconstruction, which is likely due to sampling bias in the radiocarbon record that is skewed in this region towards older (pre-Pueblo) sites. The radiocarbon SPD also does not capture the Pueblo I (AD 750--900) population peak (which may be too short-lived to be captured by such a small sample of radiocarbon dates), and seems to begin declining by the early thirteenth century AD. The tree-ring SPDs better capture the variability in population, though include a decline in the mid AD 1100s that is not in the VEP population estimates. In the NRG region (Figure \@ref(fig:Figure4)C), both SPDs rise until about AD 1250, then decline thereafter. The high peak in the tree-ring record at AD 1250, far in excess of the VEP population estimate, is particularly interesting — it likely signals the net impact of the immigration of many thousands of people to the NRG region, and the resulting (and simultaneous) burst in construction. Such a sudden and synchronous demographic and architectural event is hard to capture in the relatively lower resolution and sparsely sampled radiocarbon record, which tends to be smeared across sub-centennial scales courtesy of the calibration process [@Baillie1991].
 
 These results yield key insights on the relative sensitivity of the radiocarbon record to capture long-term, coarse-grained demographic change across the Southwest. As stated in the introduction, our aim is to understand how well the radiocarbon record captures population declines across the Southwest, as we need to develop a measure of confidence in radiocarbon records from regions across and beyond the Southwest that lack other demographic proxies. Both the radiocarbon and tree-ring SPDs show declines post-AD 1300 across all regions. In both the CMV and NRG the decline in the radiocarbon SPD begins earlier than in the VEP population series. This may indicate that radiocarbon time series make the decline seem to begin earlier than it actually does, which could be caused by a ‘cliff’ in the radiocarbon calibration curve from AD 1200--1300 that is surrounded by two plateaus at AD 1100--1200 and AD 1400 [@Reimer2013].
@@ -969,11 +976,6 @@ To control for inconsistent sample size across the archaeological sites represen
 Because the wider archaeological SPD research community still lacks a standard protocol for determining $h$, we perform a sensitivity analysis to demonstrate that the resulting SPDs for radiocarbon and tree-ring dates stabilize at a cut width of 100 or so. We calculated SPDs at 25-year intervals from 0 (only duplicate dates are binned) to 150 years (effectively binning by site).
 
 As can be seen in Figure \@ref(fig:FigureS1), binning in general has little impact on the resulting SPDs, but cut widths above $h=100$ years are virtually indistinguishable. The shape of the radiocarbon SPD (panel A) stabilizes above $h=0$ and its values stabilize by $h=100$. The tree-ring SPD arguably stabilizes in both shape and value above $h=75$ or so, but in the analysis we use $h=100$ to keep our methods consistent between the radiocarbon and tree-ring SPDs.
-
-```{r gc2, echo = FALSE, message = FALSE, results='hide'}
-gc()
-gc()
-```
 
 ```{r FigureS1, fig.height=6.5, fig.width=6.5, fig.cap='Radiocarbon (A) and tree-ring (B) density distributions in the UUSW, given varying cut widths for binning dates within sites. The density distributions for the UUSW are normalized. Years are given in AD.', fig.show = 'hold', out.width = '75%'}
 cut_widths <- seq(0, 150, 25)
@@ -1123,6 +1125,7 @@ if (requireNamespace("pander", quietly = TRUE)) pander::pander(sess)
 ```
 
 ```{r gc, echo = FALSE, message = FALSE, results='hide'}
+# This chunk is here to deal with memory limits of Travis CI
 gc()
 gc()
 ```
