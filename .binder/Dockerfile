@@ -1,4 +1,4 @@
-FROM bocinsky/robinson2020
+FROM bocinsky/robinson2020:1.0.0
 
 ## Declares build arguments
 ARG NB_USER
