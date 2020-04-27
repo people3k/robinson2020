@@ -1,4 +1,4 @@
-FROM rocker/geospatial:3.6.3
+FROM rocker/geospatial:3.6.2
 
 LABEL maintainer="bocinsky@gmail.com"
 
