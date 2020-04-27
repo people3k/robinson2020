@@ -84,6 +84,8 @@ knitr::opts_chunk$set(
 library(robinson2020)
 library(ggplot2)
 
+memory.limit(size = 4000)
+
 # Fix for deprecated ggplot2::expand_scale function
 if (utils::packageVersion("ggplot2") >= "3.3.0") {
   expand_scale <- expansion
