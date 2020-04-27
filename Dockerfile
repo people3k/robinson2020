@@ -50,7 +50,7 @@ COPY . ${HOME}
 RUN chown -R ${NB_USER} ${HOME}
 
 # Upgrade tinytex
-RUN r -e "Sys.setenv('CTAN_REPO' = paste0('https://www.texlive.info/tlnet-archive/',with(sessionInfo()[['R.version']],paste0(year,'/',month,'/',day)),'/tlnet')); tinytex::install_tinytex()"
+RUN r -e "Sys.setenv('CTAN_REPO' = paste0('https://www.texlive.info/tlnet-archive/2020/04/23/tlnet')); tinytex::install_tinytex()"
 
 # install the repo
 RUN r -e "devtools::install('${HOME}', dependencies = TRUE, quick = TRUE, upgrade = 'never')"
