@@ -92,8 +92,8 @@ if (utils::packageVersion("ggplot2") >= "3.3.0") {
 if (params$clean) {
   unlink(here::here("analysis/robinson2020.pdf"))
   unlink(here::here("analysis/robinson2020_cache"), recursive = TRUE)
-  unlink(here::here("analysis/figures/."), recursive = TRUE)
-  unlink(here::here("analysis/data/derived_data/."), recursive = TRUE)
+  unlink(here::here("analysis/figures/."))
+  unlink(here::here("analysis/data/derived_data/."))
 }
 ```
 
@@ -222,6 +222,10 @@ Here, we focus our analyses on the period for which data are most abundant: 1750
 if (!file.exists(
   here::here("analysis/data/derived_data/radiocarbon_data.csv")
 )) {
+  download.file("https://core.tdar.org/filestore/download/455460/567756",
+    destfile = here::here("analysis/data/raw_data/robinson_et_al_2020_radiocarbon.csv")
+  )
+
   readr::read_csv(
     here::here("analysis/data/raw_data/robinson_et_al_2020_radiocarbon.csv")
   ) %>%

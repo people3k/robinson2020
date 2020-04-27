@@ -1,4 +1,6 @@
+!/analysis/data/raw_data
 /analysis/data/raw_data/*
+!/analysis/data/raw_data/robinson_et_al_2020_radiocarbon.csv
 
 # Mac trash files
 .DS_Store
