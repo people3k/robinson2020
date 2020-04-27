@@ -84,8 +84,6 @@ knitr::opts_chunk$set(
 library(robinson2020)
 library(ggplot2)
 
-memory.limit(size = 4000)
-
 # Fix for deprecated ggplot2::expand_scale function
 if (utils::packageVersion("ggplot2") >= "3.3.0") {
   expand_scale <- expansion
@@ -646,7 +644,11 @@ radiocarbon_spd <-
 
 We treated the tree-ring dates in as similar a way possible as the radiocarbon dates. We modeled faux-calibrated tree-ring date probabilities as discrete degenerate distributions ($\Pr(X=k_0)=1$) with $k_0$ equal to the tree-ring date — in other words, a probability of $1$ at the date value, and $0$ elsewhere. This is akin to modeling the tree ring date as a normal distribution with a mean of the date value, and a standard deviation of zero. Thinking of tree ring dates this way allows us to use the same binning and SPD algorithms as for radiocarbon dates.^[One might consider alternative probability distributions for non-cutting or near-cutting dates. The probability mass function in such a case would be zero for years prior to the date of the outer ring of the sample, and non-zero for subsequent years, presumably decaying quickly. For instance, we could imagine a study that derives empirical probability distributions for non-cutting dates based on cutting-dates from the same contexts.] Here, we binned the tree-ring dates into site-phases using the rcarbon::binPrep function and constructing SPDs using `rcarbon::spd`, both with the same parameter selections as used for the radiocarbon samples. As above, we averaged probability distributions of binned dates, and then constructed SPDs from the site-phase distributions.
 
-```{r treering-spds}
+```{r treering-spds, results = 'hide'}
+
+gc()
+gc()
+
 calibrate_tree_ring_dates <-
   function(x, timeRange = c(50000, 0)) {
     out <- list(
