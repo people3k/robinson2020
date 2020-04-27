@@ -93,7 +93,7 @@ if (params$clean) {
   unlink(here::here("analysis/robinson2020.pdf"))
   unlink(here::here("analysis/robinson2020_cache"), recursive = TRUE)
   unlink(here::here("analysis/figures/."), recursive = TRUE)
-  unlink(here::here("analysis/data/derived_data/."), recursive = TRUE)
+  # unlink(here::here("analysis/data/derived_data/."), recursive = TRUE)
 }
 ```
 
