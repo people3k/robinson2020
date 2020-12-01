@@ -1,4 +1,4 @@
-FROM people3k/robinson2020:1.0.0
+FROM people3k/robinson2020:1.0.1
 LABEL maintainer="bocinsky@gmail.com"
 
 ## Declares build arguments
