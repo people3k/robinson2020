@@ -20,9 +20,10 @@ This repository contains the data and code for our paper:
 > [![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-7402-8450),
 > Robert L.
 > Kelly[![](https://orcid.org/sites/default/files/images/orcid_16x16.png)](https://orcid.org/0000-0001-9737-0152),
-> (In Press). Dendrochronological dates confirm a Late Prehistoric
+> (2020). Dendrochronological dates confirm a Late Prehistoric
 > population decline in the American Southwest derived from radiocarbon
-> dates. *Philosophical Transactions of the Royal Society B*.
+> dates. *Philosophical Transactions of the Royal Society B*
+> 376:20190718. <https://doi.org/10.1098/rstb.2019.0718>
 
 ### How to cite
 
