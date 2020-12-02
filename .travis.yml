@@ -16,15 +16,15 @@ services:
 
 before_install:
     # create & run container using our dockerfile, i.e. compile pkg and render Rmd
-  - docker build -t $REPO:1.0.1 .
-  - docker run $REPO:1.0.1 r -e "rmarkdown::render('/home/rstudio/analysis/robinson2020.Rmd', params = list(clean = TRUE))"
+  - docker build -t $REPO:v1.0.1 .
+  - docker run $REPO:v1.0.1 r -e "rmarkdown::render('/home/rstudio/analysis/robinson2020.Rmd', params = list(clean = TRUE))"
 
 # push our custom docker container to docker hub, env vars stored on travis-ci.org
 after_success:
   - docker login -u $DOCKER_USER -p $DOCKER_PASS
   - export REPO=people3k/robinson2020
 #  - export TAG=`if [ "$TRAVIS_BRANCH" == "master" ]; then echo "latest"; else echo $TRAVIS_BRANCH ; fi`
-  - export TAG=1.0.1
+  - export TAG=v1.0.1
   - docker build -f Dockerfile -t $REPO:$COMMIT .
   - docker tag $REPO:$COMMIT $REPO:$TAG
   - docker tag $REPO:$COMMIT $REPO:travis-$TRAVIS_BUILD_NUMBER

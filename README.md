@@ -6,7 +6,7 @@
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.3647599.svg)](https://doi.org/10.5281/zenodo.3647599)
 [![Travis build
 status](https://travis-ci.org/people3k/robinson2020.svg?branch=master)](https://travis-ci.org/people3k/robinson2020)
-[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/people3k/robinson2020/master?urlpath=rstudio)
+[![Binder](https://mybinder.org/badge_logo.svg)](https://mybinder.org/v2/gh/people3k/robinson2020/test?urlpath=rstudio)
 
 This repository contains the data and code for our paper:
 
@@ -24,7 +24,6 @@ This repository contains the data and code for our paper:
 > population decline in the American Southwest derived from radiocarbon
 > dates. *Philosophical Transactions of the Royal Society B*
 > 376:20190718. <https://doi.org/10.1098/rstb.2019.0718>
-
 
 ### How to cite
 
